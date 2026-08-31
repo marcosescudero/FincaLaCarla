@@ -17,6 +17,15 @@ window.LANG = {
     "siguiente": "Siguiente",
     "direccion_corta": "Paraje San Antonio s/n, Animana, Salta, Argentina",
     "conocer": "Conocé Finca La Carla",
+    "descubrir": "Descubrir",
+    "eyebrow_hero": "Posada boutique · Valle Calchaquí",
+    "eyebrow_hero_sub": "Paraje San Antonio · Animana · Salta",
+    "eyebrow_pres": "Bienvenidos al paraje San Antonio",
+    "eyebrow_servicios": "Nuestra propuesta",
+    "eyebrow_historia": "Una historia de familia",
+    "eyebrow_ofrecemos": "Valores que nos definen",
+    "eyebrow_testimonios": "Experiencias de huéspedes",
+    "eyebrow_donde": "Nuestra ubicación",
 
     /* ---------- Navegación ---------- */
     "nav_home": "Home",
@@ -532,6 +541,15 @@ window.LANG = {
     "siguiente": "Next",
     "direccion_corta": "Paraje San Antonio s/n, Animana, Salta, Argentina",
     "conocer": "Discover Finca La Carla",
+    "descubrir": "Discover",
+    "eyebrow_hero": "Boutique inn · Calchaquí Valley",
+    "eyebrow_hero_sub": "San Antonio · Animana · Salta",
+    "eyebrow_pres": "Welcome to San Antonio",
+    "eyebrow_servicios": "Our proposal",
+    "eyebrow_historia": "A family story",
+    "eyebrow_ofrecemos": "Values that define us",
+    "eyebrow_testimonios": "Guest experiences",
+    "eyebrow_donde": "Our location",
 
     /* ---------- Navigation ---------- */
     "nav_home": "Home",
