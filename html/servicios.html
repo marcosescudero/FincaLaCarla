@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Servicios de Finca La Carla — atención cercana, recreación, pileta, artesanías, livings y espacios comunes.">
+<title>Servicios — Finca La Carla</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<header class="encabezado">
+  <div class="contenedor encabezado__fila">
+    <a class="marca" href="../index.html" aria-label="Finca La Carla — Inicio">
+      <span class="marca__nombre">Finca La Carla<small>Valle Calchaquí · Salta</small></span>
+    </a>
+    <nav aria-label="Navegación principal">
+      <ul class="menu">
+        <li><a href="../index.html" data-i18n="nav_home">Home</a></li>
+        <li><a href="habitaciones.html" data-i18n="nav_habitaciones">Habitaciones</a></li>
+        <li><a href="gastronomia.html" data-i18n="nav_gastronomia">Gastronomía</a></li>
+        <li><a href="servicios.html" data-i18n="nav_servicios" class="activo">Servicios</a></li>
+        <li><a href="eventos.html" data-i18n="nav_eventos">Eventos</a></li>
+        <li><a href="que-hacer.html" data-i18n="nav_quehacer">Qué hacer</a></li>
+        <li><a href="quienes-somos.html" data-i18n="nav_quienessomos">Quiénes somos</a></li>
+        <li><a href="fotos.html" data-i18n="nav_fotos">Fotos</a></li>
+        <li><a href="contacto.html" data-i18n="nav_contacto">Contacto</a></li>
+        <li><a class="menu__reservar" href="#" data-whatsapp="msg" data-i18n="reservar">RESERVAR</a></li>
+      </ul>
+    </nav>
+    <div class="encabezado__acciones">
+      <div class="idioma" role="group" aria-label="Selector de idioma">
+        <button type="button" data-idioma="es" aria-pressed="true">ES</button>
+        <button type="button" data-idioma="en" aria-pressed="false">EN</button>
+      </div>
+      <button class="menu-boton" type="button" aria-label="Abrir menú" aria-expanded="false">☰</button>
+    </div>
+  </div>
+</header>
+<div class="menu-sombra" aria-hidden="true"></div>
+
+<main>
+  <section class="cabecera-pagina">
+    <div class="contenedor">
+      <p class="migas"><a href="../index.html" data-i18n="nav_home">Home</a> / <span data-i18n="nav_servicios">Servicios</span></p>
+      <h1 data-i18n="serv_titulo">Servicios simples, atención cercana y espacios para disfrutar</h1>
+      <p data-i18n="serv_intro">La estadía combina atención directa de Diego y Marcela con servicios pensados para acompañar el descanso: desayuno incluido, limpieza diaria, lavandería sin costo en estadías prolongadas, guardado de equipaje, Wi-Fi Starlink, estacionamiento, pileta de temporada, biblioteca, juegos de mesa y espacios comunes. También pueden coordinarse comidas, actividades y servicios de terceros.</p>
+    </div>
+  </section>
+
+  <!-- Atención al huésped -->
+  <section class="seccion" id="atencion">
+    <div class="contenedor">
+      <h2 class="titulo-seccion" data-i18n="serv_atencion_titulo">Atención al huésped</h2>
+      <p data-i18n="serv_atencion_texto">La atención es realizada directamente por Diego y Marcela, desde la llegada y la explicación del funcionamiento de la casa hasta la asistencia con equipaje, desayunos y coordinación de comidas o actividades.</p>
+      <ul class="lista-carac">
+        <li data-i18n="serv_atencion_1">Limpieza diaria</li>
+        <li data-i18n="serv_atencion_2">Cambio de ropa blanca cada dos días o a solicitud</li>
+        <li data-i18n="serv_atencion_3">Lavandería sin costo para estadías prolongadas</li>
+        <li data-i18n="serv_atencion_4">Guardado de equipaje sin costo</li>
+        <li data-i18n="serv_atencion_5">Cunas</li>
+        <li data-i18n="serv_atencion_6">Contacto con remises, guías locales, empresas de turismo y cabalgatas cuando se requiera</li>
+      </ul>
+      <p data-i18n="serv_atencion_nota">Los traslados, el alquiler de vehículos, el trekking guiado y las cabalgatas operados por terceros no son servicios propios de la finca.</p>
+    </div>
+  </section>
+
+  <!-- Recreación -->
+  <section class="seccion seccion--arena" id="recreacion">
+    <div class="contenedor">
+      <span class="rotulo" data-i18n="serv_recreacion">Recreación</span>
+      <h2 class="titulo-seccion" data-i18n="serv_recreacion_titulo">Tiempo para leer, jugar y compartir</h2>
+      <p data-i18n="serv_recreacion_texto">La recreación dentro de la finca está pensada para disfrutar el tiempo sin apuro. En el estar común hay una biblioteca con distintas colecciones, juegos de mesa y un Smart TV de uso compartido. Los huéspedes pueden tomar libros, jugar en familia o elegir una película. También es posible, según la época y la actividad de la finca, acercarse a tareas vinculadas con la huerta, la cosecha de frutas o uvas y la elaboración de conservas. Todo está incluido para quienes se hospedan y no requiere reserva previa.</p>
+      <div class="galeria-grid" data-render-galeria="recreacion" data-max="4"></div>
+    </div>
+  </section>
+
+  <!-- Pileta -->
+  <section class="seccion" id="pileta">
+    <div class="contenedor">
+      <span class="rotulo" data-i18n="serv_pileta">Pileta</span>
+      <h2 class="titulo-seccion" data-i18n="serv_pileta_titulo">Pileta entre árboles y paisaje</h2>
+      <p data-i18n="serv_pileta_texto">La pileta exterior mide aproximadamente 7 x 4,5 metros y tiene 1,50 metro de profundidad. Se utiliza principalmente durante el verano y también en algunos días cálidos de primavera. Su uso está incluido para los huéspedes y no tiene costo adicional. El sector cuenta con solárium, reposeras y sombra natural de los árboles; se pueden solicitar toallas y coordinar bebidas o meriendas. Desde allí se disfruta la apertura hacia el Valle Calchaquí y la cercanía con la galería y el parque. No hay bañero, por lo que los niños deben permanecer bajo supervisión adulta y se solicita evitar juegos bruscos. La pileta no es climatizada: su calefacción mediante bomba de calor es solamente un proyecto.</p>
+      <div class="galeria-grid" data-render-galeria="pileta" data-max="4"></div>
+    </div>
+  </section>
+
+  <!-- Artesanías y productos regionales -->
+  <section class="seccion seccion--arena" id="artesanias">
+    <div class="contenedor">
+      <span class="rotulo" data-i18n="serv_artesanias">Artesanías y productos regionales</span>
+      <h2 class="titulo-seccion" data-i18n="serv_artesanias_titulo">Productos nacidos en la finca</h2>
+      <p data-i18n="serv_artesanias_texto">En el hotel se exhiben y venden productos elaborados a partir de la producción de la finca: mermeladas de ciruela, damasco, membrillo, durazno y cayote, mieles orgánicas, vinos, sidra, aguardiente, coñac, brandy y frutos secos como nueces. También hay piezas artesanales con diseños de Marcela, entre ellas chales, carteras, pantalones, suéteres, camisas, ponchos y ruanas; algunas son tejidas y otras de lino. Muchos de los alimentos y bebidas que se venden son los mismos que forman parte de desayunos, almuerzos, cenas y sobremesas. Los medios de pago habituales son efectivo y transferencia.</p>
+      <div class="galeria-grid" data-render-galeria="artesanias" data-max="4"></div>
+    </div>
+  </section>
+
+  <!-- Livings y espacios comunes -->
+  <section class="seccion" id="livings">
+    <div class="contenedor">
+      <span class="rotulo" data-i18n="serv_livings">Livings y espacios comunes</span>
+      <h2 class="titulo-seccion" data-i18n="serv_livings_titulo">Espacios para compartir sin apuro</h2>
+      <p data-i18n="serv_livings_texto">Los espacios comunes prolongan el carácter cálido y despojado de las habitaciones. La cocina, el desayunador, el comedor y el estar con hogar a leña se integran como lugares para descansar, leer, conversar o compartir una comida. Hay una biblioteca, juegos de mesa y un Smart TV de uso común. El mobiliario, las lámparas, la madera, la piedra y los tonos de la tierra acompañan una ambientación rústica y minimalista, pensada para que cada ambiente conserve identidad sin perder sencillez.</p>
+      <div class="galeria-grid" data-render-galeria="livings" data-max="4"></div>
+    </div>
+  </section>
+
+  <!-- Galería física -->
+  <section class="seccion seccion--arena" id="galeria">
+    <div class="contenedor">
+      <span class="rotulo" data-i18n="serv_galeria">Galería física</span>
+      <h2 class="titulo-seccion" data-i18n="serv_galeria_titulo">Una galería abierta al Valle</h2>
+      <p data-i18n="serv_galeria_texto">La gran galería es uno de los espacios centrales de Finca La Carla. Desde allí se abre una vista amplia hacia el Valle Calchaquí y se conecta el sector de habitaciones con el parque y la pileta. En primavera y verano se convierte en uno de los lugares más elegidos para descansar, conversar y compartir comidas. Su escala permite también recibir encuentros y almuerzos grupales. La piedra, la madera y los tonos naturales mantienen el lenguaje rústico y sobrio de toda la casa.</p>
+      <div class="galeria-grid" data-render-galeria="galeria_arq" data-max="4"></div>
+    </div>
+  </section>
+</main>
+
+<footer class="pie">
+  <div class="contenedor pie__contenido">
+    <div>
+      <div class="pie__marca">Finca La Carla</div>
+      <p style="font-size:14px;" data-i18n="direccion_corta">Paraje San Antonio s/n, Animana, Salta, Argentina</p>
+      <ul>
+        <li><a href="#" data-whatsapp="msg">WhatsApp: +54 9 11 6793-1464</a></li>
+        <li data-i18n="footer_cel">Teléfono celular 2: 011 6568-3169</li>
+        <li><a href="mailto:Ramilo.diego@gmail.com">Email: Ramilo.diego@gmail.com</a></li>
+        <li><a href="mailto:lacarlareservas@gmail.com" data-i18n="footer_email_reservas">Reservas: lacarlareservas@gmail.com</a></li>
+      </ul>
+      <div class="pie__redes">
+        <a href="https://www.instagram.com/fincalacarla/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 1.8.2 2.2.4.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.2.4.4 1 .4 2.2.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.2 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.2-1 .4-2.2.4-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-1.8-.2-2.2-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.2-.4-.4-1-.4-2.2C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.9c.1-1.2.2-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.2 1-.4 2.2-.4C8.4 2.2 8.8 2.2 12 2.2zm0 1.8c-3.1 0-3.5 0-4.8.1-1.1.1-1.5.2-1.8.3-.5.2-.8.4-1.1.7-.3.3-.5.6-.7 1.1-.1.3-.3.8-.3 1.8-.1 1.2-.1 1.6-.1 4.8s0 3.6.1 4.8c.1 1.1.2 1.5.3 1.8.2.5.4.8.7 1.1.3.3.6.5 1.1.7.3.1.8.3 1.8.3 1.2.1 1.6.1 4.8.1s3.6 0 4.8-.1c1.1-.1 1.5-.2 1.8-.3.5-.2.8-.4 1.1-.7.3-.3.5-.6.7-1.1.1-.3.3-.8.3-1.8.1-1.2.1-1.6.1-4.8s0-3.6-.1-4.8c-.1-1.1-.2-1.5-.3-1.8-.2-.5-.4-.8-.7-1.1-.3-.3-.6-.5-1.1-.7-.3-.1-.8-.3-1.8-.3-1.3-.1-1.7-.1-4.8-.1zm0 3.1a4.9 4.9 0 110 9.8 4.9 4.9 0 010-9.8zm0 1.8a3.1 3.1 0 100 6.2 3.1 3.1 0 000-6.2zm5-2.9a1.1 1.1 0 110 2.3 1.1 1.1 0 010-2.3z"/></svg></a>
+        <a href="https://www.facebook.com/profile.php?id=61582360713302" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M22 12a10 10 0 10-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.4v7A10 10 0 0022 12z"/></svg></a>
+      </div>
+    </div>
+    <div>
+      <h4 data-i18n="footer_navegacion">Navegación</h4>
+      <ul>
+        <li><a href="../index.html" data-i18n="nav_home">Home</a></li>
+        <li><a href="habitaciones.html" data-i18n="nav_habitaciones">Habitaciones</a></li>
+        <li><a href="gastronomia.html" data-i18n="nav_gastronomia">Gastronomía</a></li>
+        <li><a href="servicios.html" data-i18n="nav_servicios">Servicios</a></li>
+        <li><a href="eventos.html" data-i18n="nav_eventos">Eventos</a></li>
+        <li><a href="que-hacer.html" data-i18n="nav_quehacer">Qué hacer</a></li>
+        <li><a href="quienes-somos.html" data-i18n="nav_quienessomos">Quiénes somos</a></li>
+        <li><a href="fotos.html" data-i18n="nav_fotos">Fotos</a></li>
+        <li><a href="contacto.html" data-i18n="nav_contacto">Contacto</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4 data-i18n="footer_legal">Legal</h4>
+      <ul>
+        <li><a href="terminos-condiciones.html" data-i18n="footer_terminos">Términos y condiciones</a></li>
+        <li><a href="politica-cookies.html" data-i18n="footer_cookies">Política de cookies</a></li>
+        <li><a href="sustentabilidad.html" data-i18n="footer_sustentabilidad">Sustentabilidad</a></li>
+        <li><a href="compromiso-comunidad.html" data-i18n="footer_comunidad">Compromiso con la comunidad</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="pie__legal"><span data-i18n="footer_derechos">© {año} Finca La Carla. Todos los derechos reservados.</span></div>
+</footer>
+
+<a class="whatsapp-flotante" href="#" data-whatsapp="msg" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 00-8.6 15.1L2 22l5-1.3A10 10 0 1012 2zm5.8 14.2c-.2.7-1.3 1.3-1.9 1.4-.5.1-1 .2-3.3-.7-2.8-1.2-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .6l-.4.6c-.1.2-.3.4-.1.7.1.3.7 1.2 1.6 2 1.1 1 2 1.3 2.3 1.5.3.1.5.1.7-.1l.9-1c.2-.3.4-.2.7-.1l1.9.9c.3.1.5.2.5.3.1.3.1.9-.1 1.1z"/></svg></a>
+
+<script src="../js/lang.js"></script>
+<script src="../js/main.js"></script>
+<script src="../js/whatsapp.js"></script>
+<script>window.FINCA_BASE = "../";</script>
+<script src="../js/galerias.js"></script>
+<script src="../js/lightbox.js"></script>
+</body>
+</html>

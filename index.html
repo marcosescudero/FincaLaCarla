@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Finca La Carla — Posada boutique en Paraje San Antonio, Animana, Salta, Valle Calchaquí. Una propuesta terrenal.">
+<title>Finca La Carla — Una propuesta terrenal</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ===================== ENCABEZADO ===================== -->
+<header class="encabezado">
+  <div class="contenedor encabezado__fila">
+    <a class="marca" href="index.html" aria-label="Finca La Carla — Inicio">
+      <span class="marca__nombre">Finca La Carla<small>Valle Calchaquí · Salta</small></span>
+    </a>
+
+    <nav aria-label="Navegación principal">
+      <ul class="menu">
+        <li><a href="index.html" data-i18n="nav_home" class="activo">Home</a></li>
+        <li><a href="html/habitaciones.html" data-i18n="nav_habitaciones">Habitaciones</a></li>
+        <li><a href="html/gastronomia.html" data-i18n="nav_gastronomia">Gastronomía</a></li>
+        <li><a href="html/servicios.html" data-i18n="nav_servicios">Servicios</a></li>
+        <li><a href="html/eventos.html" data-i18n="nav_eventos">Eventos</a></li>
+        <li><a href="html/que-hacer.html" data-i18n="nav_quehacer">Qué hacer</a></li>
+        <li><a href="html/quienes-somos.html" data-i18n="nav_quienessomos">Quiénes somos</a></li>
+        <li><a href="html/fotos.html" data-i18n="nav_fotos">Fotos</a></li>
+        <li><a href="html/contacto.html" data-i18n="nav_contacto">Contacto</a></li>
+        <li><a class="menu__reservar" href="#" data-whatsapp="msg" data-i18n="reservar">RESERVAR</a></li>
+      </ul>
+    </nav>
+
+    <div class="encabezado__acciones">
+      <div class="idioma" role="group" aria-label="Selector de idioma">
+        <button type="button" data-idioma="es" aria-pressed="true">ES</button>
+        <button type="button" data-idioma="en" aria-pressed="false">EN</button>
+      </div>
+      <button class="menu-boton" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu-principal">☰</button>
+    </div>
+  </div>
+</header>
+<div class="menu-sombra" aria-hidden="true"></div>
+
+<!-- ===================== HERO / BANNER ===================== -->
+<section class="hero" aria-label="Bienvenida">
+  <div class="hero__carrusel">
+    <div class="hero__slide activo">
+      <img class="hero__img" src="images/fotos/a%20Home/Banner%20(1)/Finca_La_Carla_Animana_Salta_Argentina_Banner_1.jpg" alt="Finca La Carla — Valle Calchaquí">
+    </div>
+    <div class="hero__slide">
+      <img class="hero__img" src="images/fotos/a%20Home/Banner%20(1)/Finca_La_Carla_Animana_Salta_Argentina_Banner_2.png" alt="Finca La Carla — paisaje del valle">
+    </div>
+    <div class="hero__slide">
+      <img class="hero__img" src="images/fotos/a%20Home/Banner%20(1)/Finca_La_Carla_Animana_Salta_Argentina_Banner_3.jpg" alt="Finca La Carla — atardecer en el valle">
+    </div>
+    <div class="hero__velo"></div>
+    <div class="hero__contenido">
+      <h1 class="hero__lema" data-i18n="hero_lema">Una propuesta terrenal</h1>
+    </div>
+    <button class="hero__flecha hero__flecha--prev" type="button" data-i18n-aria="anterior" aria-label="Anterior">&#10094;</button>
+    <button class="hero__flecha hero__flecha--next" type="button" data-i18n-aria="siguiente" aria-label="Siguiente">&#10095;</button>
+    <div class="hero__puntos" aria-hidden="true">
+      <button class="hero__punto activo" type="button" tabindex="-1"></button>
+      <button class="hero__punto" type="button" tabindex="-1"></button>
+      <button class="hero__punto" type="button" tabindex="-1"></button>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== PRESENTACIÓN BREVE ===================== -->
+<section class="seccion">
+  <div class="contenedor presentacion">
+    <h2 class="titulo-seccion" data-i18n="pres_titulo">Una propuesta terrenal</h2>
+    <p class="intro-seccion" data-i18n="pres_subtitulo">Naturaleza, producción y descanso en el Valle Calchaquí</p>
+    <p data-i18n="pres_texto" style="max-width:820px;margin:0 auto 26px;">Finca La Carla es una posada boutique en el paraje San Antonio, Animana, rodeada por dos hectáreas de producción agroecológica. Construida con piedra, madera y adobe, combina una estética rústica y minimalista con una mirada sustentable: energía solar, reutilización de agua y productos de la finca que llegan a la mesa. Un lugar pensado para bajar el ritmo, descansar y compartir.</p>
+    <a class="btn btn--primario btn--grande" href="html/fotos.html" data-i18n="pres_boton">Conocé Finca La Carla</a>
+  </div>
+</section>
+
+<!-- ===================== NUESTROS SERVICIOS ===================== -->
+<section class="seccion seccion--arena">
+  <div class="contenedor">
+    <h2 class="titulo-seccion texto-centro" data-i18n="servicios_titulo">Nuestros servicios</h2>
+    <div class="cuadricula-servicios">
+
+      <a class="tarjeta-servicio tarjeta-servicio--grande" href="html/gastronomia.html">
+        <img class="tarjeta-servicio__img" src="images/fotos/c%20Gastronomía/Destacada%20(1)/Finca_La_Carla_Animana_Salta_Argentina_Gastronomia.png" alt="Gastronomía Finca La Carla">
+        <div class="tarjeta-servicio__info">
+          <span class="rotulo">Finca La Carla</span>
+          <h3 data-i18n="serv_gastronomia">Gastronomía</h3>
+        </div>
+      </a>
+
+      <a class="tarjeta-servicio" href="html/eventos.html">
+        <img class="tarjeta-servicio__img" src="images/fotos/f%20Eventos/Destacada%20(1)/Finca_La_Carla_Animana_Salta_Argentina_Living.jpg" alt="Eventos Finca La Carla">
+        <div class="tarjeta-servicio__info"><h3 data-i18n="serv_eventos">Eventos</h3></div>
+      </a>
+
+      <a class="tarjeta-servicio" href="html/que-hacer.html">
+        <img class="tarjeta-servicio__img" src="images/fotos/g%20Que%20hacer/Trekking%20por%20el%20río/Destacada%20(1)/Finca_La_Carla_Animana_Salta_Argentina_Trekking_Nano_Escudero.png" alt="Qué hacer Finca La Carla">
+        <div class="tarjeta-servicio__info"><h3 data-i18n="serv_quehacer">Qué hacer</h3></div>
+      </a>
+
+      <a class="tarjeta-servicio" href="html/servicios.html#recreacion">
+        <img class="tarjeta-servicio__img" src="images/fotos/d%20Servicios/5%20Recreacion/Destacada%20(1)/Finca_La_Carla_Animana_Salta_Argentina_Living.jpg" alt="Recreación Finca La Carla">
+        <div class="tarjeta-servicio__info"><h3 data-i18n="serv_recreacion">Recreación</h3></div>
+      </a>
+
+      <a class="tarjeta-servicio" href="html/servicios.html#pileta">
+        <img class="tarjeta-servicio__img" src="images/fotos/d%20Servicios/7%20Pileta/Destacada%20(1)/Finca_La_Carla_Animana_Salta_Argentina_Pileta.png" alt="Pileta Finca La Carla">
+        <div class="tarjeta-servicio__info"><h3 data-i18n="serv_pileta">Pileta</h3></div>
+      </a>
+
+      <a class="tarjeta-servicio" href="html/servicios.html#artesanias">
+        <img class="tarjeta-servicio__img" src="images/fotos/d%20Servicios/9%20Artesanías%20y%20Product%20Regional/Destacada%20(1)/Finca_La_Carla_Animana_Salta_Argentina_Artesanias_Productos.jpg" alt="Artesanías y productos regionales">
+        <div class="tarjeta-servicio__info"><h3 data-i18n="serv_artesanias">Artesanías y productos regionales</h3></div>
+      </a>
+
+      <a class="tarjeta-servicio" href="html/servicios.html#livings">
+        <img class="tarjeta-servicio__img" src="images/fotos/d%20Servicios/10%20Living%20y%20espacios%20comunes/Destacada%20(1)/Finca_La_Carla_Animana_Salta_Argentina_Living.jpg" alt="Livings y espacios comunes">
+        <div class="tarjeta-servicio__info"><h3 data-i18n="serv_livings">Livings y espacios comunes</h3></div>
+      </a>
+
+      <a class="tarjeta-servicio" href="html/servicios.html#galeria">
+        <img class="tarjeta-servicio__img" src="images/fotos/d%20Servicios/11%20Galería/Destacada%20(1)/Finca_La_Carla_Animana_Salta_Argentina_Galeria.jpg" alt="Galería física Finca La Carla">
+        <div class="tarjeta-servicio__info"><h3 data-i18n="serv_galeria">Galería física</h3></div>
+      </a>
+
+      <a class="tarjeta-servicio" href="html/informacion-util.html">
+        <img class="tarjeta-servicio__img" src="images/fotos/d%20Servicios/12%20Información%20Util/Destacada%20(1)/Finca_La_Carla_Animana_Salta_Argentina_Habitacion%20%20(3).jpg" alt="Información útil Finca La Carla">
+        <div class="tarjeta-servicio__info"><h3 data-i18n="serv_informacion">Información útil</h3></div>
+      </a>
+
+      <a class="tarjeta-servicio" href="html/preguntas-frecuentes.html">
+        <img class="tarjeta-servicio__img" src="images/fotos/d%20Servicios/13%20Preguntas%20Frecuentes/Destacada%20(1)/Finca_La_Carla_Animana_Salta_Argentina_Arquitectura.jpg" alt="Preguntas frecuentes Finca La Carla">
+        <div class="tarjeta-servicio__info"><h3 data-i18n="serv_faq">Preguntas frecuentes</h3></div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===================== QUIÉNES SOMOS (RESUMEN) ===================== -->
+<section class="seccion">
+  <div class="contenedor">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;" class="resumen-historia">
+      <div>
+        <span class="rotulo" data-i18n="nav_quienessomos">Quiénes somos</span>
+        <h2 class="titulo-seccion" data-i18n="historia_titulo">Una historia hecha despacio</h2>
+        <p data-i18n="historia_texto">Diego imaginó este proyecto a comienzos de los años 2000 y lo construyó durante dos décadas junto a personas de la comunidad. Hoy, con Marcela, recibe personalmente a cada huésped y continúa dando forma a una finca donde diseño, producción y cuidado del ambiente son parte de la misma historia.</p>
+        <a class="btn btn--ghost" href="html/quienes-somos.html" data-i18n="historia_enlace">Conocé nuestra historia</a>
+      </div>
+      <div>
+        <img src="images/fotos/h%20Quienes%20somos/Destacada%20(1)/Finca_La_Carla_Animana_Salta_Argentina_Quienes_Somos.jpg" alt="Quiénes somos — Finca La Carla" style="width:100%;height:420px;object-fit:cover;border-radius:4px;border:1px solid var(--borde);">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== QUÉ OFRECEMOS ===================== -->
+<section class="seccion seccion--blanca">
+  <div class="contenedor">
+    <h2 class="titulo-seccion texto-centro" data-i18n="ofrecemos_titulo">Qué ofrecemos</h2>
+    <div class="diferenciales">
+      <div class="diferencial">
+        <div class="diferencial__icono" aria-hidden="true">☀</div>
+        <h3 data-i18n="ofre_sust_titulo">Sustentabilidad real</h3>
+        <p data-i18n="ofre_sust_texto">Energía solar, reutilización de agua, compostaje y producción agroecológica forman parte del funcionamiento cotidiano de la finca.</p>
+      </div>
+      <div class="diferencial">
+        <div class="diferencial__icono" aria-hidden="true">🍇</div>
+        <h3 data-i18n="ofre_prod_titulo">Producción propia</h3>
+        <p data-i18n="ofre_prod_texto">Frutas, hortalizas, mermeladas, vinos y sidras nacen en la finca y llegan a desayunos, almuerzos, cenas y productos para llevar.</p>
+      </div>
+      <div class="diferencial">
+        <div class="diferencial__icono" aria-hidden="true">❤</div>
+        <h3 data-i18n="ofre_atencion_titulo">Atención de sus dueños</h3>
+        <p data-i18n="ofre_atencion_texto">Diego y Marcela reciben y acompañan personalmente a los huéspedes, con una atención cercana y pendiente de cada necesidad.</p>
+      </div>
+      <div class="diferencial">
+        <div class="diferencial__icono" aria-hidden="true">⛰</div>
+        <h3 data-i18n="ofre_ritmo_titulo">Ritmo del valle</h3>
+        <p data-i18n="ofre_ritmo_texto">Naturaleza, silencio y un paisaje abierto invitan a bajar el ritmo y disfrutar una estadía tranquila en el paraje San Antonio.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== TESTIMONIOS ===================== -->
+<section class="seccion seccion--arena">
+  <div class="contenedor">
+    <h2 class="titulo-seccion texto-centro" data-i18n="testimonios_titulo">Testimonios</h2>
+    <div class="testimonios">
+      <div class="testimonio">
+        <p data-i18n="test_marcelo">Un lugar soñado en la montaña para conectarse en serio. Todo está muy cuidado y bien logrado. Se destacan la atención cordial y genuina de sus dueños, la comida, los dulces caseros y los vinos que elaboran.</p>
+        <span class="testimonio__autor">Marcelo</span>
+      </div>
+      <div class="testimonio">
+        <p data-i18n="test_eugenia">Nos alojamos en pareja y desde el primer día la experiencia fue hermosa. Diego y Marcela nos atendieron con mucha calidez. Disfrutamos los desayunos, las cenas, los productos cosechados allí y especialmente sus vinos.</p>
+        <span class="testimonio__autor">Eugenia</span>
+      </div>
+      <div class="testimonio">
+        <p data-i18n="test_nelly">Cada espacio refleja mucho trabajo, amor y buen gusto. La calidez con la que nos atendieron fue maravillosa, la limpieza impecable y nos encantó que tantos productos salieran directamente de la tierra y la huerta.</p>
+        <span class="testimonio__autor">Nelly de Ortega</span>
+      </div>
+      <div class="testimonio">
+        <p data-i18n="test_maya">Anfitriones maravillosos, habitaciones acogedoras e impecables, un ambiente encantador y comida increíblemente deliciosa. La finca es un oasis de relajación, con mucha atención al detalle. Ya estoy deseando volver.</p>
+        <span class="testimonio__autor">Maya Maja — Alemania</span>
+      </div>
+      <div class="testimonio">
+        <p data-i18n="test_marie">Un lugar excepcional, tranquilo, íntimo y relajante, con un desayuno exquisito elaborado con ingredientes frescos y dueños acogedores y cálidos. Fue el mejor lugar de nuestro recorrido de dos meses y medio por Sudamérica.</p>
+        <span class="testimonio__autor">Marie — Francia</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== DÓNDE ESTAMOS ===================== -->
+<section class="seccion">
+  <div class="contenedor">
+    <h2 class="titulo-seccion texto-centro" data-i18n="donde_titulo">Dónde estamos</h2>
+    <p class="intro-seccion" data-i18n="donde_texto">Finca La Carla está en el paraje San Antonio, municipio de Animana, a 18 km de Cafayate. Los últimos 7 km son de ripio, entre piedemonte, algarrobos y paisajes propios del Valle Calchaquí.</p>
+    <p class="texto-centro" style="margin-bottom:22px;" data-i18n="donde_direccion">Paraje San Antonio s/n, Animana, Salta. Argentina.</p>
+    <div class="texto-centro" style="margin-bottom:26px;">
+      <a class="btn btn--oscuro" href="https://maps.app.goo.gl/KdxJ1RJG39jp4LENA" target="_blank" rel="noopener" data-i18n="donde_abrir">Abrir en Google Maps</a>
+    </div>
+    <div class="mapa">
+      <iframe src="https://www.google.com/maps?q=Paraje%20San%20Antonio%2C%20Animana%2C%20Salta%2C%20Argentina&output=embed" title="Mapa Finca La Carla" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="pie">
+  <div class="contenedor pie__contenido">
+    <div>
+      <div class="pie__marca">Finca La Carla</div>
+      <p style="font-size:14px;" data-i18n="direccion_corta">Paraje San Antonio s/n, Animana, Salta, Argentina</p>
+      <ul>
+        <li><a href="#" data-whatsapp="msg">WhatsApp: +54 9 11 6793-1464</a></li>
+        <li data-i18n="footer_cel">Teléfono celular 2: 011 6568-3169</li>
+        <li><a href="mailto:Ramilo.diego@gmail.com">Email: Ramilo.diego@gmail.com</a></li>
+        <li><a href="mailto:lacarlareservas@gmail.com" data-i18n="footer_email_reservas">Reservas: lacarlareservas@gmail.com</a></li>
+      </ul>
+      <div class="pie__redes">
+        <a href="https://www.instagram.com/fincalacarla/" target="_blank" rel="noopener" aria-label="Instagram">
+          <svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 1.8.2 2.2.4.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.2.4.4 1 .4 2.2.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.2 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.2-1 .4-2.2.4-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-1.8-.2-2.2-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.2-.4-.4-1-.4-2.2C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.9c.1-1.2.2-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.2 1-.4 2.2-.4C8.4 2.2 8.8 2.2 12 2.2zm0 1.8c-3.1 0-3.5 0-4.8.1-1.1.1-1.5.2-1.8.3-.5.2-.8.4-1.1.7-.3.3-.5.6-.7 1.1-.1.3-.3.8-.3 1.8-.1 1.2-.1 1.6-.1 4.8s0 3.6.1 4.8c.1 1.1.2 1.5.3 1.8.2.5.4.8.7 1.1.3.3.6.5 1.1.7.3.1.8.3 1.8.3 1.2.1 1.6.1 4.8.1s3.6 0 4.8-.1c1.1-.1 1.5-.2 1.8-.3.5-.2.8-.4 1.1-.7.3-.3.5-.6.7-1.1.1-.3.3-.8.3-1.8.1-1.2.1-1.6.1-4.8s0-3.6-.1-4.8c-.1-1.1-.2-1.5-.3-1.8-.2-.5-.4-.8-.7-1.1-.3-.3-.6-.5-1.1-.7-.3-.1-.8-.3-1.8-.3-1.3-.1-1.7-.1-4.8-.1zm0 3.1a4.9 4.9 0 110 9.8 4.9 4.9 0 010-9.8zm0 1.8a3.1 3.1 0 100 6.2 3.1 3.1 0 000-6.2zm5-2.9a1.1 1.1 0 110 2.3 1.1 1.1 0 010-2.3z"/></svg>
+        </a>
+        <a href="https://www.facebook.com/profile.php?id=61582360713302" target="_blank" rel="noopener" aria-label="Facebook">
+          <svg viewBox="0 0 24 24"><path d="M22 12a10 10 0 10-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.4v7A10 10 0 0022 12z"/></svg>
+        </a>
+      </div>
+    </div>
+    <div>
+      <h4 data-i18n="footer_navegacion">Navegación</h4>
+      <ul>
+        <li><a href="index.html" data-i18n="nav_home">Home</a></li>
+        <li><a href="html/habitaciones.html" data-i18n="nav_habitaciones">Habitaciones</a></li>
+        <li><a href="html/gastronomia.html" data-i18n="nav_gastronomia">Gastronomía</a></li>
+        <li><a href="html/servicios.html" data-i18n="nav_servicios">Servicios</a></li>
+        <li><a href="html/eventos.html" data-i18n="nav_eventos">Eventos</a></li>
+        <li><a href="html/que-hacer.html" data-i18n="nav_quehacer">Qué hacer</a></li>
+        <li><a href="html/quienes-somos.html" data-i18n="nav_quienessomos">Quiénes somos</a></li>
+        <li><a href="html/fotos.html" data-i18n="nav_fotos">Fotos</a></li>
+        <li><a href="html/contacto.html" data-i18n="nav_contacto">Contacto</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4 data-i18n="footer_legal">Legal</h4>
+      <ul>
+        <li><a href="html/terminos-condiciones.html" data-i18n="footer_terminos">Términos y condiciones</a></li>
+        <li><a href="html/politica-cookies.html" data-i18n="footer_cookies">Política de cookies</a></li>
+        <li><a href="html/sustentabilidad.html" data-i18n="footer_sustentabilidad">Sustentabilidad</a></li>
+        <li><a href="html/compromiso-comunidad.html" data-i18n="footer_comunidad">Compromiso con la comunidad</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="pie__legal">
+    <span data-i18n="footer_derechos">© {año} Finca La Carla. Todos los derechos reservados.</span>
+  </div>
+</footer>
+
+<!-- Botón flotante de WhatsApp -->
+<a class="whatsapp-flotante" href="#" data-whatsapp="msg" aria-label="WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 00-8.6 15.1L2 22l5-1.3A10 10 0 1012 2zm5.8 14.2c-.2.7-1.3 1.3-1.9 1.4-.5.1-1 .2-3.3-.7-2.8-1.2-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .6l-.4.6c-.1.2-.3.4-.1.7.1.3.7 1.2 1.6 2 1.1 1 2 1.3 2.3 1.5.3.1.5.1.7-.1l.9-1c.2-.3.4-.2.7-.1l1.9.9c.3.1.5.2.5.3.1.3.1.9-.1 1.1z"/></svg>
+</a>
+
+<script src="js/lang.js"></script>
+<script src="js/main.js"></script>
+<script src="js/whatsapp.js"></script>
+<script src="js/slider.js"></script>
+<script src="js/lightbox.js"></script>
+</body>
+</html>

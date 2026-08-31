@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Finca La Carla - Boutique Inn Salta</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&amp;family=Work+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary": "#586247",
+                        "surface-bright": "#fcf9f4",
+                        "tertiary-container": "#896a4f",
+                        "on-surface": "#1c1c19",
+                        "adobe-terracota": "#a65d3a",
+                        "on-error": "#ffffff",
+                        "on-secondary": "#ffffff",
+                        "on-primary-fixed-variant": "#733515",
+                        "surface-container-low": "#f6f3ee",
+                        "primary-container": "#a65d3a",
+                        "on-primary": "#ffffff",
+                        "surface-dim": "#dcdad5",
+                        "primary-fixed-dim": "#ffb695",
+                        "tertiary-fixed": "#ffdcc0",
+                        "surface-tint": "#904c2a",
+                        "surface-variant": "#e5e2dd",
+                        "on-primary-container": "#fff3ef",
+                        "secondary-fixed": "#dce7c5",
+                        "on-background": "#1c1c19",
+                        "surface-container": "#f0ede8",
+                        "desert-sand": "#f5f2ed",
+                        "on-primary-fixed": "#351000",
+                        "on-tertiary": "#ffffff",
+                        "inverse-on-surface": "#f3f0eb",
+                        "primary-fixed": "#ffdbcc",
+                        "background": "#fcf9f4",
+                        "on-tertiary-fixed-variant": "#5c4129",
+                        "tertiary-fixed-dim": "#e5bfa0",
+                        "on-surface-variant": "#54433c",
+                        "on-secondary-fixed": "#161e09",
+                        "deep-earth": "#2d2a26",
+                        "secondary-fixed-dim": "#c0cbaa",
+                        "primary": "#884524",
+                        "secondary-container": "#dce7c5",
+                        "surface": "#fcf9f4",
+                        "inverse-surface": "#31302d",
+                        "inverse-primary": "#ffb695",
+                        "on-tertiary-container": "#fff3eb",
+                        "on-error-container": "#93000a",
+                        "surface-container-highest": "#e5e2dd",
+                        "surface-container-high": "#ebe8e3",
+                        "on-tertiary-fixed": "#2b1704",
+                        "outline": "#86736b",
+                        "olive-drab": "#707a5e",
+                        "on-secondary-container": "#5e684d",
+                        "tertiary": "#6e5239",
+                        "outline-variant": "#d9c2b8",
+                        "error": "#ba1a1a",
+                        "surface-container-lowest": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "timber-brown": "#8c6d52",
+                        "on-secondary-fixed-variant": "#414a31"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "gutter": "24px",
+                        "margin-desktop": "64px",
+                        "container-max": "1280px",
+                        "margin-mobile": "20px",
+                        "section-gap": "120px",
+                        "base": "8px"
+                    },
+                    "fontFamily": {
+                        "label-lg": ["Work Sans"],
+                        "headline-sm": ["EB Garamond"],
+                        "headline-lg": ["EB Garamond"],
+                        "body-lg": ["Work Sans"],
+                        "label-sm": ["Work Sans"],
+                        "body-md": ["Work Sans"],
+                        "headline-md": ["EB Garamond"],
+                        "display-lg": ["EB Garamond"],
+                        "headline-lg-mobile": ["EB Garamond"]
+                    },
+                    "fontSize": {
+                        "label-lg": ["14px", { "lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "headline-sm": ["24px", { "lineHeight": "1.4", "fontWeight": "500" }],
+                        "headline-lg": ["48px", { "lineHeight": "1.2", "fontWeight": "400" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "label-sm": ["12px", { "lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "500" }],
+                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "headline-md": ["32px", { "lineHeight": "1.3", "fontWeight": "400" }],
+                        "display-lg": ["64px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "400" }],
+                        "headline-lg-mobile": ["32px", { "lineHeight": "1.2", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .filled-icon {
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        /* Hide scrollbar for clean carousels */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;  /* IE and Edge */
+            scrollbar-width: none;  /* Firefox */
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md antialiased selection:bg-adobe-terracota selection:text-white">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-surface/90 dark:bg-surface/90 backdrop-blur-md border-b border-timber-brown/20 transition-all duration-300" id="main-nav">
+<div class="flex justify-between items-center px-gutter py-4 max-w-container-max mx-auto">
+<div class="flex-shrink-0">
+<a class="font-headline-md text-headline-md text-on-surface dark:text-surface-bright tracking-tighter" href="#">
+                    Finca La Carla
+                </a>
+</div>
+<div class="hidden md:flex flex-1 justify-center space-x-8">
+<a class="font-label-lg text-label-lg uppercase tracking-widest text-adobe-terracota font-bold border-b border-adobe-terracota hover:text-adobe-terracota transition-all duration-300" href="#">Home</a>
+<a class="font-label-lg text-label-lg uppercase tracking-widest text-on-surface-variant hover:text-on-surface transition-colors hover:text-adobe-terracota transition-all duration-300" href="#">Habitaciones</a>
+<a class="font-label-lg text-label-lg uppercase tracking-widest text-on-surface-variant hover:text-on-surface transition-colors hover:text-adobe-terracota transition-all duration-300" href="#">Gastronomía</a>
+<a class="font-label-lg text-label-lg uppercase tracking-widest text-on-surface-variant hover:text-on-surface transition-colors hover:text-adobe-terracota transition-all duration-300" href="#">Servicios</a>
+<a class="font-label-lg text-label-lg uppercase tracking-widest text-on-surface-variant hover:text-on-surface transition-colors hover:text-adobe-terracota transition-all duration-300" href="#">Eventos</a>
+<a class="font-label-lg text-label-lg uppercase tracking-widest text-on-surface-variant hover:text-on-surface transition-colors hover:text-adobe-terracota transition-all duration-300" href="#">Quiénes somos</a>
+</div>
+<div class="hidden md:flex items-center space-x-6">
+<button class="font-label-lg text-label-lg uppercase tracking-widest text-on-surface-variant hover:text-on-surface transition-colors">
+                    EN/ES
+                </button>
+<button class="bg-adobe-terracota text-white px-6 py-2 font-label-lg text-label-lg uppercase tracking-widest scale-95 active:scale-90 transition-transform">
+                    RESERVAR
+                </button>
+</div>
+<div class="md:hidden flex items-center">
+<button class="text-on-surface" id="mobile-menu-btn">
+<span class="material-symbols-outlined text-3xl">menu</span>
+</button>
+</div>
+</div>
+</nav>
+<!-- SideNavBar (Mobile) -->
+<div class="fixed inset-y-0 left-0 w-64 bg-surface dark:bg-surface border-r border-outline-variant shadow-sm z-50 transform -translate-x-full transition-transform duration-300 md:hidden flex flex-col gap-base p-gutter" id="mobile-sidebar">
+<div class="flex items-center justify-between mb-8">
+<div>
+<h2 class="font-headline-sm text-headline-sm text-primary">Finca La Carla</h2>
+<p class="font-label-sm text-label-sm text-on-surface-variant uppercase mt-1">Boutique Inn Salta</p>
+</div>
+<button class="text-on-surface-variant" id="close-sidebar-btn">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+<div class="flex flex-col space-y-2 flex-grow overflow-y-auto">
+<a class="flex items-center space-x-3 p-3 bg-secondary-container text-on-secondary-container rounded-lg font-label-lg text-label-lg uppercase hover:bg-surface-container-high transition-colors" href="#">
+<span class="material-symbols-outlined">home</span>
+<span>Home</span>
+</a>
+<a class="flex items-center space-x-3 p-3 text-on-surface-variant font-label-lg text-label-lg uppercase hover:bg-surface-container-high transition-colors" href="#">
+<span class="material-symbols-outlined">bed</span>
+<span>Habitaciones</span>
+</a>
+<a class="flex items-center space-x-3 p-3 text-on-surface-variant font-label-lg text-label-lg uppercase hover:bg-surface-container-high transition-colors" href="#">
+<span class="material-symbols-outlined">restaurant</span>
+<span>Gastronomía</span>
+</a>
+<a class="flex items-center space-x-3 p-3 text-on-surface-variant font-label-lg text-label-lg uppercase hover:bg-surface-container-high transition-colors" href="#">
+<span class="material-symbols-outlined">concierge</span>
+<span>Servicios</span>
+</a>
+<a class="flex items-center space-x-3 p-3 text-on-surface-variant font-label-lg text-label-lg uppercase hover:bg-surface-container-high transition-colors" href="#">
+<span class="material-symbols-outlined">event</span>
+<span>Eventos</span>
+</a>
+<a class="flex items-center space-x-3 p-3 text-on-surface-variant font-label-lg text-label-lg uppercase hover:bg-surface-container-high transition-colors" href="#">
+<span class="material-symbols-outlined">explore</span>
+<span>Qué hacer</span>
+</a>
+<a class="flex items-center space-x-3 p-3 text-on-surface-variant font-label-lg text-label-lg uppercase hover:bg-surface-container-high transition-colors" href="#">
+<span class="material-symbols-outlined">group</span>
+<span>Quiénes somos</span>
+</a>
+<a class="flex items-center space-x-3 p-3 text-on-surface-variant font-label-lg text-label-lg uppercase hover:bg-surface-container-high transition-colors" href="#">
+<span class="material-symbols-outlined">photo_library</span>
+<span>Fotos</span>
+</a>
+<a class="flex items-center space-x-3 p-3 text-on-surface-variant font-label-lg text-label-lg uppercase hover:bg-surface-container-high transition-colors" href="#">
+<span class="material-symbols-outlined">mail</span>
+<span>Contacto</span>
+</a>
+</div>
+<div class="mt-auto pt-4 border-t border-outline-variant">
+<button class="w-full bg-adobe-terracota text-white py-3 font-label-lg text-label-lg uppercase tracking-widest">
+                RESERVAR
+            </button>
+</div>
+</div>
+<!-- Mobile Sidebar Overlay -->
+<div class="fixed inset-0 bg-black/50 z-40 hidden md:hidden" id="mobile-overlay"></div>
+<main class="pt-20"> <!-- Added padding top to account for fixed navbar -->
+<!-- 1. BANNER HERO -->
+<section class="relative w-full h-[80vh] min-h-[600px] overflow-hidden">
+<div class="absolute inset-0 flex transition-transform duration-700 ease-in-out" id="hero-carousel">
+<div class="relative w-full h-full flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="A panoramic view of a luxurious boutique inn nestled in a rugged, desert mountain landscape. The architecture features rustic adobe and stone materials, blending seamlessly with the earth-toned surroundings. A serene pool reflects the warm, golden light of sunset. The mood is tranquil, exclusive, and deeply connected to nature." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBZkrfd24i8d25_-6YpLA7YfcI3i7acqcpyRsb9UQIG5Iv6Xt8_WltdaZnPgq0bIHaaXlLw_HdnIC0jtIf6s2E4HNNcybFdk3OCjYGr5qwsSWlLaIFMLbr0Bf4VFQ3WDgnT22cBVfjIGM0CwkERab0CPfKvZ9bWMXc8hHBn9szd1aO_eiwBSxHPNCBfPSZIYBVgOPsL_ManKfEtFmqXB1oeW4PIhaLGzb9GGdn2kxZku47eDUKLPgEdDZbW10rD0vxeqs-sWNt9FdA"/>
+<div class="absolute inset-0 bg-black/30"></div>
+</div>
+<div class="relative w-full h-full flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="A tranquil outdoor pool area of a boutique hotel, surrounded by rustic adobe walls and arid landscaping. The clear blue water contrasts beautifully with the warm desert sand colors of the architecture. A person is swimming peacefully. The setting is luxurious yet grounded, embodying a minimalist-editorial aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDdhWvdYVDt-93wJQt-ioMhVklgRry_Ag7d0GFf5PDJAGca97ZfgsMIaBkvju_Pj27uN9h34FqnGm6B7sYUkmkTDtm8DSProOl5looVhWNO8upa2eSC538Qr1Pdk1EIHhYEcjsmzCdH_oFwggRUnOrla0froZTA7lsXy9HEznR729jhAjJ8hP0cf2P3XtSsXd_jT7Z-lUgm4EpfJrCwSnfpg1sw0jcpONSpJhv7CdUmgBx-EvKe8Nsitux2xz49lfUUFZ6sZI0TUgY"/>
+<div class="absolute inset-0 bg-black/30"></div>
+</div>
+<div class="relative w-full h-full flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="A rustic wooden table set for a high-end, al fresco dining experience overlooking sprawling vineyards and majestic mountains. Freshly baked artisan bread, empanadas, and a bottle of red wine are presented elegantly. The warm, earthy tones of the food and setting highlight a premium, terrenal hospitality experience." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAIpt6UG1wiS7l1gIOj1E4UQYH2J4aBQ91kM1Zvv1wVybDzBnaWO6r3n9es_MQdeB0o5b8g0GQcB7kw-p3M7rDn93Z6GXyoK86XoixxbSphAea2__2QtndaYOTw32KYii27UNBF1DFcTcCIx8hKDLtvcPrP9Vx5lmD7BFpjqP3CzVEiTb28tDVSwwVicrSbeGz_I7hWjeS86kOmPSlum1RztUZLblBDWdYs_BNLNw9zv96Am0jEHp0A3z4cH1Z8x7H2iaiNan6gYyA"/>
+<div class="absolute inset-0 bg-black/30"></div>
+</div>
+</div>
+<div class="absolute inset-0 flex flex-col items-center justify-center text-center px-gutter">
+<h1 class="font-display-lg text-display-lg md:text-[80px] text-white tracking-widest uppercase opacity-90">
+                    UNA PROPUESTA TERRENAL
+                </h1>
+</div>
+<!-- Carousel Controls -->
+<div class="absolute bottom-8 left-0 right-0 flex justify-center space-x-3">
+<button class="w-2 h-2 rounded-full bg-white/80 transition-all carousel-dot" data-index="0"></button>
+<button class="w-2 h-2 rounded-full bg-white/40 hover:bg-white/60 transition-all carousel-dot" data-index="1"></button>
+<button class="w-2 h-2 rounded-full bg-white/40 hover:bg-white/60 transition-all carousel-dot" data-index="2"></button>
+</div>
+</section>
+<!-- 2. PRESENTACIÓN BREVE -->
+<section class="py-section-gap px-gutter max-w-4xl mx-auto text-center">
+<h2 class="font-headline-lg text-headline-lg text-adobe-terracota mb-4">Una propuesta terrenal</h2>
+<h3 class="font-headline-sm text-headline-sm text-on-surface-variant mb-8 italic">Naturaleza, producción y descanso en el Valle Calchaquí</h3>
+<p class="font-body-lg text-body-lg text-on-surface mb-10 leading-relaxed text-justify md:text-center">
+                Inmersa en 2 hectáreas agroecológicas, Finca La Carla ofrece un refugio donde el lujo se encuentra en la simpleza. Diseñada con materiales nobles como el adobe y la piedra local, nuestra posada boutique invita a desconectar bajo el vasto cielo andino. Cultivamos nuestros propios alimentos y honramos la sustentabilidad en cada detalle, creando una experiencia en armonía con el entorno del valle.
+            </p>
+<a class="inline-block border border-timber-brown text-timber-brown font-label-lg text-label-lg uppercase tracking-widest py-3 px-8 hover:bg-timber-brown hover:text-white transition-colors duration-300" href="#">
+                Conocé Finca La Carla
+            </a>
+</section>
+<!-- 3. NUESTROS SERVICIOS (Bento Grid) -->
+<section class="py-section-gap px-gutter bg-surface-container-low">
+<div class="max-w-container-max mx-auto">
+<div class="text-center mb-16">
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Experiencias</h2>
+<div class="w-12 h-[1px] bg-timber-brown mx-auto mt-6"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-4 auto-rows-[250px]">
+<!-- Gastronomía (Large) -->
+<div class="relative md:col-span-2 md:row-span-2 overflow-hidden group">
+<img class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A close-up shot of artisanal, organic dishes beautifully plated on rustic ceramic dinnerware. The setting is a sunlit, earthy dining room with subtle textures of adobe walls in the background. The visual style is editorial, focusing on the high-quality, locally sourced ingredients in warm natural light." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCykMWBoqsN2CNOEm-MVcaJHguTRGMkxRSC5zucdlA4MERrxAIhnv9r4PjPY4lZQwT-5vjAhtO7pWrpvUbe7GnGmDn14pNmTQeV48yNMs9EaXNHtiLvhC_DzpC2yGcjWHy2Zme_yw_vdMGba0tQEKLDBC-WBBOuq55c_Z9zY5tAGsv7QHwQ0b7YqY603Gmxd8qb5w3KUbFxGGOMjypgk9-P-IHGp-DI2Ds0qiBFP0H7I2kcviuoCajhr3xJZpm0Efcof4vCPDlt8fw"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+<div class="absolute bottom-6 left-6">
+<h3 class="font-headline-sm text-headline-sm text-white mb-1">Gastronomía</h3>
+<span class="font-label-sm text-label-sm text-surface-variant uppercase tracking-widest">Sabores del valle</span>
+</div>
+</div>
+<!-- Pileta -->
+<div class="relative md:col-span-1 md:row-span-1 overflow-hidden group">
+<img class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A serene view of a stone-lined swimming pool reflecting the bright blue sky and surrounding arid mountain landscape. Natural desert vegetation frames the pool area. The aesthetic is clean, minimalist luxury, emphasizing relaxation and quietude in a rugged environment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDikUzBEogLQQJjophGczrDherJZN4DENQAtgDarr02vfqF87Ge7oI2g6MHAc4BlimJYUVVBXbjPobbBrTyUuq1ly1ObGSr9pQHDJ3KyLqtuaDholEkJc4xOk6y5dXSWsHrIn4I5v3I8_DGB_83iQzj4-ho_B-HK-LIUWvNKdtlPXTN7pLow7ETxzWgeIEakKi6lyA2hamNRv_n6-YjpD1M0_TKxzd_v1i6EcHH44i3_01ApQf-XKO-UT8OgYF9tDmgQuTF8471_uQ"/>
+<div class="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors duration-300"></div>
+<div class="absolute bottom-4 left-4 bg-surface/90 backdrop-blur px-3 py-1">
+<h3 class="font-label-lg text-label-lg text-on-surface uppercase">Pileta</h3>
+</div>
+</div>
+<!-- Recreación -->
+<div class="relative md:col-span-1 md:row-span-1 overflow-hidden group bg-desert-sand flex items-center justify-center">
+<div class="text-center px-4 z-10">
+<span class="material-symbols-outlined text-4xl text-adobe-terracota mb-2">hiking</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Recreación</h3>
+</div>
+<!-- Subtle background pattern -->
+<div class="absolute inset-0 opacity-5" style="background-image: radial-gradient(circle at 2px 2px, #8c6d52 1px, transparent 0); background-size: 20px 20px;"></div>
+</div>
+<!-- Eventos -->
+<div class="relative md:col-span-2 md:row-span-1 overflow-hidden group">
+<img class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="An elegant, long wooden table set for an event in an open-air gallery, framed by adobe pillars and looking out onto vineyards. The lighting is soft, warm evening light, with delicate string lights adding a festive yet sophisticated, intimate atmosphere." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDtuBk_nICSA5l9K3k44ijQSgJNkxpo3AIn3gfi4DG3qW-x3aWB_OgS9RgqwiPuxs4by_Uxok0upNQwm_8gYR1ptXNY-J6_3wDGkaIpc1S4QFfz3Vd31hphMSefEAGpM0GLlKXvFfi-IFPfFG2_CXpgObwWjSso6_zsLRUIdKw1uNAVBVwheBRyVM5UTf4Km4K4ICgMObVglb2jj3egQr33RT1yPFEnk0pc5j_tgXDUqdaZcQkeFLmEmBzz-8U_ZNFPGo-wEVSgNJg"/>
+<div class="absolute inset-0 bg-gradient-to-r from-black/60 to-transparent"></div>
+<div class="absolute top-1/2 -translate-y-1/2 left-6">
+<h3 class="font-headline-sm text-headline-sm text-white mb-2">Eventos</h3>
+<a class="font-label-sm text-label-sm text-primary-fixed uppercase tracking-widest flex items-center hover:text-white transition-colors" href="#">
+                                Celebrar <span class="material-symbols-outlined text-sm ml-1">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Artesanías -->
+<div class="relative md:col-span-1 md:row-span-1 overflow-hidden group">
+<img class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Detailed macro photography of local Andean textiles and hand-thrown pottery displayed in a rustic boutique setting. The textures of the woven wool and raw clay are highlighted by directional, natural light, emphasizing artisanal craftsmanship and local heritage." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA7uDIbyDmO48BQOqfMFy_K741MZ-kmHJlhfKLsaMw52jG1crp0M9lUKusmvIteoURCb_E0msvOcro56V0vJqgzDMsyXr6oKz3olRJTzaKBsBcZcVJEuaqSo3jm96so-kCY-zo_ncQ_soex0UPljizyK-zSzqifJsP8gh5Z8YFcV5AlYLyMmhXvMYE-JkfL55ToWjZTlvfc52bZo506iYloZ-vKNR7iicdDEcezrWW6JJ_zkAHhSNXLjV_Jn0ooF7be4PfkSaxXvks"/>
+<div class="absolute inset-0 bg-black/30 group-hover:bg-black/20 transition-colors duration-300"></div>
+<div class="absolute inset-0 flex items-center justify-center">
+<h3 class="font-headline-sm text-headline-sm text-white text-center px-2">Artesanías</h3>
+</div>
+</div>
+<!-- Livings -->
+<div class="relative md:col-span-1 md:row-span-1 overflow-hidden group bg-surface border border-outline-variant p-6 flex flex-col justify-end">
+<span class="material-symbols-outlined text-3xl text-olive-drab mb-auto self-end">weekend</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Livings</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2 text-sm">Espacios para la pausa.</p>
+</div>
+<!-- Qué hacer -->
+<div class="relative md:col-span-1 md:row-span-1 overflow-hidden group bg-tertiary-container text-on-tertiary-container flex items-center justify-center">
+<div class="text-center px-4 z-10">
+<h3 class="font-headline-sm text-headline-sm mb-2">Qué hacer</h3>
+<span class="font-label-sm text-label-sm uppercase tracking-widest opacity-80 border-b border-current pb-1">Explorar</span>
+</div>
+</div>
+<!-- Galería -->
+<div class="relative md:col-span-1 md:row-span-1 overflow-hidden group">
+<img class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A tranquil architectural shot of a shaded outdoor gallery walkway featuring heavy wooden beams, adobe walls, and rustic stone flooring. Potted cacti sit quietly along the edge, catching the harsh desert sun outside while providing cool respite within." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDrlc-NHRneB7hRDVwv1a3DEDfzwvFlCMoWkbyA1SDPfg8ZIq1EvKHcwP2c8qSpjk_v6_vmUU3Gw1VDF6JrXCVX-sdxghvgX_3ukLSlQzOGr9LXzzGQkoNW47oymoAphlo6p5zLr7a2waaOUS1WJJhQk_n0OrVbGxEzbF7GAun3KazjgU8I3GCPsIu5RaxwvOR57sE2N9bHQZpsZKlk95qJW9djI3d4BYO5IKd7iyHashZpMQ80nGRXZZQAlF6vN9tsGwxaYyHC3_s"/>
+<div class="absolute inset-0 bg-black/20"></div>
+<div class="absolute top-4 right-4 bg-white/90 px-3 py-1">
+<h3 class="font-label-sm text-label-sm text-on-surface uppercase tracking-widest">Galería</h3>
+</div>
+</div>
+<!-- Info útil & FAQ (Combined for layout) -->
+<div class="relative md:col-span-2 md:row-span-1 bg-surface-container flex flex-row border-t-2 border-adobe-terracota">
+<div class="flex-1 p-6 flex flex-col justify-center hover:bg-surface-container-high transition-colors cursor-pointer border-r border-outline-variant/30">
+<span class="material-symbols-outlined text-2xl text-timber-brown mb-2">info</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Info Útil</h3>
+</div>
+<div class="flex-1 p-6 flex flex-col justify-center hover:bg-surface-container-high transition-colors cursor-pointer">
+<span class="material-symbols-outlined text-2xl text-timber-brown mb-2">help_outline</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">FAQ</h3>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 4. QUIÉNES SOMOS (Asymmetric Layout) -->
+<section class="py-section-gap px-gutter bg-surface">
+<div class="max-w-container-max mx-auto grid grid-cols-1 md:grid-cols-12 gap-gutter items-center">
+<div class="md:col-span-5 md:col-start-2 relative">
+<div class="absolute -inset-4 bg-desert-sand -z-10 translate-x-4 translate-y-4"></div>
+<img class="w-full h-auto object-cover border border-outline-variant/20" data-alt="A portrait of a warm, welcoming couple, Diego and Marcela, standing together in front of a rustic stone and adobe boutique hotel surrounded by lush vineyards. The golden hour light casts a soft, inviting glow on their faces, conveying genuine hospitality and a connection to the land." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDahTSoH6e8vNwLxS7D1x51Y6AXn9heb419qFqvNdWjgUIqtzROy5jVRIALvuQ7IPwMe4mGo51zIfFz5_sEUSFsTcdFHYE8WhMargO_L5-OJPFrjyaYC2l6KfjyaWjTA_t9ubtP23ll_9J-m03LRlIt15fZQQMj9nH-xOQEv-FADJgme-f9QDKmBxhLnNU5_foO6brb4lRtOUW5-8jPnli5miFfxJZLLSJOSVfCQhRPz_lcnxmTekyTqK5Rq8SXavtm1KgIOZOYHO0"/>
+</div>
+<div class="md:col-span-5 md:col-start-8 mt-12 md:mt-0">
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-6">Una historia hecha despacio</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-8 leading-relaxed">
+                        Somos Diego y Marcela. Finca La Carla nació de nuestro deseo de echar raíces en una tierra que nos transformó. Cada muro de adobe y cada viña plantada lleva nuestro tiempo, nuestra dedicación y el profundo respeto que sentimos por el Valle Calchaquí. Los invitamos a compartir nuestra casa.
+                    </p>
+<a class="inline-flex items-center font-label-lg text-label-lg uppercase tracking-widest text-adobe-terracota hover:text-timber-brown transition-colors group" href="#">
+                        Conocé nuestra historia
+                        <span class="material-symbols-outlined ml-2 transform group-hover:translate-x-1 transition-transform">east</span>
+</a>
+</div>
+</div>
+</section>
+<!-- 5. QUÉ OFRECEMOS (Features Row) -->
+<section class="py-24 px-gutter border-y border-outline-variant/30 bg-surface-bright">
+<div class="max-w-container-max mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-12 text-center">
+<div class="flex flex-col items-center">
+<div class="w-16 h-16 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center mb-4">
+<span class="material-symbols-outlined text-3xl filled-icon">eco</span>
+</div>
+<h3 class="font-label-lg text-label-lg uppercase tracking-widest text-on-surface mb-2">Sustentabilidad Real</h3>
+<div class="w-8 h-[1px] bg-timber-brown/50"></div>
+</div>
+<div class="flex flex-col items-center">
+<div class="w-16 h-16 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center mb-4">
+<span class="material-symbols-outlined text-3xl">agriculture</span>
+</div>
+<h3 class="font-label-lg text-label-lg uppercase tracking-widest text-on-surface mb-2">Producción Propia</h3>
+<div class="w-8 h-[1px] bg-timber-brown/50"></div>
+</div>
+<div class="flex flex-col items-center">
+<div class="w-16 h-16 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center mb-4">
+<span class="material-symbols-outlined text-3xl filled-icon">favorite</span>
+</div>
+<h3 class="font-label-lg text-label-lg uppercase tracking-widest text-on-surface mb-2">Atención de sus dueños</h3>
+<div class="w-8 h-[1px] bg-timber-brown/50"></div>
+</div>
+<div class="flex flex-col items-center">
+<div class="w-16 h-16 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center mb-4">
+<span class="material-symbols-outlined text-3xl">schedule</span>
+</div>
+<h3 class="font-label-lg text-label-lg uppercase tracking-widest text-on-surface mb-2">Ritmo del Valle</h3>
+<div class="w-8 h-[1px] bg-timber-brown/50"></div>
+</div>
+</div>
+</section>
+<!-- 6. TESTIMONIOS (Horizontal Scroll / Grid) -->
+<section class="py-section-gap px-gutter bg-desert-sand overflow-hidden">
+<div class="max-w-container-max mx-auto">
+<h2 class="font-headline-lg text-headline-lg text-center text-on-surface mb-16">Libro de visitas</h2>
+<div class="flex overflow-x-auto space-x-6 pb-8 no-scrollbar snap-x">
+<!-- Testimonial 1 -->
+<div class="snap-center flex-shrink-0 w-[300px] md:w-[400px] bg-surface p-8 border border-outline-variant/30 shadow-sm relative">
+<span class="material-symbols-outlined absolute top-6 left-6 text-4xl text-outline-variant opacity-30">format_quote</span>
+<p class="font-body-md text-body-md text-on-surface-variant italic mb-6 relative z-10 pt-4">
+                            "Un lugar mágico. La paz que se respira es inigualable y la comida, toda de su huerta, es excepcional. Volveremos sin dudarlo."
+                        </p>
+<p class="font-label-lg text-label-lg uppercase tracking-widest text-adobe-terracota">— Marcelo</p>
+</div>
+<!-- Testimonial 2 -->
+<div class="snap-center flex-shrink-0 w-[300px] md:w-[400px] bg-surface p-8 border border-outline-variant/30 shadow-sm relative">
+<span class="material-symbols-outlined absolute top-6 left-6 text-4xl text-outline-variant opacity-30">format_quote</span>
+<p class="font-body-md text-body-md text-on-surface-variant italic mb-6 relative z-10 pt-4">
+                            "La atención de Diego y Marcela hace la diferencia. Sentís que estás visitando amigos en una casona de lujo en el medio de la nada."
+                        </p>
+<p class="font-label-lg text-label-lg uppercase tracking-widest text-adobe-terracota">— Eugenia</p>
+</div>
+<!-- Testimonial 3 -->
+<div class="snap-center flex-shrink-0 w-[300px] md:w-[400px] bg-surface p-8 border border-outline-variant/30 shadow-sm relative">
+<span class="material-symbols-outlined absolute top-6 left-6 text-4xl text-outline-variant opacity-30">format_quote</span>
+<p class="font-body-md text-body-md text-on-surface-variant italic mb-6 relative z-10 pt-4">
+                            "Cada detalle está pensado. El adobe, los textiles, el silencio absoluto por las noches. Es el refugio perfecto en Salta."
+                        </p>
+<p class="font-label-lg text-label-lg uppercase tracking-widest text-adobe-terracota">— Nelly</p>
+</div>
+<!-- Testimonial 4 -->
+<div class="snap-center flex-shrink-0 w-[300px] md:w-[400px] bg-surface p-8 border border-outline-variant/30 shadow-sm relative">
+<span class="material-symbols-outlined absolute top-6 left-6 text-4xl text-outline-variant opacity-30">format_quote</span>
+<p class="font-body-md text-body-md text-on-surface-variant italic mb-6 relative z-10 pt-4">
+                            "A beautiful, secluded spot. The commitment to sustainability is evident in every aspect of the stay. Highly recommended for a quiet getaway."
+                        </p>
+<p class="font-label-lg text-label-lg uppercase tracking-widest text-adobe-terracota">— Maya Maja</p>
+</div>
+<!-- Testimonial 5 -->
+<div class="snap-center flex-shrink-0 w-[300px] md:w-[400px] bg-surface p-8 border border-outline-variant/30 shadow-sm relative">
+<span class="material-symbols-outlined absolute top-6 left-6 text-4xl text-outline-variant opacity-30">format_quote</span>
+<p class="font-body-md text-body-md text-on-surface-variant italic mb-6 relative z-10 pt-4">
+                            "La arquitectura respeta el paisaje de una forma conmovedora. Los atardeceres desde la galería con una copa de vino son inolvidables."
+                        </p>
+<p class="font-label-lg text-label-lg uppercase tracking-widest text-adobe-terracota">— Marie</p>
+</div>
+</div>
+</div>
+</section>
+<!-- 7. DÓNDE ESTAMOS -->
+<section class="py-section-gap px-gutter bg-surface">
+<div class="max-w-container-max mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+<div class="order-2 lg:order-1 h-[400px] lg:h-[600px] bg-surface-container relative overflow-hidden border border-outline-variant/50 p-2">
+<img class="w-full h-full object-cover" data-alt="A stylized, minimalist map showing the route from Cafayate to Paraje San Antonio in the Valle Calchaquí. The map uses earthy tones of sand, terracotta, and olive green, highlighting the remote, exclusive location of the boutique inn amidst the mountainous terrain." data-location="Cafayate, Salta" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCuY0ywTBC5W1z4BCehVKyLWZaZ8PHdfx_xki2W0tmRNdIoxkKbYUb1adbrOSuommKzorsZT9NcEkSP5pmb7gE7B-lXpEmATDVWABYYLaSltZdqBUsG3L_E7CxGmXnvEqkPU01TUmc4D_TFu9GZmHAFB4AjzxaFOvRwMQZLyq9kQ-6lr3jA1otKYLUOuTPY1dDS0AvnTNS5EI7hXw1VB3gC8aspgOm5XqtMGTYJeK9noj0YNCGc8XAt8GimzHJX5oqI_P-bNyTmCqc"/>
+<div class="absolute inset-0 bg-desert-sand mix-blend-color opacity-20"></div>
+</div>
+<div class="order-1 lg:order-2">
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-6">Dónde estamos</h2>
+<div class="w-12 h-[1px] bg-adobe-terracota mb-8"></div>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-6">
+                        Nos encontramos en el <strong class="font-semibold text-on-surface">Paraje San Antonio</strong>, un remanso de paz ubicado a solo 18 kilómetros de la vibrante ciudad de Cafayate, en el corazón del Valle Calchaquí, provincia de Salta.
+                    </p>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-8">
+                        Alejados del bullicio, el camino hacia Finca La Carla es el inicio de la desconexión, adentrándose en paisajes agrestes y cielos inmensos.
+                    </p>
+<div class="flex items-start space-x-4 mb-4">
+<span class="material-symbols-outlined text-olive-drab mt-1">location_on</span>
+<div>
+<p class="font-label-lg text-label-lg uppercase tracking-widest text-on-surface">Coordenadas</p>
+<p class="font-body-md text-body-md text-on-surface-variant">Ruta Nacional 40, Km 4325, Paraje San Antonio, Salta, Argentina.</p>
+</div>
+</div>
+<a class="mt-8 inline-flex items-center text-adobe-terracota font-label-lg text-label-lg uppercase tracking-widest hover:text-timber-brown transition-colors" href="#">
+                        Ver indicaciones <span class="material-symbols-outlined ml-2 text-sm">open_in_new</span>
+</a>
+</div>
+</div>
+</section>
+</main>
+<!-- 8. FOOTER -->
+<footer class="w-full py-section-gap px-gutter bg-desert-sand dark:bg-deep-earth text-timber-brown dark:text-tertiary-fixed-dim border-t border-timber-brown/10">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter max-w-container-max mx-auto">
+<!-- Column 1: Logo & Brief -->
+<div class="flex flex-col mb-8 md:mb-0">
+<span class="font-headline-sm text-headline-sm text-on-surface mb-4">Finca La Carla</span>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-xs mb-6">
+                    Boutique Inn en el Valle Calchaquí. Lujo terrenal, sustentabilidad y descanso en Salta.
+                </p>
+<p class="font-label-sm text-label-sm uppercase opacity-80 hover:opacity-100 transition-opacity">
+                    © 2024 Finca La Carla.<br/>Valle Calchaquí, Salta.
+                </p>
+</div>
+<!-- Column 2: Navigation Links -->
+<div class="flex flex-col space-y-4 mb-8 md:mb-0 md:pl-12">
+<h4 class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface mb-2 border-b border-timber-brown/20 pb-2 inline-block self-start">Explorar</h4>
+<a class="font-label-sm text-label-sm uppercase text-on-surface-variant hover:text-adobe-terracota transition-colors" href="#">Contacto</a>
+<a class="font-label-sm text-label-sm uppercase text-on-surface-variant hover:text-adobe-terracota transition-colors" href="#">Ubicación</a>
+<a class="font-label-sm text-label-sm uppercase text-on-surface-variant hover:text-adobe-terracota transition-colors" href="#">Fotos</a>
+<a class="font-label-sm text-label-sm uppercase text-on-surface-variant hover:text-adobe-terracota transition-colors" href="#">Qué hacer</a>
+</div>
+<!-- Column 3: Contact & Social -->
+<div class="flex flex-col">
+<h4 class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface mb-4 border-b border-timber-brown/20 pb-2 inline-block self-start">Contacto</h4>
+<div class="flex items-center space-x-3 mb-4">
+<span class="material-symbols-outlined text-adobe-terracota">call</span>
+<a class="font-body-md text-body-md hover:text-adobe-terracota transition-colors" href="tel:+5491167931464">WhatsApp: +54 9 11 6793-1464</a>
+</div>
+<div class="flex items-center space-x-3 mb-8">
+<span class="material-symbols-outlined text-adobe-terracota">mail</span>
+<a class="font-body-md text-body-md hover:text-adobe-terracota transition-colors" href="mailto:info@fincalacarla.com">info@fincalacarla.com</a>
+</div>
+<div class="flex space-x-4">
+<a class="w-10 h-10 rounded-full border border-timber-brown/30 flex items-center justify-center hover:bg-adobe-terracota hover:text-white hover:border-adobe-terracota transition-all duration-300" href="#">
+<span class="material-symbols-outlined text-xl">photo_camera</span> <!-- Represents Instagram roughly -->
+</a>
+<a class="w-10 h-10 rounded-full border border-timber-brown/30 flex items-center justify-center hover:bg-adobe-terracota hover:text-white hover:border-adobe-terracota transition-all duration-300" href="#">
+<span class="material-symbols-outlined text-xl">share</span> <!-- Represents Facebook roughly -->
+</a>
+</div>
+</div>
+</div>
+</footer>
+<!-- Floating WhatsApp Button -->
+<a class="fixed bottom-6 right-6 w-14 h-14 bg-[#25D366] text-white rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-transform duration-300 z-50" href="https://wa.me/5491167931464">
+<span class="material-symbols-outlined text-3xl filled-icon">chat</span>
+</a>
+<script>
+        // Navbar Scroll Effect
+        const nav = document.getElementById('main-nav');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                nav.classList.add('shadow-sm');
+                nav.classList.replace('bg-surface/90', 'bg-surface');
+            } else {
+                nav.classList.remove('shadow-sm');
+                nav.classList.replace('bg-surface', 'bg-surface/90');
+            }
+        });
+
+        // Mobile Sidebar Logic
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const closeSidebarBtn = document.getElementById('close-sidebar-btn');
+        const mobileSidebar = document.getElementById('mobile-sidebar');
+        const mobileOverlay = document.getElementById('mobile-overlay');
+
+        function toggleSidebar() {
+            const isClosed = mobileSidebar.classList.contains('-translate-x-full');
+            if (isClosed) {
+                mobileSidebar.classList.remove('-translate-x-full');
+                mobileOverlay.classList.remove('hidden');
+                document.body.style.overflow = 'hidden';
+            } else {
+                mobileSidebar.classList.add('-translate-x-full');
+                mobileOverlay.classList.add('hidden');
+                document.body.style.overflow = '';
+            }
+        }
+
+        mobileMenuBtn.addEventListener('click', toggleSidebar);
+        closeSidebarBtn.addEventListener('click', toggleSidebar);
+        mobileOverlay.addEventListener('click', toggleSidebar);
+
+        // Simple Hero Carousel Logic
+        const carousel = document.getElementById('hero-carousel');
+        const dots = document.querySelectorAll('.carousel-dot');
+        let currentSlide = 0;
+        const totalSlides = dots.length;
+
+        function updateCarousel(index) {
+            carousel.style.transform = `translateX(-${index * 100}%)`;
+            dots.forEach((dot, i) => {
+                if (i === index) {
+                    dot.classList.replace('bg-white/40', 'bg-white/80');
+                } else {
+                    dot.classList.replace('bg-white/80', 'bg-white/40');
+                }
+            });
+            currentSlide = index;
+        }
+
+        dots.forEach((dot, index) => {
+            dot.addEventListener('click', () => updateCarousel(index));
+        });
+
+        // Auto advance carousel
+        setInterval(() => {
+            let nextSlide = (currentSlide + 1) % totalSlides;
+            updateCarousel(nextSlide);
+        }, 5000);
+    </script>
+</body></html>

@@ -1,0 +1,11 @@
+# Archivo ZIP original de fotos (ya están extraídas en images/)
+b Fotos-*.zip
+
+# Archivos basura del sistema
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# Logs y temporales
+*.log
+npm-debug.log*

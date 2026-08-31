@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Contacto y Reservas - Finca La Carla</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&amp;family=Work+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary": "#586247",
+                        "secondary-fixed-dim": "#c0cbaa",
+                        "on-primary": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "on-primary-fixed-variant": "#733515",
+                        "surface-bright": "#fcf9f4",
+                        "on-primary-container": "#fff3ef",
+                        "on-error-container": "#93000a",
+                        "on-secondary-fixed-variant": "#414a31",
+                        "olive-drab": "#707a5e",
+                        "surface-variant": "#e5e2dd",
+                        "surface-container-high": "#ebe8e3",
+                        "on-secondary": "#ffffff",
+                        "surface-container": "#f0ede8",
+                        "surface-dim": "#dcdad5",
+                        "on-tertiary-fixed-variant": "#5c4129",
+                        "on-secondary-fixed": "#161e09",
+                        "outline": "#86736b",
+                        "primary-fixed-dim": "#ffb695",
+                        "primary": "#884524",
+                        "on-background": "#1c1c19",
+                        "on-tertiary": "#ffffff",
+                        "surface-container-highest": "#e5e2dd",
+                        "deep-earth": "#2d2a26",
+                        "secondary-container": "#dce7c5",
+                        "secondary-fixed": "#dce7c5",
+                        "tertiary-container": "#896a4f",
+                        "primary-fixed": "#ffdbcc",
+                        "tertiary-fixed-dim": "#e5bfa0",
+                        "background": "#fcf9f4",
+                        "on-tertiary-container": "#fff3eb",
+                        "on-secondary-container": "#5e684d",
+                        "surface": "#fcf9f4",
+                        "on-primary-fixed": "#351000",
+                        "outline-variant": "#d9c2b8",
+                        "adobe-terracota": "#a65d3a",
+                        "inverse-on-surface": "#f3f0eb",
+                        "inverse-surface": "#31302d",
+                        "surface-tint": "#904c2a",
+                        "surface-container-lowest": "#ffffff",
+                        "on-surface-variant": "#54433c",
+                        "tertiary-fixed": "#ffdcc0",
+                        "primary-container": "#a65d3a",
+                        "timber-brown": "#8c6d52",
+                        "tertiary": "#6e5239",
+                        "on-error": "#ffffff",
+                        "on-tertiary-fixed": "#2b1704",
+                        "on-surface": "#1c1c19",
+                        "error": "#ba1a1a",
+                        "surface-container-low": "#f6f3ee",
+                        "desert-sand": "#f5f2ed",
+                        "inverse-primary": "#ffb695"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "margin-mobile": "20px",
+                        "gutter": "24px",
+                        "section-gap": "120px",
+                        "base": "8px",
+                        "margin-desktop": "64px",
+                        "container-max": "1280px"
+                    },
+                    "fontFamily": {
+                        "headline-lg": ["EB Garamond"],
+                        "display-lg": ["EB Garamond"],
+                        "body-md": ["Work Sans"],
+                        "headline-sm": ["EB Garamond"],
+                        "label-lg": ["Work Sans"],
+                        "headline-md": ["EB Garamond"],
+                        "body-lg": ["Work Sans"],
+                        "label-sm": ["Work Sans"],
+                        "headline-lg-mobile": ["EB Garamond"]
+                    },
+                    "fontSize": {
+                        "headline-lg": ["48px", { "lineHeight": "1.2", "fontWeight": "400" }],
+                        "display-lg": ["64px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "400" }],
+                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "headline-sm": ["24px", { "lineHeight": "1.4", "fontWeight": "500" }],
+                        "label-lg": ["14px", { "lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "headline-md": ["32px", { "lineHeight": "1.3", "fontWeight": "400" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "label-sm": ["12px", { "lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "500" }],
+                        "headline-lg-mobile": ["32px", { "lineHeight": "1.2", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body { background-color: theme('colors.background'); color: theme('colors.on-background'); }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+    </style>
+</head>
+<body class="font-body-md text-body-md antialiased flex flex-col min-h-screen">
+<!-- TopNavBar -->
+<nav class="bg-surface/90 backdrop-blur-md dark:bg-deep-earth/90 text-primary dark:text-primary-fixed-dim docked full-width top-0 sticky border-b border-timber-brown/20 flat no shadows z-40">
+<div class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-6 max-w-container-max mx-auto">
+<a class="font-headline-md text-headline-md tracking-tighter text-primary dark:text-primary-fixed-dim" href="#">Finca La Carla</a>
+<div class="hidden md:flex space-x-8 font-label-lg text-label-lg uppercase tracking-widest">
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-300" href="#">Home</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-300" href="#">Habitaciones</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-300" href="#">Gastronomía</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-300" href="#">Servicios</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-300" href="#">Eventos</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-300" href="#">Quiénes somos</a>
+</div>
+<div class="flex items-center space-x-4">
+<button class="font-label-lg text-label-lg uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors duration-300 hidden sm:block">ES / EN</button>
+<button class="bg-primary-container text-on-primary font-label-lg text-label-lg uppercase tracking-widest px-6 py-2 rounded-DEFAULT hover:opacity-80 transition-opacity scale-95 duration-200 ease-in-out">RESERVAR</button>
+<button class="md:hidden text-primary">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+</div>
+</div>
+</nav>
+<!-- Main Content Canvas -->
+<main class="flex-grow">
+<!-- Hero Section -->
+<section class="px-margin-mobile md:px-margin-desktop py-section-gap max-w-container-max mx-auto text-center relative overflow-hidden">
+<div class="bg-cover bg-center bg-no-repeat" data-alt="A sweeping, rustic landscape view of a vast vineyard valley nestled against towering, rugged mountains at golden hour. Soft, warm sunlight bathes the scene in a tranquil, contemporary minimal luxury aesthetic." style="background-image: url('https://lh3.googleusercontent.com/aida/AEtjO1W0CEq-vlqkQu-y6Ls9D4shzig4PAFZaQEy1aY4tgcSUOM5Oc2v9h13wAGA3JG-NcssMykcUz_ldp9rtI4MQZsJBhMtMBb22BBjqIjxhpbkjTYloNMC1jqROo5QeZPBcoZLgY5OK1CdaqGRQekqAwL0rYGz8Zj1_pGntbW1a6XUwUTarBkWL_nOQq7Lgcz5-OUGgL4LQexIGGGrJ1vLFS4wMGn8nN22z5DQStYWhv5BF1yDbbPmJBBbKw')"></div>
+<div class="relative z-10 max-w-3xl mx-auto">
+<h1 class="font-display-lg text-headline-lg-mobile md:text-display-lg text-primary mb-8">Reservas y consultas</h1>
+<div class="w-16 h-px bg-timber-brown mx-auto mb-8 opacity-50"></div>
+<p class="font-body-lg text-body-lg text-on-surface-variant italic">
+                    Para consultar disponibilidad o reservar podés comunicarte directamente con Finca La Carla; las reservas directas se gestionan principalmente por WhatsApp y también se reciben consultas por email; antes de viajar recomendamos consultar cualquier duda sobre el acceso, las comidas o los servicios.
+                </p>
+</div>
+</section>
+<!-- Details & Form Section -->
+<section class="px-margin-mobile md:px-margin-desktop pb-section-gap max-w-container-max mx-auto">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+<!-- Official Data -->
+<div class="lg:col-span-5 space-y-8">
+<div class="bg-surface-container-low border border-timber-brown/20 p-8 rounded-DEFAULT">
+<h2 class="font-headline-sm text-headline-sm text-primary mb-6 border-b border-timber-brown/10 pb-4">Datos Oficiales</h2>
+<div class="space-y-6">
+<div class="flex items-start">
+<span class="material-symbols-outlined text-secondary mr-4" data-icon="location_on">location_on</span>
+<div>
+<h3 class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant mb-1">Dirección</h3>
+<p class="font-body-md text-body-md text-on-background">Paraje San Antonio s/n, Animana,<br/>Salta (CP 4427), Argentina</p>
+</div>
+</div>
+<div class="flex items-start">
+<span class="material-symbols-outlined text-secondary mr-4" data-icon="chat">chat</span>
+<div>
+<h3 class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant mb-1">WhatsApp / Reservas</h3>
+<a class="font-body-md text-body-md text-adobe-terracota hover:text-primary transition-colors" href="tel:+5491167931464">+54 9 11 6793-1464</a>
+</div>
+</div>
+<div class="flex items-start">
+<span class="material-symbols-outlined text-secondary mr-4" data-icon="phone_iphone">phone_iphone</span>
+<div>
+<h3 class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant mb-1">Teléfono 2</h3>
+<a class="font-body-md text-body-md text-adobe-terracota hover:text-primary transition-colors" href="tel:+5491165683169">+54 9 11 6568-3169</a>
+</div>
+</div>
+<div class="flex items-start">
+<span class="material-symbols-outlined text-secondary mr-4" data-icon="mail">mail</span>
+<div>
+<h3 class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant mb-1">Emails</h3>
+<a class="block font-body-md text-body-md text-adobe-terracota hover:text-primary transition-colors" href="mailto:Ramilo.diego@gmail.com">Ramilo.diego@gmail.com</a>
+<a class="block font-body-md text-body-md text-adobe-terracota hover:text-primary transition-colors mt-1" href="mailto:lacarlareservas@gmail.com">lacarlareservas@gmail.com</a>
+</div>
+</div>
+</div>
+<div class="mt-8 pt-6 border-t border-timber-brown/10 flex space-x-4">
+<a aria-label="Facebook" class="text-secondary hover:text-primary transition-colors p-2 border border-timber-brown/20 rounded-full" href="#">
+<svg class="w-5 h-5 fill-current" viewbox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"></path></svg>
+</a>
+<a aria-label="Instagram" class="text-secondary hover:text-primary transition-colors p-2 border border-timber-brown/20 rounded-full" href="#">
+<svg class="w-5 h-5 fill-current" viewbox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"></path></svg>
+</a>
+</div>
+</div>
+</div>
+<!-- Contact Form -->
+<div class="lg:col-span-7 bg-surface-container border border-timber-brown/10 p-8 md:p-12 rounded-DEFAULT relative">
+<h2 class="font-headline-sm text-headline-sm text-primary mb-8 text-center md:text-left">Envianos tu consulta</h2>
+<form class="space-y-6" id="contactForm">
+<div>
+<label class="block font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant mb-2" for="name">Nombre y apellido</label>
+<input class="w-full bg-transparent border-0 border-b border-timber-brown/30 focus:border-adobe-terracota focus:ring-0 px-0 py-2 font-body-md text-on-background placeholder-on-surface-variant/50 transition-colors" id="name" name="name" placeholder="Tu nombre completo" required="" type="text"/>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div>
+<label class="block font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant mb-2" for="checkin">Fecha de ingreso</label>
+<input class="w-full bg-transparent border-0 border-b border-timber-brown/30 focus:border-adobe-terracota focus:ring-0 px-0 py-2 font-body-md text-on-background text-on-surface-variant transition-colors" id="checkin" name="checkin" required="" type="date"/>
+</div>
+<div>
+<label class="block font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant mb-2" for="checkout">Fecha de egreso</label>
+<input class="w-full bg-transparent border-0 border-b border-timber-brown/30 focus:border-adobe-terracota focus:ring-0 px-0 py-2 font-body-md text-on-background text-on-surface-variant transition-colors" id="checkout" name="checkout" required="" type="date"/>
+</div>
+</div>
+<div>
+<label class="block font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant mb-2" for="guests">Cantidad de personas</label>
+<select class="w-full bg-transparent border-0 border-b border-timber-brown/30 focus:border-adobe-terracota focus:ring-0 px-0 py-2 font-body-md text-on-background text-on-surface-variant transition-colors" id="guests" name="guests">
+<option value="1">1 Persona</option>
+<option selected="" value="2">2 Personas</option>
+<option value="3">3 Personas</option>
+<option value="4">4 Personas</option>
+<option value="5+">5 o más Personas</option>
+</select>
+</div>
+<div>
+<label class="block font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant mb-2" for="email">Email</label>
+<input class="w-full bg-transparent border-0 border-b border-timber-brown/30 focus:border-adobe-terracota focus:ring-0 px-0 py-2 font-body-md text-on-background placeholder-on-surface-variant/50 transition-colors" id="email" name="email" placeholder="tu@email.com" required="" type="email"/>
+</div>
+<div>
+<label class="block font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant mb-2" for="message">Mensaje</label>
+<textarea class="w-full bg-transparent border-0 border-b border-timber-brown/30 focus:border-adobe-terracota focus:ring-0 px-0 py-2 font-body-md text-on-background placeholder-on-surface-variant/50 transition-colors resize-none" id="message" name="message" placeholder="Dejanos tu consulta o comentarios adicionales..." rows="4"></textarea>
+</div>
+<div class="pt-6 flex flex-col sm:flex-row gap-4">
+<button class="bg-primary-container text-on-primary font-label-lg text-label-lg uppercase tracking-widest px-8 py-3 rounded-DEFAULT hover:bg-primary transition-colors duration-300 w-full sm:w-auto text-center" type="submit">
+                                Enviar
+                            </button>
+<a class="border border-timber-brown text-timber-brown font-label-lg text-label-lg uppercase tracking-widest px-8 py-3 rounded-DEFAULT hover:bg-timber-brown/5 transition-colors duration-300 w-full sm:w-auto text-center flex items-center justify-center gap-2" href="https://wa.me/5491167931464" target="_blank">
+<span class="material-symbols-outlined text-[18px]" data-icon="chat">chat</span> WhatsApp
+                            </a>
+</div>
+</form>
+<!-- Success Message (Hidden by default) -->
+<div class="hidden absolute inset-0 bg-surface-container flex flex-col items-center justify-center p-8 text-center rounded-DEFAULT border border-timber-brown/10" id="successMessage">
+<span class="material-symbols-outlined text-olive-drab text-display-lg mb-4" data-icon="check_circle">check_circle</span>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-2">Mensaje enviado</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Tu consulta se realizó con éxito. Te responderemos a la brevedad.</p>
+<button class="mt-6 text-adobe-terracota font-label-sm uppercase tracking-widest hover:text-primary underline" onclick="document.getElementById('successMessage').classList.add('hidden'); document.getElementById('contactForm').reset();">Volver al formulario</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Map Section -->
+<section class="w-full h-[50vh] min-h-[400px] relative bg-surface-dim">
+<!-- Simulated Map Image (since we can't embed real iframe easily without api keys, we use an image representation as requested by design guidelines for maps usually) -->
+<div class="absolute inset-0 bg-cover bg-center" data-alt="A top-down satellite view of a rustic estate surrounded by lush green vineyards and arid mountain terrain in Salta, Argentina. The style is clear, bright, and detailed, serving as a map background." data-location="Animana" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCoZ7a7n_KGKLymVYXJRNrWH24lbZEr4FCzOzMtov4LvH0Q5Kza8_sn1tbn_nvj1Jlx2m7VgkuQG8iC_3fVrbgobgRoi6XVAgB0UC0PvqXPo7D45fUdadPGYgFPpJ1Sw7EpJrPHLohkcie74OmCz5sifeE_Z6GrjPSlU9waBZiHWIBrmhQmJaFIkU3Ibgb3vK1sr3xahtwHCwETcPzC7ttQKiW1VvFi2owgsuMUd5EZN_2Mj4YiJKSiHaW6Ot2BlTMzH03h5D96eBs')"></div>
+<div class="absolute inset-0 bg-timber-brown/10"></div>
+<div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10">
+<a class="bg-surface text-primary font-label-lg text-label-lg uppercase tracking-widest px-8 py-3 rounded-DEFAULT shadow-lg hover:bg-surface-bright transition-colors duration-300 flex items-center gap-2" href="https://maps.google.com/?q=Paraje+San+Antonio,+Animana,+Salta" target="_blank">
+<span class="material-symbols-outlined" data-icon="map">map</span> Abrir en Google Maps
+                </a>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container dark:bg-deep-earth text-secondary dark:text-secondary-fixed-dim full-width mt-section-gap bg-surface-container-high border-t border-timber-brown/10 flat no shadows">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter px-margin-mobile md:px-margin-desktop py-20 max-w-container-max mx-auto">
+<div class="flex flex-col items-center md:items-start text-center md:text-left">
+<span class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary dark:text-primary-fixed-dim mb-4">Finca La Carla</span>
+<p class="font-body-md text-body-md">Boutique Inn &amp; Vineyards<br/>Valle Calchaquí</p>
+</div>
+<div class="flex flex-col items-center space-y-4 font-label-sm text-label-sm uppercase tracking-widest">
+<a class="text-on-surface-variant hover:text-secondary hover:text-primary transition-colors" href="#">Habitaciones</a>
+<a class="text-on-surface-variant hover:text-secondary hover:text-primary transition-colors" href="#">Gastronomía</a>
+<a class="text-on-surface-variant hover:text-secondary hover:text-primary transition-colors" href="#">Servicios</a>
+<a class="text-on-surface-variant hover:text-secondary hover:text-primary transition-colors" href="#">Eventos</a>
+<a class="text-adobe-terracota underline hover:text-primary transition-colors opacity-100" href="#">Contacto</a>
+<a class="text-on-surface-variant hover:text-secondary hover:text-primary transition-colors" href="#">Ubicación</a>
+</div>
+<div class="flex flex-col items-center md:items-end justify-end text-center md:text-right mt-8 md:mt-0">
+<p class="font-body-md text-body-md text-on-surface-variant/70 text-sm">
+                    © 2024 Finca La Carla Boutique Inn.<br/>Salta, Argentina. All rights reserved.
+                </p>
+</div>
+</div>
+</footer>
+<!-- BottomNavBar (Floating WhatsApp) -->
+<a aria-label="WhatsApp" class="fixed bottom-8 right-8 z-50 bg-secondary text-on-secondary rounded-full p-4 shadow-lg hover:scale-110 transition-transform flex items-center justify-center group" href="https://wa.me/5491167931464" target="_blank">
+<span class="material-symbols-outlined text-[28px]" data-icon="chat" data-weight="fill">chat</span>
+<!-- Label intentionally hidden per styling, typical for FAB, but can reveal on hover if needed. JSON says 'hidden' brand logo, but label_icon type usually shows icon. -->
+</a>
+<script>
+        // Simple form handling simulation
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            // Simulate network request
+            setTimeout(() => {
+                document.getElementById('successMessage').classList.remove('hidden');
+            }, 500);
+        });
+    </script>
+</body></html>

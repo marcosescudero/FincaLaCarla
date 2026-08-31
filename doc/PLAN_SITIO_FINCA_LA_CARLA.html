@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Plan del Sitio Web — Finca La Carla (v2)</title>
+<style>
+  :root{
+    --tierra:#8b6f47; --tierra-osc:#5d4837; --arena:#f2ece1; --arena-2:#e7ddca;
+    --piedra:#b9ae9a; --verde:#5b6b3a; --texto:#2b2620; --blanco:#ffffff;
+    --acento:#a4794a; --linea:#d8cbb4;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0; font-family:Georgia,'Times New Roman',serif; color:var(--texto);
+       background:var(--arena); line-height:1.55;}
+  header.portada{background:linear-gradient(135deg,var(--tierra-osc),var(--tierra) 60%,var(--acento));
+       color:var(--blanco); padding:34px 40px 28px; border-bottom:6px solid var(--verde);}
+  header.portada h1{margin:0 0 6px; font-size:1.9em; letter-spacing:.5px;}
+  header.portada p{margin:3px 0; font-family:Verdana,Arial,sans-serif; font-size:.92em; opacity:.95;}
+  .lema{display:inline-block; margin-top:12px; padding:8px 16px; background:rgba(0,0,0,.18);
+        border:1px solid rgba(255,255,255,.5); font-size:.95em; letter-spacing:2px; text-transform:uppercase;}
+  nav.indice{background:var(--blanco); border-bottom:1px solid var(--linea);
+        padding:12px 40px; font-family:Verdana,Arial,sans-serif; font-size:.85em;}
+  nav.indice a{color:var(--tierra-osc); text-decoration:none; margin-right:16px; white-space:nowrap;}
+  nav.indice a:hover{text-decoration:underline;}
+  main{max-width:1000px; margin:0 auto; padding:8px 40px 60px;}
+  section{border:1px solid var(--linea); background:var(--blanco); border-radius:10px;
+        margin:26px 0; padding:22px 30px; box-shadow:0 1px 3px rgba(93,72,55,.12);}
+  h2{color:var(--tierra-osc); font-size:1.35em; border-bottom:3px solid var(--arena-2);
+     padding-bottom:8px; margin:0 0 14px;}
+  h3{color:var(--verde); font-size:1.08em; margin:18px 0 8px;}
+  h4{color:var(--acento); margin:14px 0 6px; font-size:1em;}
+  ul,ol{margin:6px 0 12px; padding-left:24px;}
+  li{margin:4px 0;}
+  .fase{background:var(--arena);}
+  .fase .num{display:inline-block; background:var(--verde); color:var(--blanco); border-radius:50%;
+        width:26px; height:26px; text-align:center; line-height:26px; font-family:Verdana,Arial,sans-serif;
+        font-size:.85em; margin-right:8px;}
+  .estado{font-family:Verdana,Arial,sans-serif; font-size:.78em; padding:2px 8px; border-radius:4px; margin-left:6px;}
+  .ok{background:#e3f0d6; color:#3c5a1e; border:1px solid #b6d195;}
+  .pend{background:#fdf0d6; color:#8a6212; border:1px solid #ecd69a;}
+  table{width:100%; border-collapse:collapse; margin:12px 0; font-size:.93em;}
+  th,td{border:1px solid var(--linea); padding:7px 10px; text-align:left; vertical-align:top;}
+  th{background:var(--arena-2); color:var(--tierra-osc);}
+  tr:nth-child(even) td{background:#faf7f1;}
+  code,.archivo{font-family:Consolas,'Courier New',monospace; font-size:.9em;
+        background:var(--arena-2); padding:1px 5px; border-radius:3px; color:#5d4837;}
+  pre{background:#2b2620; color:#f0e9dc; padding:14px 18px; border-radius:8px; overflow-x:auto;
+      font-family:Consolas,'Courier New',monospace; font-size:.86em; line-height:1.45;}
+  .nota{background:#fdf6ea; border-left:4px solid var(--acento); padding:10px 14px; margin:12px 0; font-size:.93em;}
+  .check{list-style:none; padding-left:4px;}
+  .check li:before{content:"\2611  "; color:var(--verde);}
+  footer.pie{max-width:1000px; margin:0 auto; padding:10px 40px 40px; font-family:Verdana,Arial,sans-serif;
+        font-size:.8em; color:#7a6a53; text-align:center;}
+  @media (max-width:640px){ header.portada, main, nav.indice, footer.pie{padding-left:18px; padding-right:18px;}
+        section{padding:16px 18px;} }
+</style>
+</head>
+<body>
+
+<header class="portada">
+  <h1>Plan del Sitio Web — Finca La Carla</h1>
+  <p>Proyecto: <strong>Finca La Carla</strong> — Posada boutique · Paraje San Antonio s/n, Animana, Salta, Argentina (Valle Calchaquí)</p>
+  <p>Documento base: <em>PROMPT_DESARROLLO_WEBSITE_FINCA_LA_CARLA_V2</em> · Versión del plan: <strong>v2 (borrador para revisión)</strong></p>
+  <p>Fecha de elaboración: 29/08/2026</p>
+  <span class="lema">Una propuesta terrenal</span>
+</header>
+
+<nav class="indice">
+  <a href="#contexto">1. Contexto</a>
+  <a href="#objetivo">2. Objetivo</a>
+  <a href="#fase0">3. Fase 0</a>
+  <a href="#fase1">4. Fase 1</a>
+  <a href="#fase2">5. Fase 2</a>
+  <a href="#fase3">6. Fase 3</a>
+  <a href="#fase4">7. Fase 4</a>
+  <a href="#estructura">8. Estructura</a>
+  <a href="#mapafotos">9. Fotos</a>
+  <a href="#decisiones">10. Decisiones</a>
+  <a href="#consideraciones">11. Consideraciones</a>
+</nav>
+
+<main>
+
+<section id="contexto">
+  <h2>1. Contexto del proyecto</h2>
+  <ul>
+    <li><strong>Workspace:</strong> <span class="archivo">d:\EscuderoSistemas\src\websites\animana\FincaLaCarla\main</span> (proyecto nuevo / vacío).</li>
+    <li><strong>Stack:</strong> HTML / CSS / JavaScript <strong>puro (vanilla)</strong>, sin frameworks.</li>
+    <li><strong>Idiomas:</strong> Español (argentino, voseo) e Inglés, con selector de idioma visible.</li>
+    <li><strong>Diseño / prototipado:</strong> mediante la conexión MCP a <strong>Stitch</strong> (API key ya configurada).</li>
+    <li><strong>Fotos:</strong> exclusivamente del Google Drive de Finca La Carla (ya descargadas y organizadas en <span class="archivo">images/fotos/</span>).</li>
+    <li><strong>Formulario:</strong> envío mediante <strong>PHP local (XAMPP)</strong>.</li>
+  </ul>
+</section>
+
+<section id="objetivo">
+  <h2>2. Objetivo del sitio</h2>
+  <p>Comunicar que <strong>Finca La Carla no es un hotel convencional</strong>: combina naturaleza, tranquilidad, producción agroecológica, arquitectura con materiales locales (piedra, madera, adobe, caña), sustentabilidad, atención personalizada de sus dueños (Diego y Marcela), gastronomía casera, vínculo con la comunidad y el ritmo tranquilo del Valle Calchaquí.</p>
+  <ul>
+    <li>Identidad: <strong>rústica, minimalista, natural, cálida, artesanal</strong>.</li>
+    <li>Lema principal (no modificar): <strong>“UNA PROPUESTA TERRENAL”</strong>.</li>
+    <li>El sitio debe resultar atractivo pero <strong>no exageradamente comercial</strong>; priorizar información concreta y diferencial.</li>
+  </ul>
+  <div class="nota"><strong>Reglas de texto (obligatorias):</strong> no usar la palabra “alojamiento” en los textos comerciales (usar finca, hotel, posada, casa, estadía o lugar); español argentino con voseo y sin lenguaje inclusivo; inglés como traducción fiel sin traducir nombres propios (Finca La Carla, San Antonio, Animana, Valle Calchaquí, Pachamama, Ruta 40); evitar clichés (“sumergite”, “una experiencia inolvidable”, etc.); sin lorem ipsum, sin placeholders, sin tarjetas vacías.</div>
+</section>
+
+<section id="fase0" class="fase">
+  <h2><span class="num">0</span>Fase 0 — Preparación <span class="estado ok">COMPLETADA</span></h2>
+  <ul>
+    <li><strong>Fotos del Drive:</strong> ✅ ZIP recibido y descomprimido en <span class="archivo">images/fotos/</span> con la estructura de subcarpetas intacta (275 archivos). Ver <a href="#mapafotos">mapa de fotos</a>.</li>
+    <li><strong>Formulario:</strong> ✅ decisión tomada → <strong>PHP local (XAMPP)</strong>.</li>
+    <li><strong>Estructura de páginas:</strong> ✅ confirmada (opción 1), respetando estrictamente el documento.</li>
+    <li><strong>Enfoque bilingüe:</strong> ✅ confirmado → un solo set de páginas + diccionario JavaScript.</li>
+    <li><strong>Stitch MCP:</strong> pendiente de verificar que sus herramientas (<span class="archivo">stitch_*</span>) estén activas al pasar a construcción; si no, se reinicia el servidor MCP.</li>
+    <li><span class="estado pend">PENDIENTE MENOR</span> <strong>Logo:</strong> la carpeta <span class="archivo">n Logo</span> contiene un <span class="archivo">LOGO.pdf</span>; se necesitará una versión <strong>PNG/SVG</strong> (o autorización para generarla) para usarla en header/footer.</li>
+  </ul>
+</section>
+
+<section id="fase1" class="fase">
+  <h2><span class="num">1</span>Fase 1 — Diseño y prototipado con Stitch</h2>
+  <ol>
+    <li>Generar el <strong>sistema de diseño</strong> (archivo <span class="archivo">DESIGN.md</span>): paleta de tonos tierra (adobe, arena, piedra, madera, vegetación), fondos claros naturales, tipografía elegante <em>serif</em> para títulos + <em>sans-serif</em> limpia para cuerpo, mucho espacio visual y composición limpia.</li>
+    <li>Generar los <strong>prototipos</strong> de los templates clave (Home, Habitaciones, Galería, Contacto, etc.) en formato HTML (Tailwind), siguiendo el patrón del proyecto de referencia <span class="archivo">stitch_la_merced_digital_redesign</span>.</li>
+    <li>Guardar la salida de Stitch en la carpeta <span class="archivo">prototipos/</span> del proyecto.</li>
+    <li><strong>Revisión con el cliente</strong> de los prototipos antes de convertirlos a código final.</li>
+  </ol>
+  <div class="nota"><strong>Criterio visual del documento:</strong> la web debe tener personalidad propia (no copiar la estructura de otro hotel), transmitir rusticidad y diseño contemporáneo a la vez, y no decorarse artificialmente con elementos folklóricos. Puede usarse serif sobria para títulos combinada con sans limpia para textos, siempre que dialogue con el logo y las fotos.</div>
+</section>
+
+<section id="fase2" class="fase">
+  <h2><span class="num">2</span>Fase 2 — Arquitectura y conversión a vanilla</h2>
+  <h3>Estructura de carpetas del proyecto</h3>
+  <pre>main/
+├── index.html                 ← Portada (HOME) — OBLIGATORIO en la raíz
+├── html/                      ← Resto de páginas del sitio
+├── css/                       ← Hojas de estilo
+├── js/                        ← Scripts
+├── images/fotos/              ← Fotografías del Drive (estructura preservada)
+├── php/                       ← Script de envío del formulario
+├── prototipos/                ← Salida de Stitch (diseños)
+└── doc/                       ← Documentación del proyecto (este plan)</pre>
+  <h3>Scripts JavaScript (en <span class="archivo">js/</span>)</h3>
+  <ul>
+    <li><span class="archivo">main.js</span> — menú móvil, navegación general, hover/touch.</li>
+    <li><span class="archivo">lang.js</span> — diccionario de traducción ES/EN (<span class="archivo">data-i18n</span>).</li>
+    <li><span class="archivo">slider.js</span> — banner de Home y carruseles.</li>
+    <li><span class="archivo">lightbox.js</span> — galerías con apertura grande y navegación por flechas.</li>
+    <li><span class="archivo">acordeon.js</span> — preguntas frecuentes.</li>
+    <li><span class="archivo">formulario.js</span> — validación y envío al script PHP.</li>
+    <li><span class="archivo">whatsapp.js</span> — botón de WhatsApp.</li>
+    <li><span class="archivo">mapa.js</span> — carga del mapa de Google embebido.</li>
+  </ul>
+  <p>CSS: variables de diseño en <span class="archivo">:root</span> basadas en el sistema de diseño, <strong>mobile-first</strong> y responsive (escritorio / tablet / móvil).</p>
+</section>
+
+<section id="fase3" class="fase">
+  <h2><span class="num">3</span>Fase 3 — Páginas y contenidos</h2>
+  <p>Estructura confirmada (opción 1), respetando <strong>estrictamente</strong> las definiciones del documento.</p>
+  <table>
+    <tr><th>Archivo</th><th>Contenido (según documento)</th></tr>
+    <tr><td><span class="archivo">index.html</span> (raíz)</td><td>Banner con 3 fotos + lema “UNA PROPUESTA TERRENAL” · presentación breve · cuadrícula “Nuestros servicios” (clickeable) · resumen “Quiénes somos” · 4 diferenciales · testimonios (5) · “Dónde estamos” + mapa embebido.</td></tr>
+    <tr><td><span class="archivo">html/habitaciones.html</span></td><td>Una sola categoría (7 habitaciones: 5 triples, 1 doble, 1 doble matrimonial), características exactas, distribución, galería general única.</td></tr>
+    <tr><td><span class="archivo">html/gastronomia.html</span></td><td>Desayuno incluido · almuerzos/cenas a pedido · dietas especiales · bebidas · viandas.</td></tr>
+    <tr><td><span class="archivo">html/servicios.html</span></td><td>Anclas: atención al huésped · recreación · pileta · artesanías y productos regionales · livings y espacios comunes · galería física.</td></tr>
+    <tr><td><span class="archivo">html/eventos.html</span></td><td>Encuentros, galería y parque, equipamiento confirmado, condiciones.</td></tr>
+    <tr><td><span class="archivo">html/que-hacer.html</span></td><td>3 actividades con tarjeta y subpágina propia.</td></tr>
+    <tr><td><span class="archivo">html/que-hacer-obras-agua.html</span></td><td>Visita a las obras hidráulicas de provisión de agua a la comunidad.</td></tr>
+    <tr><td><span class="archivo">html/que-hacer-petroglifos.html</span></td><td>Visita a pinturas y petroglifos (guía local — tercero).</td></tr>
+    <tr><td><span class="archivo">html/que-hacer-cabalgata.html</span></td><td>Cabalgata en Corralito (prestador — tercero).</td></tr>
+    <tr><td><span class="archivo">html/quienes-somos.html</span></td><td>Historia (2003, Diego + Iris Gilbert; Marcela) — foco en Diego y Marcela.</td></tr>
+    <tr><td><span class="archivo">html/fotos.html</span></td><td>Índice visual completo + galerías por carpeta real + lightbox con flechas.</td></tr>
+    <tr><td><span class="archivo">html/contacto.html</span></td><td>Datos oficiales exactos · formulario (nombre, fechas, personas, email, mensaje) · botón WhatsApp · redes · mapa.</td></tr>
+    <tr><td><span class="archivo">html/informacion-util.html</span></td><td>Datos prácticos en tarjetas/filas (check-in, check-out, acceso, etc.).</td></tr>
+    <tr><td><span class="archivo">html/preguntas-frecuentes.html</span></td><td>Acordeones con las preguntas y respuestas del documento.</td></tr>
+    <tr><td><span class="archivo">html/sustentabilidad.html</span></td><td>Prácticas sustentables confirmadas (sin certificación ambiental).</td></tr>
+    <tr><td><span class="archivo">html/compromiso-comunidad.html</span></td><td>Relación con la comunidad de San Antonio.</td></tr>
+    <tr><td><span class="archivo">html/terminos-condiciones.html</span></td><td>Únicamente la información confirmada en el documento.</td></tr>
+    <tr><td><span class="archivo">html/politica-cookies.html</span></td><td>Texto <strong>exacto</strong> del documento (no reescribir).</td></tr>
+  </table>
+  <h3>Elementos transversales (en todas las páginas)</h3>
+  <ul>
+    <li>Menú principal con las 10 secciones del documento + botón <strong>RESERVAR</strong> → WhatsApp <span class="archivo">+54 9 11 6793-1464</span>.</li>
+    <li>Selector de idioma <strong>ES/EN</strong> visible y funcional.</li>
+    <li><strong>Footer en 3 columnas</strong> según el documento.</li>
+    <li>Botón flotante de <strong>WhatsApp</strong>.</li>
+    <li>Mapa de Google (enlace en nueva pestaña + mapa embebido).</li>
+  </ul>
+  <div class="nota"><strong>NO incluir:</strong> Spa · Gimnasio · tarjeta de Parrilla como servicio · Newsletter · Premios y reconocimientos · menú sin TACC · certificación ambiental · servicios de terceros presentados como propios.</div>
+</section>
+
+<section id="fase4" class="fase">
+  <h2><span class="num">4</span>Fase 4 — Verificación y control final</h2>
+  <p>Aplicar el <strong>“Control final obligatorio”</strong> del documento, punto por punto:</p>
+  <ul class="check">
+    <li>El nombre debe ser siempre <strong>Finca La Carla</strong>.</li>
+    <li>La ubicación debe ser <strong>Paraje San Antonio s/n, Animana, Salta, Argentina</strong>.</li>
+    <li>El lema debe ser <strong>“Una propuesta terrenal”</strong>.</li>
+    <li>El sitio debe estar en <strong>español e inglés</strong> y el selector de idioma debe funcionar.</li>
+    <li>WhatsApp principal: <strong>+54 9 11 6793-1464</strong>.</li>
+    <li>No debe aparecer <strong>Spa</strong> ni <strong>Gimnasio</strong>.</li>
+    <li>La pileta no debe presentarse como <strong>climatizada</strong>.</li>
+    <li>No debe publicarse <strong>menú sin TACC</strong>.</li>
+    <li>Las cabalgatas y la visita a petroglifos deben quedar claramente diferenciadas como <strong>servicios de terceros</strong>.</li>
+    <li>No debe publicarse ninguna <strong>certificación ambiental</strong>.</li>
+    <li>Deben mantenerse exactamente <strong>7 habitaciones</strong> (5 triples, 1 doble, 1 doble matrimonial); capacidad máxima 21 personas.</li>
+    <li>Deben indicarse <strong>5 habitaciones en planta baja y 2 en planta alta</strong>.</li>
+    <li>Cama adicional a pedido según disponibilidad (sin costo).</li>
+    <li>No presentar la finca como accesible para movilidad reducida.</li>
+    <li>No indicar televisores en habitaciones; no inventar minibar, caja de seguridad, aire, pava ni cafetera.</li>
+    <li>Cancelación y reprogramación con plazo de <strong>20 días</strong>.</li>
+    <li>Datos de contacto exactos del documento.</li>
+    <li>Todas las fotos provienen <strong>exclusivamente del Drive</strong>; respetar Destacadas / Principales / Secundarias y el orden numérico; no duplicar; <strong>no cortar caras ni cabezas</strong>.</li>
+    <li>Sin tarjetas vacías; textos con voseo y sin lenguaje inclusivo; sin la palabra “alojamiento” en textos comerciales.</li>
+    <li>Todos los botones, mapas, formularios y enlaces con destino correcto; diseño con identidad propia.</li>
+  </ul>
+  <p>Prueba final en <strong>Live Server / XAMPP</strong>: responsive (escritorio, tablet, móvil), funcionamiento del selector ES/EN, galerías, formulario, WhatsApp y mapas.</p>
+</section>
+
+<section id="estructura">
+  <h2>8. Estructura de archivos (destino)</h2>
+  <pre>d:\EscuderoSistemas\src\websites\animana\FincaLaCarla\main\
+├── index.html
+├── html\
+│   ├── habitaciones.html
+│   ├── gastronomia.html
+│   ├── servicios.html
+│   ├── eventos.html
+│   ├── que-hacer.html
+│   ├── que-hacer-obras-agua.html
+│   ├── que-hacer-petroglifos.html
+│   ├── que-hacer-cabalgata.html
+│   ├── quienes-somos.html
+│   ├── fotos.html
+│   ├── contacto.html
+│   ├── informacion-util.html
+│   ├── preguntas-frecuentes.html
+│   ├── sustentabilidad.html
+│   ├── compromiso-comunidad.html
+│   ├── terminos-condiciones.html
+│   └── politica-cookies.html
+├── css\      (style.css + específicos)
+├── js\       (main.js, lang.js, slider.js, lightbox.js, acordeon.js, formulario.js, whatsapp.js, mapa.js)
+├── images\fotos\
+├── php\      (enviar_consulta.php)
+├── prototipos\  (salida de Stitch: DESIGN.md + code.html)
+└── doc\      (este plan)</pre>
+</section>
+
+<section id="mapafotos">
+  <h2>9. Mapa de fotografías (Drive → sitio)</h2>
+  <p>Fotos extraídas del ZIP en <span class="archivo">images/fotos/</span> (275 archivos). Las subcarpetas <span class="archivo">Destacada (1)</span>, <span class="archivo">Principales (6)</span> y <span class="archivo">Secundarias (resto)</span> definen la jerarquía de uso.</p>
+  <table>
+    <tr><th>Carpeta del Drive</th><th>Uso en el sitio</th></tr>
+    <tr><td><span class="archivo">a Home/Banner (1)</span></td><td>Banner principal del Home (Banner 1 → 2 → 3, en orden).</td></tr>
+    <tr><td><span class="archivo">a Home/Presentación del alojamiento (1)</span></td><td>Sección de presentación breve del Home.</td></tr>
+    <tr><td><span class="archivo">b Habitaciones/Habitacion Categoría A</span></td><td>Galería <strong>general única</strong> de habitaciones (el documento prohíbe subdividir por categoría).</td></tr>
+    <tr><td><span class="archivo">b Habitaciones/z Baño</span></td><td>Galería de baños (tema confirmado en el documento).</td></tr>
+    <tr><td><span class="archivo">c Gastronomía</span></td><td>Galería de gastronomía; subcarpetas <span class="archivo">z Otras/Desayunos</span>, <span class="archivo">Salón Comedor</span>, <span class="archivo">Salón Desayunador</span> → desayuno / espacios comunes.</td></tr>
+    <tr><td><span class="archivo">d Servicios</span></td><td>Tarjetas y anclas de Servicios: <span class="archivo">0 Destacada</span>, <span class="archivo">5 Recreacion</span>, <span class="archivo">7 Pileta</span>, <span class="archivo">9 Artesanías</span>, <span class="archivo">10 Living</span>, <span class="archivo">11 Galería</span>, <span class="archivo">12 Información Util</span>, <span class="archivo">13 Preguntas Frecuentes</span>.</td></tr>
+    <tr><td><span class="archivo">d Servicios/8 Parrilla</span></td><td><strong>No se usa</strong> (el documento no confirma la parrilla como servicio/galería).</td></tr>
+    <tr><td><span class="archivo">f Eventos</span></td><td>Sección Eventos.</td></tr>
+    <tr><td><span class="archivo">g Que hacer</span></td><td>Subcarpetas <span class="archivo">Cabalgatas en Corralito</span>, <span class="archivo">Pinturas y geroglifos</span>, <span class="archivo">Trekking por el río</span> → 3 actividades (a validar visualmente: el trekking/río corresponde a la visita a las obras de agua).</td></tr>
+    <tr><td><span class="archivo">h Quienes somos</span></td><td>Sección Quiénes somos.</td></tr>
+    <tr><td><span class="archivo">i Arquitectura</span></td><td>Galería de arquitectura.</td></tr>
+    <tr><td><span class="archivo">j Exterior o jardines</span></td><td>Galería exterior / jardines / finca productiva.</td></tr>
+    <tr><td><span class="archivo">k Objetos decorativos</span></td><td><strong>A evaluar</strong> — el documento no confirma “objetos decorativos” como contenido propio; solo se usará si aplica como “área real confirmada”.</td></tr>
+    <tr><td><span class="archivo">m Sustentabilidad</span></td><td>Página Sustentabilidad.</td></tr>
+    <tr><td><span class="archivo">n Logo</span></td><td>Logo (PDF → se requiere versión PNG/SVG para la web).</td></tr>
+    <tr><td><span class="archivo">o Seccion Fotos</span></td><td>Portada (Destacada) de la página Fotos.</td></tr>
+  </table>
+</section>
+
+<section id="decisiones">
+  <h2>10. Decisiones tomadas</h2>
+  <table>
+    <tr><th>Tema</th><th>Decisión</th></tr>
+    <tr><td>Stack técnico</td><td>HTML / CSS / JS puro (vanilla).</td></tr>
+    <tr><td>Bilingüe</td><td>Un set de páginas + diccionario JavaScript (data-i18n / lang.js).</td></tr>
+    <tr><td>Formulario de contacto</td><td>PHP local (XAMPP) → <span class="archivo">php/enviar_consulta.php</span>.</td></tr>
+    <tr><td>Prototipado / diseño</td><td>Stitch MCP (sistema de diseño + prototipos Tailwind) → luego conversión a vanilla.</td></tr>
+    <tr><td>Fotografías</td><td>Solo las del Drive (ya descargadas a <span class="archivo">images/fotos/</span>).</td></tr>
+    <tr><td>Estructura de páginas</td><td>Opción 1 confirmada (menú de 10 ítems + subpáginas), estricta al documento.</td></tr>
+  </table>
+</section>
+
+<section id="consideraciones">
+  <h2>11. Consideraciones y pendientes</h2>
+  <ul>
+    <li><span class="estado pend">PENDIENTE</span> Logo en formato imagen (PNG/SVG) para header y footer.</li>
+    <li><span class="estado pend">A VALIDAR</span> Correspondencia visual de las carpetas de <span class="archivo">g Que hacer</span> (verificar las imágenes durante la construcción).</li>
+    <li><span class="estado pend">A VALIDAR</span> Uso de la carpeta <span class="archivo">k Objetos decorativos</span> (no crear servicios nuevos por existir una carpeta).</li>
+    <li><span class="estado pend">A VERIFICAR</span> Disponibilidad de las herramientas de Stitch MCP al iniciar la construcción (reiniciar servidor MCP si no aparecen).</li>
+    <li>El sitio requerirá un servidor con <strong>PHP</strong> para el envío del formulario (XAMPP para pruebas locales).</li>
+  </ul>
+</section>
+
+</main>
+
+<footer class="pie">
+  Plan elaborado como borrador para revisión del cliente · Finca La Carla · 29/08/2026
+</footer>
+
+</body>
+</html>

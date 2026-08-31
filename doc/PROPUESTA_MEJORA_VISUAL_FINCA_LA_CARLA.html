@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Propuesta de mejora visual — Finca La Carla</title>
+<style>
+  :root{
+    --adobe:#a65d3a; --adobe-osc:#7a431f; --vegetacion:#5b6b3a; --madera:#6b4f35;
+    --piedra:#8a8578; --arena:#f5ede0; --arena-clara:#faf5ec; --arena-osc:#e5dccb;
+    --tierra:#2b241b; --tierra-suave:#52493d; --borde:#d8cbb4; --dorado:#b07d4f;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  body{
+    font-family:'Segoe UI', system-ui, -apple-system, Arial, sans-serif;
+    background:var(--arena-clara); color:var(--tierra); line-height:1.65; font-size:16px;
+  }
+  .hoja{max-width:960px; margin:0 auto; padding:40px 28px 80px;}
+  header.cabecera{
+    border-bottom:4px solid var(--adobe); padding-bottom:24px; margin-bottom:36px;
+    display:flex; align-items:flex-end; justify-content:space-between; gap:16px; flex-wrap:wrap;
+  }
+  header.cabecera h1{font-family:Georgia, 'Times New Roman', serif; font-size:34px; font-weight:500; letter-spacing:.5px;}
+  header.cabecera p.sub{color:var(--tierra-suave); margin-top:6px; font-size:15px;}
+  .fecha{
+    background:var(--arena); border:1px solid var(--borde); border-radius:6px;
+    padding:10px 14px; font-size:13px; color:var(--tierra-suave); white-space:nowrap;
+  }
+  .fecha strong{color:var(--adobe-osc);}
+  h2.seccion{
+    font-family:Georgia, 'Times New Roman', serif; font-size:26px; font-weight:500;
+    margin:44px 0 16px; padding-bottom:8px; border-bottom:2px solid var(--borde); color:var(--tierra);
+  }
+  h2.seccion .num{color:var(--adobe); margin-right:8px;}
+  p{margin:10px 0;}
+  ul,ol{margin:10px 0 10px 26px;}
+  li{margin:5px 0;}
+  .card{
+    background:#fff; border:1px solid var(--borde); border-radius:10px;
+    padding:20px 22px; margin:16px 0; box-shadow:0 2px 8px rgba(43,36,27,.06);
+  }
+  .card.destacada{border-left:5px solid var(--adobe);}
+  .card.verde{border-left:5px solid var(--vegetacion);}
+  .card.oscura{background:var(--tierra); color:var(--arena); border:1px solid var(--tierra);}
+  .card.oscura h3{color:var(--arena);}
+  .card.oscura .tag{color:var(--dorado);}
+  h3{font-family:Georgia, 'Times New Roman', serif; font-size:19px; font-weight:500; color:var(--tierra); margin:0 0 8px;}
+  h4{font-size:15px; text-transform:uppercase; letter-spacing:1.6px; color:var(--adobe-osc); margin:18px 0 8px;}
+  .tag{
+    display:inline-block; font-size:11px; text-transform:uppercase; letter-spacing:2.4px;
+    color:var(--dorado); margin-bottom:6px;
+  }
+  .tag.adobe{color:var(--adobe);}
+  table{
+    width:100%; border-collapse:collapse; margin:16px 0; background:#fff;
+    border:1px solid var(--borde); border-radius:10px; overflow:hidden;
+  }
+  th,td{text-align:left; padding:12px 14px; border-bottom:1px solid var(--arena-osc); vertical-align:top; font-size:14.5px;}
+  thead th{
+    background:var(--tierra); color:var(--arena); font-size:13px; text-transform:uppercase;
+    letter-spacing:1.2px; font-weight:600;
+  }
+  tbody tr:nth-child(even){background:var(--arena-clara);}
+  tbody tr:last-child td{border-bottom:none;}
+  td.destacado{color:var(--adobe-osc); font-weight:600;}
+  td.si{color:var(--vegetacion); font-weight:700;}
+  td.no{color:var(--piedra); font-weight:700;}
+  .check{color:var(--vegetacion); font-weight:700;}
+  .cruz{color:var(--adobe); font-weight:700;}
+  .opciones{display:grid; grid-template-columns:1fr 1fr; gap:18px; margin:16px 0;}
+  @media(max-width:700px){.opciones{grid-template-columns:1fr;}}
+  .opcion{background:#fff; border:2px solid var(--borde); border-radius:12px; padding:22px;}
+  .opcion.a{border-top:6px solid var(--dorado);}
+  .opcion.b{border-top:6px solid var(--adobe);}
+  .opcion h3{font-size:20px;}
+  .opcion .nivel{font-size:11px; text-transform:uppercase; letter-spacing:2px; margin-bottom:10px;}
+  .opcion.a .nivel{color:var(--dorado);}
+  .opcion.b .nivel{color:var(--adobe);}
+  .opcion ul{font-size:14.5px;}
+  .resumen{
+    background:var(--arena); border:1px solid var(--borde); border-radius:10px;
+    padding:20px 24px; margin:24px 0; font-size:15px;
+  }
+  .resumen strong{color:var(--adobe-osc);}
+  .firma{margin-top:48px; padding-top:20px; border-top:2px solid var(--borde); color:var(--tierra-suave); font-size:14px; display:flex; justify-content:space-between; flex-wrap:wrap; gap:10px;}
+  .muted{color:var(--tierra-suave);}
+  code{background:var(--arena-osc); border-radius:4px; padding:1px 6px; font-size:13px;}
+</style>
+</head>
+<body>
+<div class="hoja">
+
+  <header class="cabecera">
+    <div>
+      <p class="tag adobe">Documento de trabajo · Análisis visual</p>
+      <h1>Propuesta de mejora visual — Finca La Carla</h1>
+      <p class="sub">Análisis comparativo con el sitio de referencia «La Posada de Cloe» · Documento para revisión con el equipo de Itinere</p>
+    </div>
+    <div class="fecha"><strong>Fecha:</strong> 30 de agosto de 2026<br><strong>Estado:</strong> Propuesta — pendiente de aprobación</div>
+  </header>
+
+  <div class="resumen">
+    <strong>Objetivo:</strong> elevar el look &amp; feel del sitio de Finca La Carla a un nivel más profesional, tomando como referencia estilística el sitio <em>«La Posada de Cloe»</em> (Seclantás, Salta). Este documento describe el diagnóstico, la propuesta concreta y dos niveles de intervención para decidir en equipo. <strong>No se modificó nada del sitio todavía.</strong>
+  </div>
+
+  <!-- ================= DIAGNÓSTICO ================= -->
+  <h2 class="seccion"><span class="num">1</span>Diagnóstico: ¿por qué «La Posada de Cloe» se ve más profesional?</h2>
+  <p>Se compararon ambos sitios en detalle (tipografías, colores, espaciados, estructura y componentes). El diseño de referencia tiene una estética <strong>premium, minimalista y editorial</strong> característica de las posadas boutique, construida sobre patrones visuales muy concretos que hoy Finca La Carla no utiliza.</p>
+
+  <table>
+    <thead>
+      <tr><th>Elemento</th><th>La Posada de Cloe (referencia)</th><th>Finca La Carla (actual)</th><th>Impacto</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Títulos (h2)</strong></td>
+        <td>Cormorant Garamond · 48px · peso 500</td>
+        <td>EB Garamond · 33px · peso 400</td>
+        <td class="destacado">Alto</td>
+      </tr>
+      <tr>
+        <td><strong>Texto / UI</strong></td>
+        <td>Inter (tipografía limpia y «diseñada»)</td>
+        <td>Work Sans</td>
+        <td class="destacado">Medio</td>
+      </tr>
+      <tr>
+        <td><strong>Etiquetas «eyebrow»</strong><br><span class="muted">texto chico, mayúsculas, espaciado, dorado</span></td>
+        <td class="si">Sí — 10–11px, uppercase, letter-spacing 2.2–3.2px, color <code>#c69769</code></td>
+        <td class="no">No existen</td>
+        <td class="destacado">Muy alto</td>
+      </tr>
+      <tr>
+        <td><strong>Aire vertical (secciones)</strong></td>
+        <td>Padding 128–160px, contenido máx. 1300–1400px</td>
+        <td>Padding 64px, contenedor 1200px</td>
+        <td class="destacado">Alto</td>
+      </tr>
+      <tr>
+        <td><strong>Ritmo visual</strong></td>
+        <td>Secciones claras y oscuras alternadas (historia y testimonios sobre fondo tierra oscuro)</td>
+        <td>Fondo claro uniforme</td>
+        <td class="destacado">Alto</td>
+      </tr>
+      <tr>
+        <td><strong>Hero</strong></td>
+        <td>Pantalla completa, texto editorial mínimo (eyebrow + lema serif + subtítulo uppercase espaciado)</td>
+        <td>Carrusel funcional, sin tratamiento editorial de texto</td>
+        <td class="destacado">Medio</td>
+      </tr>
+      <tr>
+        <td><strong>Tarjetas de servicios</strong></td>
+        <td>Imagen + etiqueta «Descubrir» (10px uppercase dorada) + título serif + hover</td>
+        <td>Tarjeta con imagen y título</td>
+        <td class="destacado">Medio</td>
+      </tr>
+      <tr>
+        <td><strong>Botones</strong></td>
+        <td>Refinados, con icono, buen hover</td>
+        <td>Rectos, adobe <code>#a65d3a</code>, radio 4px</td>
+        <td class="muted">Medio</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3>Los 4 patrones que explican el look profesional</h3>
+  <ul>
+    <li><span class="check">✔</span> <strong>Etiquetas «eyebrow»</strong>: pequeños textos en mayúsculas y espaciadas encima de cada título (el patrón de diseño premium por excelencia).</li>
+    <li><span class="check">✔</span> <strong>Tipografía premium</strong>: Cormorant Garamond (serif elegante para títulos) + Inter (UI limpia).</li>
+    <li><span class="check">✔</span> <strong>Mucho más aire</strong>: espaciado amplio entre secciones y títulos grandes.</li>
+    <li><span class="check">✔</span> <strong>Ritmo con secciones oscuras alternadas</strong>: historia y testimonios sobre fondo tierra oscuro.</li>
+  </ul>
+
+  <!-- ================= PROPUESTA ================= -->
+  <h2 class="seccion"><span class="num">2</span>Propuesta concreta de mejora</h2>
+
+  <div class="card destacada">
+    <p class="tag">1 · Tipografía</p>
+    <h3>Upgrade de tipografías</h3>
+    <ul>
+      <li>Títulos → <strong>Cormorant Garamond</strong> (peso 500, h2 entre 44 y 48px).</li>
+      <li>Texto y UI → <strong>Inter</strong>.</li>
+      <li>Hero con lema grande en serif y jerarquía clara.</li>
+    </ul>
+  </div>
+
+  <div class="card destacada">
+    <p class="tag">2 · Sistema «eyebrow»</p>
+    <h3>El cambio de mayor impacto</h3>
+    <ul>
+      <li>Nueva clase <code>.eyebrow</code>: 11px, mayúsculas, letter-spacing ~2.5px, color dorado/terracota.</li>
+      <li>Aplicada sobre cada título de sección: «Una propuesta terrenal», «Nuestros servicios», «Quiénes somos», «Dónde estamos», etc.</li>
+    </ul>
+  </div>
+
+  <div class="card destacada">
+    <p class="tag">3 · Espaciado y ritmo</p>
+    <h3>Más aire y contraste</h3>
+    <ul>
+      <li>Padding de sección de 64px → <strong>112–128px</strong>.</li>
+      <li><strong>Secciones oscuras alternadas</strong> (tierra oscuro con texto claro) para historia y testimonios — el sello de los sitios boutique.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <p class="tag adobe">4 · Hero</p>
+    <h3>Tratamiento editorial del carrusel</h3>
+    <ul>
+      <li>Se mantiene el carrusel actual (ya funciona y usa fotos reales del Drive).</li>
+      <li>Se refina el texto encima: eyebrow + lema grande + subtítulo uppercase espaciado.</li>
+      <li>Se mejoran flechas e indicadores.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <p class="tag adobe">5 · Tarjetas de servicios</p>
+    <h3>Estilo imagen + etiqueta</h3>
+    <ul>
+      <li>Tarjetas «imagen + etiqueta Descubrir + título serif».</li>
+      <li>Hover con zoom suave de la imagen.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <p class="tag adobe">6 · Botones, header y footer</p>
+    <h3>Refinamiento general</h3>
+    <ul>
+      <li>Botones más redondeados, con mejor hover y (opcional) icono.</li>
+      <li>Header y footer con más aire y consistencia tipográfica.</li>
+    </ul>
+  </div>
+
+  <!-- ================= NO CAMBIA ================= -->
+  <h2 class="seccion"><span class="num">3</span>Lo que NO cambia</h2>
+  <div class="card verde">
+    <ul>
+      <li><span class="check">✔</span> Contenido textual exacto de la especificación (voseo, lema «Una propuesta terrenal», datos de contacto, 7 habitaciones, actividades, política de 20 días, etc.).</li>
+      <li><span class="check">✔</span> Estructura de páginas y navegación.</li>
+      <li><span class="check">✔</span> Sistema de idiomas ES/EN.</li>
+      <li><span class="check">✔</span> Galerías, lightbox, formulario PHP, WhatsApp, mapa.</li>
+      <li><span class="check">✔</span> Las fotos (exclusivamente las del Drive de Finca La Carla).</li>
+    </ul>
+  </div>
+
+  <!-- ================= OPCIONES ================= -->
+  <h2 class="seccion"><span class="num">4</span>Niveles de intervención — opciones para decidir en equipo</h2>
+
+  <div class="opciones">
+    <div class="opcion a">
+      <p class="nivel">Opción A · Refinamiento elegante</p>
+      <h3>🪶 Mejorar sin cambiar la identidad</h3>
+      <ul>
+        <li>Se mantiene la paleta actual (adobe/arena).</li>
+        <li>Se suman: tipografía Cormorant + Inter, eyebrows, espaciado amplio, botones refinados.</li>
+        <li>Cambio <strong>menor</strong> (principalmente CSS), riesgo bajo, se ve mucho más prolijo.</li>
+      </ul>
+    </div>
+    <div class="opcion b">
+      <p class="nivel">Opción B · Rediseño al estilo Cloe</p>
+      <h3>🌟 Look profesional idéntico al sitio de referencia</h3>
+      <ul>
+        <li>Alineación completa: Cormorant + Inter, secciones oscuras alternadas, hero editorial, tarjetas imagen.</li>
+        <li>Cambio <strong>medio</strong>: todo el CSS + ajustes en el HTML (secciones).</li>
+        <li>Resultado visual muy cercano a «La Posada de Cloe», con identidad propia de Finca La Carla.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ================= RECOMENDACIÓN ================= -->
+  <h2 class="seccion"><span class="num">5</span>Recomendación y próximos pasos</h2>
+  <div class="card oscura">
+    <p class="tag">Recomendación inicial</p>
+    <h3>Arrancar con la Opción B (núcleo), con respaldo</h3>
+    <ul>
+      <li>Se recomienda aplicar la <strong>Opción B</strong> para lograr el look profesional buscado, pero manteniendo un respaldo (git / copia) del CSS actual por si el equipo prefiere volver atrás.</li>
+      <li>Alternativa equilibrada: <strong>Opción B en el Home y páginas principales</strong>, y refinamiento A en el resto.</li>
+      <li>Próximo paso: que el equipo confirme la opción elegida y el alcance (todo el sitio o páginas clave).</li>
+    </ul>
+  </div>
+
+  <div class="firma">
+    <span><strong>Finca La Carla</strong> · Paraje San Antonio s/n, Animana, Salta, Argentina</span>
+    <span>Documento generado el 30 de agosto de 2026</span>
+  </div>
+
+</div>
+</body>
+</html>

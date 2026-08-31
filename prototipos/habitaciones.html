@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Habitaciones - Finca La Carla</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&amp;family=Work+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-surface-variant": "#54433c",
+                      "error-container": "#ffdad6",
+                      "secondary-fixed": "#dce7c5",
+                      "surface-container-low": "#f6f3ee",
+                      "on-error": "#ffffff",
+                      "on-background": "#1c1c19",
+                      "outline-variant": "#d9c2b8",
+                      "on-surface": "#1c1c19",
+                      "inverse-primary": "#ffb695",
+                      "tertiary-container": "#896a4f",
+                      "deep-earth": "#2d2a26",
+                      "tertiary-fixed-dim": "#e5bfa0",
+                      "surface-container-high": "#ebe8e3",
+                      "surface-bright": "#fcf9f4",
+                      "primary-container": "#a65d3a",
+                      "surface-container-lowest": "#ffffff",
+                      "on-primary-container": "#fff3ef",
+                      "surface": "#fcf9f4",
+                      "primary-fixed": "#ffdbcc",
+                      "on-tertiary-container": "#fff3eb",
+                      "timber-brown": "#8c6d52",
+                      "on-secondary-fixed-variant": "#414a31",
+                      "on-primary-fixed-variant": "#733515",
+                      "desert-sand": "#f5f2ed",
+                      "on-secondary-container": "#5e684d",
+                      "on-primary-fixed": "#351000",
+                      "on-primary": "#ffffff",
+                      "surface-container": "#f0ede8",
+                      "primary-fixed-dim": "#ffb695",
+                      "on-secondary-fixed": "#161e09",
+                      "inverse-on-surface": "#f3f0eb",
+                      "adobe-terracota": "#a65d3a",
+                      "surface-tint": "#904c2a",
+                      "on-tertiary": "#ffffff",
+                      "background": "#fcf9f4",
+                      "olive-drab": "#707a5e",
+                      "on-secondary": "#ffffff",
+                      "tertiary": "#6e5239",
+                      "secondary-fixed-dim": "#c0cbaa",
+                      "secondary": "#586247",
+                      "error": "#ba1a1a",
+                      "surface-variant": "#e5e2dd",
+                      "surface-container-highest": "#e5e2dd",
+                      "primary": "#884524",
+                      "inverse-surface": "#31302d",
+                      "on-error-container": "#93000a",
+                      "tertiary-fixed": "#ffdcc0",
+                      "outline": "#86736b",
+                      "secondary-container": "#dce7c5",
+                      "on-tertiary-fixed-variant": "#5c4129",
+                      "on-tertiary-fixed": "#2b1704",
+                      "surface-dim": "#dcdad5"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "spacing": {
+                      "gutter": "24px",
+                      "margin-desktop": "64px",
+                      "base": "8px",
+                      "section-gap": "120px",
+                      "container-max": "1280px",
+                      "margin-mobile": "20px"
+              },
+              "fontFamily": {
+                      "label-sm": [
+                              "Work Sans"
+                      ],
+                      "headline-lg": [
+                              "EB Garamond"
+                      ],
+                      "display-lg": [
+                              "EB Garamond"
+                      ],
+                      "headline-lg-mobile": [
+                              "EB Garamond"
+                      ],
+                      "headline-sm": [
+                              "EB Garamond"
+                      ],
+                      "headline-md": [
+                              "EB Garamond"
+                      ],
+                      "body-lg": [
+                              "Work Sans"
+                      ],
+                      "label-lg": [
+                              "Work Sans"
+                      ],
+                      "body-md": [
+                              "Work Sans"
+                      ]
+              },
+              "fontSize": {
+                      "label-sm": [
+                              "12px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "letterSpacing": "0.05em",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "headline-lg": [
+                              "48px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "display-lg": [
+                              "64px",
+                              {
+                                      "lineHeight": "1.1",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-lg-mobile": [
+                              "32px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-sm": [
+                              "24px",
+                              {
+                                      "lineHeight": "1.4",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "headline-md": [
+                              "32px",
+                              {
+                                      "lineHeight": "1.3",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "body-lg": [
+                              "18px",
+                              {
+                                      "lineHeight": "1.6",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "label-lg": [
+                              "14px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "letterSpacing": "0.05em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "1.6",
+                                      "fontWeight": "400"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+      </script>
+<style>
+        body {
+            background-color: #fcf9f4; /* arena fallback */
+            color: #1c1c19; /* on-surface */
+        }
+      </style>
+</head>
+<body class="bg-background text-on-surface antialiased overflow-x-hidden">
+<!-- TopNavBar -->
+<nav class="bg-surface/90 dark:bg-surface/90 backdrop-blur-md fixed top-0 w-full z-50 border-b border-timber-brown/20 flat no shadows">
+<div class="flex justify-between items-center px-gutter py-4 max-w-container-max mx-auto hidden md:flex">
+<a class="font-headline-md text-headline-md text-on-surface dark:text-surface-bright tracking-tighter" href="#">Finca La Carla</a>
+<ul class="flex items-center gap-8">
+<li><a class="font-label-lg text-label-lg uppercase tracking-widest text-on-surface-variant hover:text-adobe-terracota transition-all duration-300" href="#">Home</a></li>
+<li><a class="font-label-lg text-label-lg uppercase tracking-widest text-adobe-terracota font-bold border-b border-adobe-terracota transition-all duration-300" href="#">Habitaciones</a></li>
+<li><a class="font-label-lg text-label-lg uppercase tracking-widest text-on-surface-variant hover:text-adobe-terracota transition-all duration-300" href="#">Gastronomía</a></li>
+<li><a class="font-label-lg text-label-lg uppercase tracking-widest text-on-surface-variant hover:text-adobe-terracota transition-all duration-300" href="#">Servicios</a></li>
+<li><a class="font-label-lg text-label-lg uppercase tracking-widest text-on-surface-variant hover:text-adobe-terracota transition-all duration-300" href="#">Eventos</a></li>
+<li><a class="font-label-lg text-label-lg uppercase tracking-widest text-on-surface-variant hover:text-adobe-terracota transition-all duration-300" href="#">Quiénes somos</a></li>
+</ul>
+<div class="flex items-center gap-6">
+<button class="font-label-lg text-label-lg uppercase tracking-widest text-timber-brown border border-timber-brown px-6 py-2 scale-95 active:scale-90 transition-transform hover:text-adobe-terracota hover:border-adobe-terracota">EN/ES</button>
+<button class="bg-adobe-terracota text-desert-sand font-label-lg text-label-lg uppercase tracking-widest px-8 py-3 scale-95 active:scale-90 transition-transform hover:bg-primary-container">RESERVAR</button>
+</div>
+</div>
+</nav>
+<!-- SideNavBar (Mobile) -->
+<aside class="bg-surface dark:bg-surface docked left h-full w-64 md:hidden fixed top-0 left-0 z-50 border-r border-outline-variant shadow-sm translate-x-0 transition-transform hidden">
+<div class="flex flex-col gap-base p-gutter">
+<div class="mb-8">
+<h2 class="font-headline-sm text-headline-sm text-primary">Finca La Carla</h2>
+<p class="font-label-sm text-label-sm text-on-surface-variant mt-1">Boutique Inn Salta</p>
+</div>
+<nav class="flex flex-col gap-2">
+<a class="flex items-center gap-4 px-4 py-3 text-on-surface-variant hover:bg-surface-container-high rounded-lg font-label-lg text-label-lg uppercase" href="#"><span class="material-symbols-outlined">home</span>Home</a>
+<a class="flex items-center gap-4 px-4 py-3 bg-secondary-container text-on-secondary-container rounded-lg font-label-lg text-label-lg uppercase" href="#"><span class="material-symbols-outlined">bed</span>Habitaciones</a>
+<a class="flex items-center gap-4 px-4 py-3 text-on-surface-variant hover:bg-surface-container-high rounded-lg font-label-lg text-label-lg uppercase" href="#"><span class="material-symbols-outlined">restaurant</span>Gastronomía</a>
+<a class="flex items-center gap-4 px-4 py-3 text-on-surface-variant hover:bg-surface-container-high rounded-lg font-label-lg text-label-lg uppercase" href="#"><span class="material-symbols-outlined">concierge</span>Servicios</a>
+<a class="flex items-center gap-4 px-4 py-3 text-on-surface-variant hover:bg-surface-container-high rounded-lg font-label-lg text-label-lg uppercase" href="#"><span class="material-symbols-outlined">event</span>Eventos</a>
+<a class="flex items-center gap-4 px-4 py-3 text-on-surface-variant hover:bg-surface-container-high rounded-lg font-label-lg text-label-lg uppercase" href="#"><span class="material-symbols-outlined">explore</span>Qué hacer</a>
+<a class="flex items-center gap-4 px-4 py-3 text-on-surface-variant hover:bg-surface-container-high rounded-lg font-label-lg text-label-lg uppercase" href="#"><span class="material-symbols-outlined">group</span>Quiénes somos</a>
+<a class="flex items-center gap-4 px-4 py-3 text-on-surface-variant hover:bg-surface-container-high rounded-lg font-label-lg text-label-lg uppercase" href="#"><span class="material-symbols-outlined">photo_library</span>Fotos</a>
+<a class="flex items-center gap-4 px-4 py-3 text-on-surface-variant hover:bg-surface-container-high rounded-lg font-label-lg text-label-lg uppercase" href="#"><span class="material-symbols-outlined">mail</span>Contacto</a>
+</nav>
+<div class="mt-auto pt-8">
+<button class="w-full bg-adobe-terracota text-desert-sand font-label-lg text-label-lg uppercase py-4">RESERVAR</button>
+</div>
+</div>
+</aside>
+<main class="pt-32 md:pt-48 pb-section-gap">
+<!-- Hero / Encabezado -->
+<section class="max-w-container-max mx-auto px-gutter mb-section-gap">
+<div class="max-w-4xl mx-auto text-center">
+<h1 class="font-display-lg text-display-lg text-on-surface mb-8">Siete habitaciones cálidas, simples y pensadas para descansar</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-3xl mx-auto leading-relaxed">
+                    Nuestras siete habitaciones comparten una misma esencia: carácter rústico y minimalista para un descanso profundo. Cinco ubicadas en planta baja y dos en planta alta, equipadas con baño privado, calefacción por radiadores, Wi-Fi y placard. Destaca nuestra habitación con un gran ventanal al valle y al cielo nocturno.
+                </p>
+</div>
+</section>
+<!-- Galería Principal -->
+<section class="max-w-container-max mx-auto px-gutter mb-section-gap">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+<div class="md:col-span-8">
+<img class="w-full h-[600px] object-cover border border-timber-brown/20" data-alt="A spacious, rustic-contemporary bedroom in a luxury boutique hotel in Salta. The room features textured adobe walls, a large wooden bed with a colorful woven blanket in terracotta, cream, and charcoal. A huge picture window frames a stunning view of vineyards and snow-capped Andes mountains. Sunlight streams in, casting warm light on the stone floor. Minimalist decor with wooden furniture and leather chairs." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA2JdqfrWyD_OXR1Iwkvtin6Ho50_UidKMRxyy5WHgzsAhYioU_54bm3_GMaSkhexVrbcRpXvILcvGHviqO3Hb4k9qKz9kqCEGFVYW5KH-6-nzez3hTmdYhOe1oaooUm4wLHJVa8UUQednOXpZgGuYQn8gq-w6jL-E8yCMEcMUJze6pEGpJtQZa6B9qy4ag01Pj8KUEP3ug7DxD5cjXre-w52YF-EYBdAW6rJUd5DnEs7mJlC973sn6oNuIM--l1DP6dSmBPIN79wA"/>
+</div>
+<div class="md:col-span-4 flex flex-col gap-8">
+<img class="w-full h-[350px] object-cover border border-timber-brown/20 ml-auto md:-ml-12 relative z-10 mt-12 md:mt-0" data-alt="A warm, dimly lit rustic bedroom at sunset. Textured earth-toned walls, a wooden bed with patterned, vibrant woven pillows and a colorful blanket. Small lamps cast a cozy glow. Woven tapestries hang on the wall. Small leather chairs sit in the corner. The atmosphere is intimate, traditional, and luxurious." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBPvJ4saspsrDpupBkr8jEdw3Mnzejdq9g3X9A_KDfC7yjevlt9hocT4tnWaF88qUqtEr0WqEPbjWN_77ParY1g1LC-kQIlR7eCctyZ9hEkzrcKxb97XcDW48vJ4Tyu4V0tqewMVz1cmGha5migxixm46uwdNK3yqm8KDGgZ3a2spNcaHpfpMHzE0ROAYrPDwPLhpyVQfsymlUsG3TkMgMYzFQ3wq-pjfN2w-KhlT5otD5CQ3qRyCJ88tRPsHQHUOQcS0M9UL06Uy8"/>
+<img class="w-full h-[400px] object-cover border border-timber-brown/20" data-alt="A rustic luxury bathroom featuring walls built from irregular natural stones. A large wooden slab vanity holds a stone vessel sink. Warm light emanates from copper wall sconces. A window looks out onto a desert landscape with scrub brush. Minimalist, earthy aesthetic with soft cotton towels." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBeNFhFtx9Ph-HGVlxA4hoaUB-aDM3f25HtxJo8fQIyVl-ZdTlJZzHX6bVZeytZw-Ba6hBHQm3BzaaFW9EOCMsEjjDekZw3ipzNpIemI5E-7Oov0E8IdtF2x_GHy3rbQbBwk0p4kO3hv0jcskgFyW-Emwm2WEEeJGkdnPmD-IkMDPUqHftX93s1-wqN4rPd6cqBKp5ZoC6MYclBG78bM1w024oD0LjjoD76hWJJcPMKFfgclfFssQHShV4BOTnZfUQAUSVm_08LQ5g"/>
+</div>
+</div>
+</section>
+<!-- Características (2 Columnas) -->
+<section class="max-w-container-max mx-auto px-gutter mb-section-gap">
+<div class="bg-surface-container-low p-12 md:p-24 border border-timber-brown/10">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-16">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-adobe-terracota mb-8 border-b border-timber-brown/20 pb-4 inline-block">Todas cuentan con</h3>
+<ul class="space-y-4 font-body-md text-body-md text-on-surface-variant">
+<li class="flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-adobe-terracota"></span> Baño privado, inodoro, bidet</li>
+<li class="flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-adobe-terracota"></span> Calefacción por radiadores</li>
+<li class="flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-adobe-terracota"></span> Conexión Wi-Fi</li>
+<li class="flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-adobe-terracota"></span> Placard</li>
+<li class="flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-adobe-terracota"></span> Secador de pelo</li>
+<li class="flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-adobe-terracota"></span> Ropa de cama de calidad</li>
+<li class="flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-adobe-terracota"></span> Toallas</li>
+</ul>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-timber-brown mb-8 border-b border-timber-brown/20 pb-4 inline-block">No cuentan con</h3>
+<ul class="space-y-4 font-body-md text-body-md text-on-surface-variant opacity-80">
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-sm text-timber-brown">close</span> TV (disponible solo en espacio común)</li>
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-sm text-timber-brown">close</span> Aire acondicionado</li>
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-sm text-timber-brown">close</span> Caja de seguridad</li>
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-sm text-timber-brown">close</span> Minibar</li>
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-sm text-timber-brown">close</span> Pava eléctrica</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<!-- Capacidad y Distribución & Info Adicional -->
+<section class="max-w-container-max mx-auto px-gutter mb-section-gap">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-16">
+<div class="lg:col-span-7">
+<h2 class="font-headline-md text-headline-md text-on-surface mb-10">Capacidad y Distribución</h2>
+<div class="space-y-6">
+<div class="flex items-center justify-between border-b border-timber-brown/20 pb-4">
+<span class="font-body-lg text-body-lg text-on-surface">Habitaciones Triples <span class="text-sm text-on-surface-variant ml-2">(1 matrimonial + 1 simple)</span></span>
+<span class="font-headline-sm text-headline-sm text-adobe-terracota">5</span>
+</div>
+<div class="flex items-center justify-between border-b border-timber-brown/20 pb-4">
+<span class="font-body-lg text-body-lg text-on-surface">Habitación Doble</span>
+<span class="font-headline-sm text-headline-sm text-adobe-terracota">1</span>
+</div>
+<div class="flex items-center justify-between border-b border-timber-brown/20 pb-4">
+<span class="font-body-lg text-body-lg text-on-surface">Habitación Doble Matrimonial</span>
+<span class="font-headline-sm text-headline-sm text-adobe-terracota">1</span>
+</div>
+</div>
+<div class="mt-8 flex flex-wrap gap-4">
+<div class="bg-desert-sand px-6 py-3 rounded-full border border-timber-brown/10 font-label-sm text-label-sm uppercase text-timber-brown tracking-widest">
+                            Capacidad máx: 21 personas
+                        </div>
+<div class="bg-desert-sand px-6 py-3 rounded-full border border-timber-brown/10 font-label-sm text-label-sm uppercase text-timber-brown tracking-widest">
+                            Superficie promedia: 18m²
+                        </div>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mt-6 italic">
+                        * Nota: El acceso a la planta alta es por escalera (no contamos con ascensor).
+                    </p>
+</div>
+<div class="lg:col-span-5 bg-desert-sand p-10 flex flex-col justify-center border border-timber-brown/15">
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-6 text-center">Detalles que importan</h3>
+<div class="w-12 h-[1px] bg-adobe-terracota mx-auto mb-8"></div>
+<ul class="space-y-6">
+<li class="flex items-start gap-4">
+<span class="material-symbols-outlined text-adobe-terracota mt-1">crib</span>
+<div>
+<span class="font-label-lg text-label-lg block text-on-surface uppercase mb-1">Cuna a pedido</span>
+<span class="font-body-md text-body-md text-on-surface-variant">Disponible sin costo adicional.</span>
+</div>
+</li>
+<li class="flex items-start gap-4">
+<span class="material-symbols-outlined text-adobe-terracota mt-1">hot_tub</span>
+<div>
+<span class="font-label-lg text-label-lg block text-on-surface uppercase mb-1">Experiencia Superior</span>
+<span class="font-body-md text-body-md text-on-surface-variant">Habitación 3 equipada con jacuzzi exclusivo.</span>
+</div>
+</li>
+<li class="flex items-start gap-4">
+<span class="material-symbols-outlined text-adobe-terracota mt-1">landscape</span>
+<div>
+<span class="font-label-lg text-label-lg block text-on-surface uppercase mb-1">Vistas Privilegiadas</span>
+<span class="font-body-md text-body-md text-on-surface-variant">Orientación hacia el viñedo o el inmenso valle.</span>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</section>
+<!-- Galería Final -->
+<section class="max-w-container-max mx-auto px-gutter mb-12">
+<div class="relative overflow-hidden group">
+<div class="grid grid-cols-2 gap-4">
+<img class="w-full h-[500px] object-cover transition-transform duration-700 hover:scale-105" data-alt="A pristine, modern rectangular swimming pool reflecting a clear blue sky, surrounded by natural desert vegetation and adobe stone walls in the Calchaquí Valley. Lounge chairs sit nearby. The mood is tranquil, exclusive, and harmonious with nature." src="https://lh3.googleusercontent.com/aida/AEtjO1VYAlmtPy9ah8pLQevVyXa8OfJ7PqIGwvnOdvFKDaQFds1S52Fl-oQU_ydpHT4QqtodI-K6vRWhKQPDlG8j3-l0ajWyGo8WVmx1XbRZSRWU4dcR-B8lMD-GLut_XJ2gZS_RNgQocSVQvVbAA2xfUg1AVH5zwpkteot3H4uDBKZQQBdd6nPG5NtPHJRmi98TAPUL_466nr5Y1q-KnzjGeWV80Qyv2bZcTJCwhLucg-wdoMcUXcbkGfbbnQ"/>
+<img class="w-full h-[500px] object-cover transition-transform duration-700 hover:scale-105" data-alt="A rustic outdoor wooden table set for a meal on a stone terrace overlooking sprawling vineyards in Salta. The table features artisanal bread, local gastronomy on ceramic plates, and a bottle of local wine. Warm, golden hour sunlight casts long shadows. Textural, inviting, and authentic." src="https://lh3.googleusercontent.com/aida/AEtjO1XTj2VSp5J4G2STnsnYg07VFvcPENx-zqmOopoE6amZF_uhT2F8_xyuJTf5HQGgCvDgMHtqi7uOZ4_ZZzKaNV-Dgeoub0uQD9ftDKNgz4oUzBY7jAtmJmLRXlcaQ0EpuLlvqFtfYwX5xujHsoltXqyWKtJip3dqHG8dE3Crxkvy3In9VCFH6DpTMwNULQ3aqmA3aC0RRl1zhP7P5PYG7p3yxpnb-IOzFualBDD4kAj4pVleF2HQSPnQUA"/>
+</div>
+<div class="absolute inset-0 flex items-center justify-between px-8 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+<button class="w-12 h-12 bg-surface/80 rounded-full flex items-center justify-center pointer-events-auto hover:bg-surface text-on-surface backdrop-blur-sm border border-timber-brown/20 transition-all">
+<span class="material-symbols-outlined">arrow_back_ios_new</span>
+</button>
+<button class="w-12 h-12 bg-surface/80 rounded-full flex items-center justify-center pointer-events-auto hover:bg-surface text-on-surface backdrop-blur-sm border border-timber-brown/20 transition-all">
+<span class="material-symbols-outlined">arrow_forward_ios</span>
+</button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-desert-sand dark:bg-deep-earth w-full py-section-gap px-gutter border-t border-timber-brown/10 flat no shadows">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter max-w-container-max mx-auto">
+<div class="flex flex-col gap-4">
+<span class="font-headline-sm text-headline-sm text-on-surface">Finca La Carla</span>
+<p class="font-body-md text-body-md text-timber-brown dark:text-tertiary-fixed-dim">
+                    © 2024 Finca La Carla. Valle Calchaquí, Salta.
+                </p>
+</div>
+<div class="flex flex-col justify-center items-start md:items-center">
+<ul class="flex flex-col gap-4 text-center md:text-left">
+<li><a class="font-label-sm text-label-sm uppercase text-on-surface-variant hover:text-adobe-terracota transition-colors opacity-80 hover:opacity-100" href="#">Contacto</a></li>
+<li><a class="font-label-sm text-label-sm uppercase text-on-surface-variant hover:text-adobe-terracota transition-colors opacity-80 hover:opacity-100" href="#">Ubicación</a></li>
+<li><a class="font-label-sm text-label-sm uppercase text-on-surface-variant hover:text-adobe-terracota transition-colors opacity-80 hover:opacity-100" href="#">Fotos</a></li>
+<li><a class="font-label-sm text-label-sm uppercase text-on-surface-variant hover:text-adobe-terracota transition-colors opacity-80 hover:opacity-100" href="#">Qué hacer</a></li>
+</ul>
+</div>
+<div class="flex justify-start md:justify-end items-end">
+<button class="font-label-lg text-label-lg uppercase tracking-widest text-adobe-terracota border border-adobe-terracota px-6 py-2 hover:bg-adobe-terracota hover:text-desert-sand transition-colors duration-300">
+                    RESERVAR AHORA
+                </button>
+</div>
+</div>
+</footer>
+</body></html>
