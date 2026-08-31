@@ -26,6 +26,11 @@ window.LANG = {
     "eyebrow_ofrecemos": "Valores que nos definen",
     "eyebrow_testimonios": "Experiencias de huéspedes",
     "eyebrow_donde": "Nuestra ubicación",
+    "cta_eyebrow": "¿Listo para reservar?",
+    "cta_titulo": "Escribinos y organicemos tu estadía",
+    "cta_texto": "Consultá disponibilidad y recibí toda la información por WhatsApp.",
+    "cta_whatsapp": "Reservar por WhatsApp",
+    "cta_contacto": "Ver todos los contactos",
 
     /* ---------- Navegación ---------- */
     "nav_home": "Home",
@@ -224,6 +229,7 @@ window.LANG = {
     /* ---------- Qué hacer ---------- */
     "q_titulo": "Caminatas, comunidad y paisajes del valle",
     "q_intro": "Desde la finca pueden coordinarse actividades para conocer el paraje San Antonio y sus alrededores: una caminata por las obras comunitarias de provisión de agua, visitas a petroglifos y pinturas con guía local y cabalgatas en la zona de Corralito. Algunas son organizadas por terceros y requieren reserva previa.",
+    "q_actividades_titulo": "Actividades para coordinar desde la finca",
     "q_act1_titulo": "Visita a las obras hidráulicas de provisión de agua a la comunidad",
     "q_act1_mini": "Una caminata sencilla para conocer cómo la comunidad gestiona el agua para consumo y riego mediante obras construidas durante 25 años.",
     "q_act1_texto": "Esta caminata permite conocer las obras que la comunidad de San Antonio desarrolló durante los últimos 25 años para abastecerse de agua para consumo y riego. El recorrido parte desde la zona de la finca, cruza el río y avanza entre uno y dos kilómetros por un terreno de dificultad muy baja. La actividad dura aproximadamente entre dos y tres horas y se coordina a pedido con al menos un día de anticipación. No tiene costo adicional para los huéspedes. Se recomienda llevar ropa cómoda y agua. Por sus características, no está indicada para personas adultas mayores.",
@@ -550,6 +556,11 @@ window.LANG = {
     "eyebrow_ofrecemos": "Values that define us",
     "eyebrow_testimonios": "Guest experiences",
     "eyebrow_donde": "Our location",
+    "cta_eyebrow": "Ready to book?",
+    "cta_titulo": "Write to us and let's plan your stay",
+    "cta_texto": "Check availability and get all the information on WhatsApp.",
+    "cta_whatsapp": "Book on WhatsApp",
+    "cta_contacto": "See all contacts",
 
     /* ---------- Navigation ---------- */
     "nav_home": "Home",
@@ -748,6 +759,7 @@ window.LANG = {
     /* ---------- Things to do ---------- */
     "q_titulo": "Walks, community and valley landscapes",
     "q_intro": "From the farm, activities can be coordinated to get to know the village of San Antonio and its surroundings: a walk along the community water supply works, visits to petroglyphs and paintings with a local guide, and horse riding in the Corralito area. Some are organised by third parties and require prior booking.",
+    "q_actividades_titulo": "Activities to arrange from the estate",
     "q_act1_titulo": "Visit to the hydraulic water supply works of the community",
     "q_act1_mini": "A simple walk to learn how the community manages water for consumption and irrigation through works built over 25 years.",
     "q_act1_texto": "This walk allows you to learn about the works that the San Antonio community developed over the last 25 years to supply itself with water for consumption and irrigation. The route starts from the farm area, crosses the river and advances between one and two kilometres over terrain of very low difficulty. The activity lasts approximately two to three hours and is coordinated on request with at least one day's notice. It has no additional cost for guests. Comfortable clothing and water are recommended. Due to its characteristics, it is not suitable for older adults.",
