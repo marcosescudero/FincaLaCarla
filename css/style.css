@@ -7,23 +7,23 @@
 /* ---------- Tokens de diseño ---------- */
 :root {
   /* Colores (paleta cálida de los Valles Calchaquíes) */
-  --adobe: #a65d3a;
-  --adobe-osc: #7a431f;
+  --adobe: #b56a3d;           /* clay-500 */
+  --adobe-osc: #8f5230;       /* clay-600 */
   --adobe-claro: #f3d9c8;
-  --dorado: #b07d4f;          /* acento "eyebrow" y detalles */
+  --dorado: #c69769;          /* clay-400 — acento eyebrow */
   --vegetacion: #5b6b3a;
   --vegetacion-osc: #485728;
   --madera: #6b4f35;
   --piedra: #8a8578;
-  --arena: #f7f1e6;           /* fondo de sección cálido */
-  --arena-clara: #faf6ee;     /* fondo general */
-  --arena-osc: #ece2d1;
-  --tierra: #2b241b;          /* texto principal */
-  --tierra-suave: #5f564a;    /* texto secundario */
-  --tierra-900: #1a120e;      /* fondo oscuro (hero / secciones) */
+  --arena: #f7f1e6;           /* cream-100 — fondo de sección */
+  --arena-clara: #fbf7ee;     /* cream-50 — fondo general */
+  --arena-osc: #ece1cc;
+  --tierra: #2b201a;          /* earth-900 — texto principal */
+  --tierra-suave: rgba(43, 32, 26, .72); /* texto secundario */
+  --tierra-900: #1a120e;      /* earth-950 — fondo oscuro */
   --tierra-800: #241a13;      /* fondo oscuro secundario */
   --blanco: #ffffff;
-  --borde: #e0d5c2;
+  --borde: #dad2c8;
   --error: #a83836;
 
   /* Tipografía */
@@ -51,7 +51,7 @@ body {
   margin: 0;
   font-family: var(--font-texto);
   font-size: 16px;
-  line-height: 1.7;
+  line-height: 1.6;
   color: var(--tierra);
   background: var(--arena-clara);
   -webkit-font-smoothing: antialiased;
@@ -79,7 +79,7 @@ strong, b { font-weight: 600; }
   margin: 0 auto;
   padding: 0 var(--gutter);
 }
-.seccion { padding: 116px 0; }
+.seccion { padding: clamp(84px, 11vw, 128px) 0; }
 .seccion--arena { background: var(--arena); }
 .seccion--blanca { background: var(--blanco); }
 .seccion--oscura { background: var(--tierra-900); color: var(--arena); }
@@ -99,7 +99,7 @@ strong, b { font-weight: 600; }
 }
 
 .titulo-seccion {
-  font-size: clamp(34px, 4.6vw, 50px);
+  font-size: clamp(36px, 4.8vw, 48px);
   margin-bottom: 18px;
 }
 .intro-seccion {
@@ -115,13 +115,13 @@ strong, b { font-weight: 600; }
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 9px;
-  padding: 15px 30px;
+  gap: 8px;
+  padding: 10px 18px;
   border-radius: 0;
   font-family: var(--font-texto);
-  font-size: 13px;
-  font-weight: 600;
-  letter-spacing: .08em;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: .18em;
   text-transform: uppercase;
   cursor: pointer;
   border: 1px solid transparent;
@@ -136,10 +136,10 @@ strong, b { font-weight: 600; }
 .btn--oscuro:hover { background: #000; color: var(--blanco); transform: translateY(-2px); box-shadow: var(--sombra-media); }
 .btn--whatsapp { background: #25d366; color: var(--blanco); }
 .btn--whatsapp:hover { background: #1eb856; color: var(--blanco); transform: translateY(-2px); box-shadow: var(--sombra-media); }
-.btn--grande { padding: 17px 38px; font-size: 14px; }
+.btn--grande { padding: 13px 28px; font-size: 12px; }
 
 /* Flecha animada dentro de botones */
-.btn__icono { width: 16px; height: 16px; transition: transform .25s ease; }
+.btn__icono { width: 14px; height: 14px; transition: transform .25s ease; }
 .btn:hover .btn__icono { transform: translateX(4px); }
 
 /* Botones dentro de sección oscura */
@@ -148,14 +148,21 @@ strong, b { font-weight: 600; }
 .seccion--oscura .btn--ghost { color: var(--arena); border-color: var(--dorado); }
 .seccion--oscura .btn--ghost:hover { background: var(--dorado); color: var(--tierra-900); }
 
-/* ---------- Encabezado / navegación ---------- */
+/* ---------- Encabezado / navegación (transparente sobre hero → sólido al scroll) ---------- */
 .encabezado {
-  position: sticky;
+  position: fixed;
   top: 0;
+  left: 0;
+  right: 0;
   z-index: 900;
-  background: rgba(250, 246, 238, 0.9);
+  background: transparent;
+  border-bottom: 1px solid transparent;
+  transition: background .35s ease, border-color .35s ease;
+}
+.encabezado.encabezado--solido {
+  background: rgba(251, 247, 238, 0.92);
   backdrop-filter: blur(10px);
-  border-bottom: 1px solid var(--borde);
+  border-bottom-color: var(--borde);
 }
 .encabezado__fila {
   display: flex;
@@ -170,9 +177,10 @@ strong, b { font-weight: 600; }
   font-family: var(--font-titulo);
   font-size: 24px;
   font-weight: 500;
-  color: var(--tierra);
+  color: var(--arena);
   line-height: 1;
   letter-spacing: .2px;
+  transition: color .3s ease;
 }
 .marca__nombre small {
   display: block;
@@ -199,12 +207,12 @@ strong, b { font-weight: 600; }
   font-weight: 500;
   letter-spacing: .1em;
   text-transform: uppercase;
-  color: var(--tierra-suave);
-  border-radius: 6px;
+  color: rgba(247, 241, 230, .9);
+  border-radius: 0;
   transition: color .2s, background .2s;
 }
-.menu a:hover { color: var(--adobe-osc); background: var(--arena-osc); }
-.menu a.activo { color: var(--adobe-osc); background: var(--arena-osc); }
+.menu a:hover { color: var(--blanco); background: rgba(255, 255, 255, .12); }
+.menu a.activo { color: var(--blanco); background: rgba(255, 255, 255, .14); }
 
 .menu__reservar { background: var(--adobe) !important; color: var(--blanco) !important; }
 .menu__reservar:hover { background: var(--adobe-osc) !important; color: var(--blanco) !important; }
@@ -212,7 +220,7 @@ strong, b { font-weight: 600; }
 .encabezado__acciones { display: flex; align-items: center; gap: 12px; }
 
 /* Selector de idioma */
-.idioma { display: inline-flex; border: 1px solid var(--borde); border-radius: 0; overflow: hidden; }
+.idioma { display: inline-flex; border: 1px solid rgba(247, 241, 230, .4); border-radius: 0; overflow: hidden; }
 .idioma button {
   background: transparent;
   border: none;
@@ -222,22 +230,33 @@ strong, b { font-weight: 600; }
   font-weight: 600;
   letter-spacing: .1em;
   cursor: pointer;
-  color: var(--tierra-suave);
+  color: rgba(247, 241, 230, .9);
   transition: background .2s, color .2s;
 }
-.idioma button.activo { background: var(--tierra); color: var(--blanco); }
-.idioma button:not(.activo):hover { background: var(--arena-osc); }
+.idioma button.activo { background: var(--arena); color: var(--tierra-900); }
+.idioma button:not(.activo):hover { background: rgba(255, 255, 255, .12); }
 
 /* Botón menú móvil */
 .menu-boton {
   display: none;
   background: none;
-  border: 1px solid var(--borde);
-  border-radius: 6px;
+  border: 1px solid rgba(247, 241, 230, .4);
+  border-radius: 0;
   padding: 8px 12px;
   cursor: pointer;
-  color: var(--tierra);
+  color: var(--arena);
 }
+
+/* Estado sólido (después de hacer scroll) */
+.encabezado--solido .marca__nombre { color: var(--tierra); }
+.encabezado--solido .menu a { color: var(--tierra-suave); }
+.encabezado--solido .menu a:hover { color: var(--adobe-osc); background: var(--arena-osc); }
+.encabezado--solido .menu a.activo { color: var(--adobe-osc); background: var(--arena-osc); }
+.encabezado--solido .idioma { border-color: var(--borde); }
+.encabezado--solido .idioma button { color: var(--tierra-suave); }
+.encabezado--solido .idioma button.activo { background: var(--tierra); color: var(--blanco); }
+.encabezado--solido .idioma button:not(.activo):hover { background: var(--arena-osc); }
+.encabezado--solido .menu-boton { color: var(--tierra); border-color: var(--borde); }
 
 /* ---------- Banner hero (editorial) ---------- */
 .hero { position: relative; overflow: hidden; }
@@ -853,7 +872,8 @@ strong, b { font-weight: 600; }
     z-index: 1000;
   }
   .menu.abierto { transform: translateX(0); }
-  .menu a { padding: 14px 14px; font-size: 15px; border-bottom: 1px solid var(--arena-osc); }
+  .menu a { padding: 14px 14px; font-size: 15px; border-bottom: 1px solid var(--arena-osc); color: var(--tierra-suave); }
+  .menu a:hover, .menu a.activo { color: var(--adobe-osc); background: var(--arena-osc); }
   .menu__reservar { text-align: center; }
   .menu-sombra { position: fixed; inset: 0; background: rgba(20, 14, 9, .55); z-index: 999; display: none; }
   .menu-sombra.visible { display: block; }

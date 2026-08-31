@@ -110,9 +110,21 @@
     });
   }
 
+  /* ---------- Encabezado transparente → sólido al hacer scroll ---------- */
+  function initHeader() {
+    var header = document.querySelector(".encabezado");
+    if (!header) return;
+    function actualizar() {
+      header.classList.toggle("encabezado--solido", (window.pageYOffset || document.documentElement.scrollTop) > 30);
+    }
+    actualizar();
+    window.addEventListener("scroll", actualizar, { passive: true });
+  }
+
   /* ---------- Inicialización ---------- */
   document.addEventListener("DOMContentLoaded", function () {
     initMenu();
+    initHeader();
     marcarActivo();
     document.querySelectorAll(".idioma button[data-idioma]").forEach(function (b) {
       b.addEventListener("click", function () { aplicarIdioma(b.getAttribute("data-idioma")); });
