@@ -34,8 +34,8 @@
   --container: 1320px;
   --gutter: 28px;
   --gutter-movil: 20px;
-  --radio: 6px;
-  --radio-suave: 12px;
+  --radio: 0px;
+  --radio-suave: 4px;
 
   /* Elevación */
   --sombra-suave: 0 1px 3px rgba(26, 18, 14, 0.10);
@@ -117,7 +117,7 @@ strong, b { font-weight: 600; }
   justify-content: center;
   gap: 9px;
   padding: 15px 30px;
-  border-radius: 8px;
+  border-radius: 0;
   font-family: var(--font-texto);
   font-size: 13px;
   font-weight: 600;
@@ -137,6 +137,10 @@ strong, b { font-weight: 600; }
 .btn--whatsapp { background: #25d366; color: var(--blanco); }
 .btn--whatsapp:hover { background: #1eb856; color: var(--blanco); transform: translateY(-2px); box-shadow: var(--sombra-media); }
 .btn--grande { padding: 17px 38px; font-size: 14px; }
+
+/* Flecha animada dentro de botones */
+.btn__icono { width: 16px; height: 16px; transition: transform .25s ease; }
+.btn:hover .btn__icono { transform: translateX(4px); }
 
 /* Botones dentro de sección oscura */
 .seccion--oscura .btn--oscuro { background: var(--arena); color: var(--tierra-900); }
@@ -208,7 +212,7 @@ strong, b { font-weight: 600; }
 .encabezado__acciones { display: flex; align-items: center; gap: 12px; }
 
 /* Selector de idioma */
-.idioma { display: inline-flex; border: 1px solid var(--borde); border-radius: 6px; overflow: hidden; }
+.idioma { display: inline-flex; border: 1px solid var(--borde); border-radius: 0; overflow: hidden; }
 .idioma button {
   background: transparent;
   border: none;
@@ -421,19 +425,20 @@ strong, b { font-weight: 600; }
 }
 .diferencial { text-align: center; padding: 14px 10px; }
 .diferencial__icono {
-  width: 64px;
-  height: 64px;
+  width: 56px;
+  height: 56px;
   margin: 0 auto 18px;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 50%;
-  background: var(--arena);
-  color: var(--adobe-osc);
-  border: 1px solid var(--borde);
-  font-size: 24px;
-  box-shadow: var(--sombra-suave);
+  border: 1px solid var(--adobe);
+  color: var(--adobe);
+  background: transparent;
+  border-radius: 0;
+  transition: background .25s ease, color .25s ease;
 }
+.diferencial:hover .diferencial__icono { background: var(--adobe); color: var(--arena-clara); }
+.diferencial__icono svg { width: 24px; height: 24px; }
 .diferencial h3 {
   font-size: 13px;
   letter-spacing: .14em;
@@ -456,18 +461,8 @@ strong, b { font-weight: 600; }
   padding: 30px 28px;
   position: relative;
 }
-.testimonio::before {
-  content: "\201C";
-  position: absolute;
-  top: 4px;
-  left: 22px;
-  font-family: var(--font-titulo);
-  font-size: 72px;
-  line-height: 1;
-  color: var(--dorado);
-  opacity: .5;
-}
-.testimonio p { margin: 16px 0 14px; color: rgba(247, 241, 230, .92); font-size: 15.5px; font-style: italic; }
+.testimonio__quote { width: 30px; height: 30px; color: var(--dorado); margin-bottom: 8px; }
+.testimonio p { margin: 8px 0 14px; color: rgba(247, 241, 230, .92); font-size: 15.5px; font-style: italic; }
 .testimonio__autor {
   font-family: var(--font-texto);
   font-size: 12px;
@@ -618,7 +613,7 @@ strong, b { font-weight: 600; }
   width: 100%;
   padding: 13px 15px;
   border: 1px solid var(--borde);
-  border-radius: 8px;
+  border-radius: 0;
   background: var(--arena-clara);
   color: var(--tierra);
   font-family: var(--font-texto);
@@ -915,6 +910,52 @@ strong, b { font-weight: 600; }
 .cta-final .btn--ghost { color: var(--arena); border-color: var(--dorado); }
 .cta-final .btn--ghost:hover { background: var(--dorado); color: var(--tierra-900); }
 .cta-final .rotulo { text-align: center; }
+
+/* ---------- Iconografía (estilo Lucide / Cloe) ---------- */
+:root {
+  --ic-msg: url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2024%2024'%20fill='none'%20stroke='black'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'%3E%3Cpath%20d='M7.9%2020A9%209%200%201%200%204%2016.1L2%2022Z'/%3E%3C/svg%3E");
+  --ic-send: url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2024%2024'%20fill='none'%20stroke='black'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'%3E%3Cpath%20d='m22%202-7%2020-4-9-9-4Z'/%3E%3Cpath%20d='M22%202%2011%2013'/%3E%3C/svg%3E");
+  --ic-pin: url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2024%2024'%20fill='none'%20stroke='black'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'%3E%3Cpath%20d='M20%2010c0%204.993-5.539%2010.193-7.399%2011.799a1%201%200%200%201-1.202%200C9.539%2020.193%204%2014.993%204%2010a8%208%200%200%201%2016%200'/%3E%3Ccircle%20cx='12'%20cy='10'%20r='3'/%3E%3C/svg%3E");
+  --ic-phone: url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2024%2024'%20fill='none'%20stroke='black'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'%3E%3Cpath%20d='M22%2016.92v3a2%202%200%200%201-2.18%202%2019.79%2019.79%200%200%201-8.63-3.07%2019.5%2019.5%200%200%201-6-6%2019.79%2019.79%200%200%201-3.07-8.67A2%202%200%200%201%204.11%202h3a2%202%200%200%201%202%201.72%2012.84%2012.84%200%200%200%20.7%202.81%202%202%200%200%201-.45%202.11L8.09%209.91a16%2016%200%200%200%206%206l1.27-1.27a2%202%200%200%201%202.11-.45%2012.84%2012.84%200%200%200%202.81.7A2%202%200%200%201%2022%2016.92z'/%3E%3C/svg%3E");
+  --ic-mail: url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2024%2024'%20fill='none'%20stroke='black'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'%3E%3Crect%20width='20'%20height='16'%20x='2'%20y='4'%20rx='2'/%3E%3Cpath%20d='m22%207-8.991%205.727a2%202%200%200%201-2.009%200L2%207'/%3E%3C/svg%3E");
+}
+
+/* Icono en RESERVAR (menú) */
+.menu__reservar { display: inline-flex; align-items: center; gap: 8px; }
+.menu__reservar::before {
+  content: ""; width: 14px; height: 14px; flex-shrink: 0;
+  background-color: currentColor;
+  -webkit-mask: var(--ic-msg) center / contain no-repeat;
+  mask: var(--ic-msg) center / contain no-repeat;
+}
+
+/* Icono send en CTA WhatsApp */
+.cta-final .btn--whatsapp::before {
+  content: ""; width: 15px; height: 15px; flex-shrink: 0;
+  background-color: currentColor;
+  -webkit-mask: var(--ic-send) center / contain no-repeat;
+  mask: var(--ic-send) center / contain no-repeat;
+}
+
+/* Iconos en footer (contacto) */
+.pie p[data-i18n="direccion_corta"],
+.pie li a[data-whatsapp="msg"],
+.pie li a[href^="mailto:"] { display: inline-flex; align-items: center; gap: 8px; }
+.pie p[data-i18n="direccion_corta"]::before,
+.pie li[data-i18n="footer_cel"]::before,
+.pie li a[data-whatsapp="msg"]::before,
+.pie li a[href^="mailto:"]::before {
+  content: ""; width: 14px; height: 14px; flex-shrink: 0;
+  background-color: var(--dorado);
+  -webkit-mask: var(--ic-pin) center / contain no-repeat;
+  mask: var(--ic-pin) center / contain no-repeat;
+}
+.pie li[data-i18n="footer_cel"]::before { -webkit-mask: var(--ic-phone) center / contain no-repeat; mask: var(--ic-phone) center / contain no-repeat; }
+.pie li a[data-whatsapp="msg"]::before { -webkit-mask: var(--ic-msg) center / contain no-repeat; mask: var(--ic-msg) center / contain no-repeat; }
+.pie li a[href^="mailto:"]::before { -webkit-mask: var(--ic-mail) center / contain no-repeat; mask: var(--ic-mail) center / contain no-repeat; }
+
+/* Iconos chevron en hero */
+.hero__icono { width: 22px; height: 22px; }
 
 /* ---------- Accesibilidad ---------- */
 :focus-visible { outline: 3px solid var(--adobe); outline-offset: 2px; }
