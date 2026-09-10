@@ -145,8 +145,10 @@ h1 { font-weight: 400; }
 
 .btn--grande { padding: 17px 40px; font-size: 11px; }
 
-/* ---------- Encabezado: barra oscura al hacer scroll ---------- */
-.encabezado--solido {
+/* ---------- Encabezado: barra oscura al hacer scroll ----------
+   OJO: `style.css` define el fondo con `.encabezado.encabezado--solido` (0-2-0), que le gana a
+   `.encabezado--solido` (0-1-0). Hay que usar el selector doble para ganar el empate. */
+.encabezado.encabezado--solido {
   background: rgba(15, 23, 18, .95);
   border-bottom: 1px solid rgba(198, 166, 100, .3);
   backdrop-filter: blur(10px);
@@ -165,6 +167,7 @@ h1 { font-weight: 400; }
 .menu__reservar:hover { background: var(--oro-claro) !important; color: var(--noche) !important; }
 .idioma { border-radius: 0; border-color: rgba(224, 203, 154, .5); }
 .menu-boton { border-radius: 0; }
+.encabezado--solido .menu-boton { color: var(--marfil); border-color: rgba(224, 203, 154, .38); }
 .menu a:not(.menu__reservar)::after { background: var(--oro); }
 
 /* ---------- Selector de idioma (referencia: La Posada de Cloe) ----------
