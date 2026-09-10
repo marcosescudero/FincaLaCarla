@@ -167,6 +167,39 @@ h1 { font-weight: 400; }
 .menu-boton { border-radius: 0; }
 .menu a:not(.menu__reservar)::after { background: var(--oro); }
 
+/* ---------- Selector de idioma (referencia: La Posada de Cloe) ----------
+   Recuadro de filete fino + ícono de globo + "ES | EN".
+   El idioma activo va en oro; el inactivo, atenuado. Sin fondos rellenos. */
+.idioma {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid rgba(224, 203, 154, .38);
+  border-radius: 0;
+  padding: 6px 10px;
+  overflow: visible;
+}
+.idioma__globo { width: 13px; height: 13px; color: var(--marfil); opacity: .8; flex: 0 0 auto; }
+.idioma__sep { color: rgba(248, 245, 238, .3); font-size: 11px; line-height: 1; }
+.idioma button {
+  background: transparent;
+  border: 0;
+  padding: 0;
+  min-width: 24px;
+  min-height: 24px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-texto);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: .22em;
+  color: rgba(248, 245, 238, .55);
+  transition: color .3s ease;
+}
+.idioma button.activo { background: transparent; color: var(--oro); }
+.idioma button:not(.activo):hover { background: transparent; color: var(--oro-claro); }
+
 /* ---------- HERO: cinematográfico ---------- */
 .hero__img { height: 88vh; min-height: 620px; max-height: 1000px; }
 .hero__velo {
