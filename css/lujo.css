@@ -1,0 +1,273 @@
+/* ==========================================================================
+   FINCA LA CARLA — PROTOTIPO "LUJO CLÁSICO" (Opción L)
+   Capa de prototipo: se carga DESPUÉS de style.css y redefine el sistema.
+   Dirección: verde profundo + oro, serif de alto contraste, formas rectas,
+   filetes de 1px, fotografía cinematográfica.
+   ⚠️ Es una capa de comparación: NO consolidar sin refactorizar en style.css.
+   ========================================================================== */
+
+/* ---------- Tokens ---------- */
+:root {
+  /* Base oscura: verde profundo */
+  --noche: #16211b;
+  --noche-osc: #0f1712;
+  --noche-suave: #1e2f26;
+
+  /* Metálico */
+  --oro: #c6a664;
+  --oro-claro: #e0cb9a;
+  --oro-osc: #9a7f45;
+  --oro-texto: #8a6d33;   /* oro legible sobre fondo claro (AA 4,55:1) */
+
+  /* Claros */
+  --marfil: #f8f5ee;
+  --arena: #ece5d8;
+  --arena-osc: #ded5c4;
+
+  /* Texto */
+  --texto: #1a1f1b;
+  --texto-suave: #5d665e;
+
+  /* Remapeo de los tokens del sistema anterior */
+  --adobe: #c6a664;
+  --adobe-osc: #9a7f45;
+  --adobe-claro: #e0cb9a;
+  --dorado: #c6a664;
+  --dorado-texto: #8a6d33;
+  --dorado-claro: #e0cb9a;
+  --vegetacion: #16211b;
+  --vegetacion-osc: #0f1712;
+  --madera: #5d665e;
+  --piedra: #5d665e;
+  --tierra: #16211b;
+  --tierra-suave: #5d665e;
+  --tierra-900: #16211b;
+  --tierra-800: #0f1712;
+  --arena-clara: #f8f5ee;
+  --borde: rgba(198, 166, 100, .32);
+  --radio: 0px;
+  --radio-suave: 0px;
+
+  /* Tipografía */
+  --font-titulo: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+  --font-texto: 'Inter', system-ui, -apple-system, 'Segoe UI', Arial, sans-serif;
+
+  /* Layout */
+  --container: 1280px;
+  --gutter: 32px;
+
+  /* Sin sombras difusas: el lujo se construye con contraste, no con blur */
+  --sombra-suave: none;
+  --sombra-media: none;
+}
+
+/* ---------- Base tipográfica ---------- */
+body {
+  background: var(--marfil);
+  color: var(--texto-suave);
+  letter-spacing: .005em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 400;
+  letter-spacing: .01em;
+  color: var(--tierra);
+}
+h1 { font-weight: 400; }
+
+/* Rótulos: versalitas espaciadas en oro */
+.rotulo {
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: .34em;
+  color: var(--oro-texto);
+}
+
+.titulo-seccion {
+  font-size: clamp(34px, 4.8vw, 60px);
+  font-weight: 400;
+  line-height: 1.08;
+  letter-spacing: .01em;
+}
+
+.intro-seccion {
+  font-size: 16px;
+  line-height: 1.85;
+  color: var(--texto-suave);
+}
+
+.seccion { padding: clamp(84px, 10vw, 148px) 0; }
+.seccion--arena { background: var(--arena); }
+.seccion--blanca { background: var(--marfil); }
+
+/* Filete fino de separación */
+.seccion--oscura {
+  background: var(--noche);
+  color: rgba(248, 245, 238, .78);
+  border-top: 1px solid rgba(198, 166, 100, .22);
+  border-bottom: 1px solid rgba(198, 166, 100, .22);
+}
+.seccion--oscura .titulo-seccion,
+.seccion--oscura h1,
+.seccion--oscura h2,
+.seccion--oscura h3 { color: var(--marfil); }
+.seccion--oscura .rotulo { color: var(--oro-claro); }
+
+/* ---------- Botones: rectangulares, filete, sin sombra ---------- */
+.btn {
+  border-radius: 0;
+  padding: 15px 32px;
+  min-height: 48px;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: .22em;
+  box-shadow: none;
+  transition: background .4s ease, color .4s ease, border-color .4s ease;
+}
+.btn:hover { transform: none; box-shadow: none; }
+
+.btn--primario {
+  background: var(--noche);
+  color: var(--oro-claro);
+  border: 1px solid var(--noche);
+}
+.btn--primario:hover { background: var(--oro); color: var(--noche); border-color: var(--oro); }
+
+.btn--ghost {
+  background: transparent;
+  color: var(--tierra);
+  border: 1px solid var(--oro);
+}
+.btn--ghost:hover { background: var(--noche); color: var(--oro-claro); border-color: var(--noche); }
+
+.btn--oscuro { background: var(--oro); color: var(--noche); border-color: var(--oro); }
+.btn--oscuro:hover { background: var(--oro-claro); color: var(--noche); border-color: var(--oro-claro); }
+
+.btn--grande { padding: 17px 40px; font-size: 11px; }
+
+/* ---------- Encabezado: barra oscura al hacer scroll ---------- */
+.encabezado--solido {
+  background: rgba(15, 23, 18, .95);
+  border-bottom: 1px solid rgba(198, 166, 100, .3);
+  backdrop-filter: blur(10px);
+}
+.encabezado--solido .marca__nombre { color: var(--marfil); }
+.encabezado--solido .marca__nombre small { color: var(--oro); }
+.encabezado--solido .menu a { color: rgba(248, 245, 238, .82); }
+.encabezado--solido .menu a:hover,
+.encabezado--solido .menu a.activo { color: var(--oro-claro); background: transparent; }
+.encabezado--solido .menu a.activo { color: var(--oro-claro); }
+.encabezado--solido .marca::before { background: var(--oro); color: var(--noche); border-color: var(--oro); }
+.marca::before { background: rgba(198, 166, 100, .92); color: var(--noche); border-color: rgba(224, 203, 154, .8); }
+.marca__nombre { font-family: var(--font-titulo); letter-spacing: .02em; }
+.menu a { font-size: 10px; letter-spacing: .18em; }
+.menu__reservar { background: var(--oro) !important; color: var(--noche) !important; border-radius: 0 !important; }
+.menu__reservar:hover { background: var(--oro-claro) !important; color: var(--noche) !important; }
+.idioma { border-radius: 0; border-color: rgba(224, 203, 154, .5); }
+.menu-boton { border-radius: 0; }
+.menu a:not(.menu__reservar)::after { background: var(--oro); }
+
+/* ---------- HERO: cinematográfico ---------- */
+.hero__img { height: 88vh; min-height: 620px; max-height: 1000px; }
+.hero__velo {
+  background: linear-gradient(180deg, rgba(15, 23, 18, .62) 0%, rgba(15, 23, 18, .34) 38%, rgba(15, 23, 18, .82) 100%);
+}
+.hero__lema {
+  font-size: clamp(46px, 7vw, 96px);
+  font-weight: 400;
+  letter-spacing: .005em;
+  line-height: 1.04;
+  text-shadow: 0 2px 30px rgba(0, 0, 0, .45);
+}
+.hero__eyebrow { color: var(--oro-claro); font-size: 10px; letter-spacing: .42em; font-weight: 500; }
+.hero__subtitulo { color: rgba(248, 245, 238, .82); font-size: 12px; letter-spacing: .3em; }
+.hero__punto { background-color: rgba(248, 245, 238, .4); }
+.hero__punto.activo { background-color: var(--oro); }
+.hero__flecha { border-color: rgba(224, 203, 154, .5); background: rgba(15, 23, 18, .35); }
+.hero__flecha:hover { background: rgba(198, 166, 100, .9); color: var(--noche); border-color: var(--oro); }
+.btn--hero-ghost { color: var(--marfil); border-color: rgba(224, 203, 154, .7); }
+.btn--hero-ghost:hover { background: var(--oro); color: var(--noche); border-color: var(--oro); }
+
+/* ---------- Tarjetas: a sangre, filete, sin sombra ---------- */
+.tarjeta-servicio {
+  border: 1px solid rgba(198, 166, 100, .3);
+  border-top: 1px solid rgba(198, 166, 100, .3);
+  border-radius: 0;
+  box-shadow: none;
+  background: var(--noche);
+}
+.tarjeta-servicio:hover { transform: none; box-shadow: none; border-color: var(--oro); }
+.tarjeta-servicio:hover .tarjeta-servicio__img { transform: scale(1.03); }
+.tarjeta-servicio__img { filter: saturate(1.04) contrast(1.06); transition: transform .9s ease; }
+.tarjeta-servicio__info {
+  background: linear-gradient(to top, rgba(15, 23, 18, .9), rgba(15, 23, 18, 0) 72%);
+  padding: 80px 26px 26px;
+}
+.tarjeta-servicio__info .rotulo { color: var(--oro-claro); letter-spacing: .3em; }
+.tarjeta-servicio h3 { font-weight: 400; font-size: 30px; letter-spacing: .01em; }
+
+/* ---------- Imágenes: tratamiento cinematográfico ---------- */
+.resumen-historia img {
+  border: 1px solid rgba(198, 166, 100, .3);
+  border-radius: 0;
+  box-shadow: none;
+  filter: saturate(1.04) contrast(1.06);
+}
+.diferencial__icono {
+  border: 1px solid rgba(198, 166, 100, .55);
+  color: var(--oro-osc);
+  border-radius: 0;
+}
+.diferencial:hover .diferencial__icono { background: var(--noche); color: var(--oro-claro); }
+.diferencial h3 { color: var(--tierra); letter-spacing: .2em; font-family: var(--font-texto); font-size: 11px; font-weight: 600; }
+.diferencial p { font-size: 15px; line-height: 1.8; }
+
+/* ---------- Testimonios sobre oscuro ---------- */
+.testimonio { background: transparent; border: 1px solid rgba(198, 166, 100, .22); border-top: 1px solid rgba(198, 166, 100, .22); padding: 34px 30px; }
+.testimonio__quote { color: var(--oro); }
+.testimonio p { color: rgba(248, 245, 238, .85); font-style: normal; font-size: 16px; line-height: 1.85; }
+.testimonio__autor { color: var(--oro-claro); letter-spacing: .2em; }
+
+/* ---------- Formularios ---------- */
+.formulario input[type="text"], .formulario input[type="email"], .formulario input[type="date"],
+.formulario input[type="number"], .formulario select, .formulario textarea {
+  border: 1px solid rgba(198, 166, 100, .4);
+  background: #fff;
+  border-radius: 0;
+}
+.formulario input:focus, .formulario select:focus, .formulario textarea:focus {
+  border-color: var(--oro);
+  box-shadow: 0 0 0 2px rgba(198, 166, 100, .22);
+}
+.formulario__campo label { letter-spacing: .18em; font-size: 10px; color: var(--oro-texto); }
+.dato__clave { color: var(--oro-texto); letter-spacing: .2em; }
+
+/* ---------- Otros componentes ---------- */
+.tarjeta, .dato, .ficha { border: 1px solid rgba(198, 166, 100, .3); border-radius: 0; box-shadow: none; background: #fff; }
+.dato__valor, .ficha__valor { color: var(--texto); }
+.acordeon__boton { border-bottom: 1px solid rgba(198, 166, 100, .3); }
+.acordeon__icono { color: var(--oro-osc); }
+.mapa { border: 1px solid rgba(198, 166, 100, .3); border-radius: 0; box-shadow: none; }
+.migas { letter-spacing: .16em; font-size: 10px; text-transform: uppercase; color: var(--oro-claro); }
+.migas a { color: rgba(248, 245, 238, .7); }
+.lista-carac li::before { color: var(--oro); }
+.cabecera-pagina--imagen::before { background: linear-gradient(180deg, rgba(15, 23, 18, .68) 0%, rgba(15, 23, 18, .5) 100%); }
+
+/* ---------- Footer ---------- */
+.pie { background: var(--noche-osc); border-top: 1px solid rgba(198, 166, 100, .3); color: rgba(248, 245, 238, .72); }
+.pie h4 { color: var(--oro); letter-spacing: .24em; font-size: 10px; font-weight: 600; }
+.pie a { color: rgba(248, 245, 238, .72); }
+.pie a:hover { color: var(--oro-claro); }
+.pie__marca { color: var(--marfil); font-weight: 400; letter-spacing: .02em; }
+.pie__redes a { border-color: rgba(198, 166, 100, .35); }
+.pie__redes a:hover { background: rgba(198, 166, 100, .16); border-color: var(--oro); }
+.pie__redes svg { fill: var(--oro); }
+.pie__legal { border-top: 1px solid rgba(198, 166, 100, .18); color: rgba(248, 245, 238, .6); }
+
+/* ---------- CTA final ---------- */
+.cta-final { background: var(--noche); border-top: 1px solid rgba(198, 166, 100, .25); }
+.cta-final__titulo { font-weight: 400; color: var(--marfil); }
+.cta-final .rotulo { color: var(--oro-claro); }
+.cta-final__texto { color: rgba(248, 245, 238, .75); }
+.cta-final .btn--ghost { color: var(--marfil); border-color: rgba(224, 203, 154, .6); }
+.cta-final .btn--ghost:hover { background: var(--oro); color: var(--noche); border-color: var(--oro); }
