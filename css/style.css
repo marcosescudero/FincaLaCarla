@@ -6,40 +6,41 @@
 
 /* ---------- Tokens de diseño ---------- */
 :root {
-  /* Colores (paleta cálida de los Valles Calchaquíes) */
-  --adobe: #b56a3d;           /* clay-500 */
-  --adobe-osc: #8f5230;       /* clay-600 */
-  --adobe-claro: #f3d9c8;
-  --dorado: #c69769;          /* clay-400 — acento eyebrow */
-  --vegetacion: #5b6b3a;
-  --vegetacion-osc: #485728;
-  --madera: #6b4f35;
-  --piedra: #8a8578;
-  --arena: #f7f1e6;           /* cream-100 — fondo de sección */
-  --arena-clara: #fbf7ee;     /* cream-50 — fondo general */
-  --arena-osc: #ece1cc;
-  --tierra: #2b201a;          /* earth-900 — texto principal */
-  --tierra-suave: rgba(43, 32, 26, .72); /* texto secundario */
-  --tierra-900: #1a120e;      /* earth-950 — fondo oscuro */
-  --tierra-800: #241a13;      /* fondo oscuro secundario */
+  /* Colores — Sistema de Diseño Itinere */
+  --adobe: #d4a373;           /* Acento (arena/terracota) */
+  --adobe-osc: #c28f5f;       /* Acento hover */
+  --adobe-claro: #e8e0d5;     /* Fondos de detalles */
+  --dorado: #c69769;          /* Rótulos (se conserva) */
+  --vegetacion: #2c3e2f;      /* Primario (verde bosque) */
+  --vegetacion-osc: #24331f;
+  --madera: #7a6b5d;          /* Terciario */
+  --piedra: #7a6b5d;          /* Terciario */
+  --arena: #e8e0d5;           /* Fondos de detalles / secciones */
+  --arena-clara: #f9f6f0;     /* Fondo principal */
+  --arena-osc: #ded4c6;
+  --tierra: #2c3e2f;          /* Primario: títulos y acentos */
+  --tierra-suave: #4a5b4e;    /* Texto secundario */
+  --tierra-900: #2c3e2f;      /* Fondo de secciones oscuras */
+  --tierra-800: #24331f;
   --blanco: #ffffff;
-  --borde: #dad2c8;
+  --borde: #e0e0e0;
   --error: #a83836;
+  --azul: #3b82f6;            /* Acento para acciones digitales */
 
   /* Tipografía */
-  --font-titulo: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+  --font-titulo: 'Lora', Georgia, 'Times New Roman', serif;
   --font-texto: 'Inter', system-ui, -apple-system, 'Segoe UI', Arial, sans-serif;
 
   /* Espaciado */
-  --container: 1320px;
-  --gutter: 28px;
+  --container: 1200px;
+  --gutter: 24px;
   --gutter-movil: 20px;
-  --radio: 0px;
-  --radio-suave: 4px;
+  --radio: 8px;
+  --radio-suave: 8px;
 
   /* Elevación */
-  --sombra-suave: 0 1px 3px rgba(26, 18, 14, 0.10);
-  --sombra-media: 0 14px 34px rgba(26, 18, 14, 0.16);
+  --sombra-suave: 0 4px 15px rgba(0, 0, 0, 0.05);
+  --sombra-media: 0 8px 30px rgba(0, 0, 0, 0.12);
 }
 
 /* ---------- Reset / base ---------- */
@@ -52,7 +53,7 @@ body {
   font-family: var(--font-texto);
   font-size: 16px;
   line-height: 1.6;
-  color: var(--tierra);
+  color: var(--tierra-suave);
   background: var(--arena-clara);
   -webkit-font-smoothing: antialiased;
 }
@@ -64,11 +65,12 @@ ul, ol { padding-left: 1.3em; }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-titulo);
-  font-weight: 500;
+  font-weight: 600;
   line-height: 1.15;
   color: var(--tierra);
   margin: 0 0 .45em;
 }
+h1 { font-weight: 700; }
 p { margin: 0 0 1em; }
 strong, b { font-weight: 600; }
 
@@ -268,7 +270,7 @@ strong, b { font-weight: 600; }
 .hero__velo {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to bottom, rgba(20, 14, 9, .45), rgba(20, 14, 9, .15) 45%, rgba(20, 14, 9, .6));
+  background: linear-gradient(to bottom, rgba(44, 62, 47, .45), rgba(44, 62, 47, .15) 45%, rgba(44, 62, 47, .6));
 }
 .hero__contenido {
   position: absolute;
@@ -314,7 +316,7 @@ strong, b { font-weight: 600; }
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(20, 14, 9, .4);
+  background: rgba(44, 62, 47, .4);
   color: var(--blanco);
   border: 1px solid rgba(255, 255, 255, .35);
   border-radius: 50%;
@@ -328,7 +330,7 @@ strong, b { font-weight: 600; }
   transition: background .2s, transform .2s;
   z-index: 5;
 }
-.hero__flecha:hover { background: rgba(20, 14, 9, .7); transform: translateY(-50%) scale(1.06); }
+.hero__flecha:hover { background: rgba(44, 62, 47, .7); transform: translateY(-50%) scale(1.06); }
 .hero__flecha--prev { left: 22px; }
 .hero__flecha--next { right: 22px; }
 .hero__puntos {
@@ -384,7 +386,7 @@ strong, b { font-weight: 600; }
   inset-inline: 0;
   bottom: 0;
   padding: 60px 22px 20px;
-  background: linear-gradient(to top, rgba(20, 14, 9, .82), rgba(20, 14, 9, 0) 70%);
+  background: linear-gradient(to top, rgba(44, 62, 47, .82), rgba(44, 62, 47, 0) 70%);
   color: var(--blanco);
 }
 .tarjeta-servicio__info .rotulo { color: var(--dorado); margin-bottom: 6px; }
@@ -527,7 +529,7 @@ strong, b { font-weight: 600; }
 .galeria-tema__velo {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to top, rgba(20, 14, 9, .78), transparent 55%);
+  background: linear-gradient(to top, rgba(44, 62, 47, .78), transparent 55%);
   display: flex;
   align-items: flex-end;
   padding: 18px;
@@ -810,7 +812,7 @@ strong, b { font-weight: 600; }
 /* ---------- Hero interior con imagen ---------- */
 .hero-interior { position: relative; min-height: 360px; display: flex; align-items: flex-end; overflow: hidden; }
 .hero-interior img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
-.hero-interior__velo { position: absolute; inset: 0; background: linear-gradient(to top, rgba(20, 14, 9, .72), rgba(20, 14, 9, .08)); }
+.hero-interior__velo { position: absolute; inset: 0; background: linear-gradient(to top, rgba(44, 62, 47, .72), rgba(44, 62, 47, .08)); }
 .hero-interior__texto { position: relative; z-index: 2; color: var(--blanco); padding: 48px 0; }
 .hero-interior h1 { color: var(--blanco); }
 .hero-interior h1::before {
@@ -875,7 +877,7 @@ strong, b { font-weight: 600; }
   .menu a { padding: 14px 14px; font-size: 15px; border-bottom: 1px solid var(--arena-osc); color: var(--tierra-suave); }
   .menu a:hover, .menu a.activo { color: var(--adobe-osc); background: var(--arena-osc); }
   .menu__reservar { text-align: center; }
-  .menu-sombra { position: fixed; inset: 0; background: rgba(20, 14, 9, .55); z-index: 999; display: none; }
+  .menu-sombra { position: fixed; inset: 0; background: rgba(44, 62, 47, .55); z-index: 999; display: none; }
   .menu-sombra.visible { display: block; }
   .formulario__filas { grid-template-columns: 1fr; }
   .hero__img { height: 78vh; min-height: 460px; }
@@ -907,7 +909,7 @@ strong, b { font-weight: 600; }
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(to top, rgba(20, 14, 9, .85), rgba(20, 14, 9, .25));
+  background: linear-gradient(to top, rgba(44, 62, 47, .85), rgba(44, 62, 47, .25));
 }
 .cabecera-pagina--imagen .contenedor {
   position: relative;
@@ -979,24 +981,11 @@ strong, b { font-weight: 600; }
 
 /* ---------- Accesibilidad ---------- */
 
-/* ---------- Ajuste editorial inspirado en La Posada de Cloe ---------- */
-:root {
-  --container: 1240px;
-  --gutter: 34px;
-  --arena-clara: #f8f4ec;
-  --arena: #eee7da;
-  --arena-osc: #dfd4c3;
-  --adobe: #b56a3d;
-  --adobe-osc: #934f2b;
-  --tierra: #2b201a;
-  --tierra-900: #30231c;
-  --borde: #d7caba;
-  --sombra-suave: 0 8px 24px rgba(43, 32, 26, .06);
-  --sombra-media: 0 18px 38px rgba(43, 32, 26, .14);
-}
+/* ---------- Ajuste editorial (sistema Itinere) ---------- */
+/* El bloque de overrides "Cloe" fue eliminado: rige el :root de Itinere definido al inicio. */
 
 body { letter-spacing: .01em; }
-.seccion { padding: clamp(96px, 12vw, 156px) 0; }
+.seccion { padding: clamp(64px, 8vw, 80px) 0; }
 .seccion--arena { background: var(--arena); }
 .seccion--blanca { background: var(--arena-clara); }
 
@@ -1016,7 +1005,7 @@ body { letter-spacing: .01em; }
   font-family: var(--font-titulo);
   font-size: 17px;
   letter-spacing: .04em;
-  background: rgba(73, 92, 44, .88);
+  background: rgba(44, 62, 47, .88);
   transition: border-color .3s ease, color .3s ease, background .3s ease;
 }
 .marca__nombre { font-size: 25px; }
@@ -1053,7 +1042,7 @@ body { letter-spacing: .01em; }
   from { transform: scale(1); }
   to { transform: scale(1.045); }
 }
-.hero__velo { background: linear-gradient(90deg, rgba(20, 14, 9, .62), rgba(20, 14, 9, .12) 65%), linear-gradient(0deg, rgba(20, 14, 9, .48), transparent 55%); }
+.hero__velo { background: linear-gradient(90deg, rgba(44, 62, 47, .62), rgba(44, 62, 47, .12) 65%), linear-gradient(0deg, rgba(44, 62, 47, .48), transparent 55%); }
 .hero__contenido {
   align-items: flex-start;
   justify-content: flex-end;
@@ -1075,7 +1064,7 @@ body { letter-spacing: .01em; }
 .btn--hero-ghost { color: var(--blanco); border-color: rgba(255, 255, 255, .72); }
 .btn--hero-ghost:hover { background: var(--blanco); color: var(--tierra); }
 
-.titulo-seccion { font-size: clamp(40px, 5vw, 58px); font-weight: 400; }
+.titulo-seccion { font-size: clamp(40px, 5vw, 58px); font-weight: 600; }
 .intro-seccion { font-size: 18px; line-height: 1.7; }
 .presentacion { max-width: 900px; }
 .presentacion > p[data-i18n="pres_texto"] { line-height: 1.85 !important; color: var(--tierra-suave); }
@@ -1134,7 +1123,7 @@ body { letter-spacing: .01em; }
   background-position: center;
   overflow: hidden;
 }
-.gastro-hero__velo { position: absolute; inset: 0; background: linear-gradient(90deg, rgba(25, 17, 11, .66), rgba(25, 17, 11, .08) 72%), linear-gradient(0deg, rgba(25, 17, 11, .72), transparent 52%); }
+.gastro-hero__velo { position: absolute; inset: 0; background: linear-gradient(90deg, rgba(44, 62, 47, .66), rgba(44, 62, 47, .08) 72%), linear-gradient(0deg, rgba(44, 62, 47, .72), transparent 52%); }
 .gastro-hero__contenido { position: relative; z-index: 1; padding-top: 170px; padding-bottom: 86px; color: var(--blanco); }
 .gastro-hero .migas, .gastro-hero .migas a { color: rgba(255, 255, 255, .78); }
 .gastro-hero .rotulo { color: var(--dorado); margin-bottom: 12px; }
