@@ -131,8 +131,8 @@ strong, b { font-weight: 600; }
   text-decoration: none;
   box-shadow: var(--sombra-suave);
 }
-.btn--primario { background: var(--adobe); color: var(--blanco); }
-.btn--primario:hover { background: var(--adobe-osc); color: var(--blanco); transform: translateY(-2px); box-shadow: var(--sombra-media); }
+.btn--primario { background: var(--adobe); color: var(--tierra); }
+.btn--primario:hover { background: var(--adobe-osc); color: var(--tierra); transform: translateY(-2px); box-shadow: var(--sombra-media); }
 .btn--ghost { background: transparent; color: var(--adobe); border-color: var(--adobe); box-shadow: none; }
 .btn--ghost:hover { background: var(--adobe); color: var(--blanco); }
 .btn--oscuro { background: var(--tierra); color: var(--blanco); }
@@ -217,8 +217,8 @@ strong, b { font-weight: 600; }
 .menu a:hover { color: var(--blanco); background: rgba(255, 255, 255, .12); }
 .menu a.activo { color: var(--blanco); background: rgba(255, 255, 255, .14); }
 
-.menu__reservar { background: var(--adobe) !important; color: var(--blanco) !important; border-radius: 50px !important; }
-.menu__reservar:hover { background: var(--adobe-osc) !important; color: var(--blanco) !important; }
+.menu__reservar { background: var(--adobe) !important; color: var(--tierra) !important; border-radius: 50px !important; }
+.menu__reservar:hover { background: var(--adobe-osc) !important; color: var(--tierra) !important; }
 
 .encabezado__acciones { display: flex; align-items: center; gap: 12px; }
 
@@ -267,11 +267,11 @@ strong, b { font-weight: 600; }
 .hero__slide { position: relative; display: none; }
 .hero__slide.activo { display: block; animation: fadeIn .8s ease; }
 @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
-.hero__img { width: 100%; height: min(92vh, 840px); object-fit: cover; }
+.hero__img { width: 100%; height: 80vh; min-height: 600px; max-height: 900px; object-fit: cover; }
 .hero__velo {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to bottom, rgba(44, 62, 47, .45), rgba(44, 62, 47, .15) 45%, rgba(44, 62, 47, .6));
+  background: linear-gradient(180deg, rgba(44, 62, 47, .3) 0%, rgba(44, 62, 47, .6) 100%);
 }
 .hero__contenido {
   position: absolute;
@@ -282,7 +282,7 @@ strong, b { font-weight: 600; }
   justify-content: center;
   text-align: center;
   color: var(--blanco);
-  padding: 24px;
+  padding: 80px 40px;
   gap: 6px;
 }
 .hero__eyebrow {
@@ -296,22 +296,21 @@ strong, b { font-weight: 600; }
 }
 .hero__lema {
   font-family: var(--font-titulo);
-  font-weight: 500;
-  font-size: clamp(38px, 7vw, 80px);
-  letter-spacing: .01em;
-  line-height: 1.05;
-  margin: 0 0 18px;
+  font-weight: 700;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  margin: 0 0 16px;
   color: var(--blanco);
-  text-shadow: 0 3px 22px rgba(0, 0, 0, .45);
+  text-shadow: 0 2px 10px rgba(0, 0, 0, .3);
 }
 .hero__subtitulo {
   font-family: var(--font-texto);
-  font-size: 14px;
+  font-size: clamp(1rem, 1.5vw, 1.25rem);
   font-weight: 400;
-  letter-spacing: .34em;
-  text-transform: uppercase;
-  color: rgba(247, 241, 230, .85);
-  margin: 0;
+  letter-spacing: .02em;
+  color: rgba(255, 255, 255, .9);
+  margin: 16px 0 0;
 }
 .hero__flecha {
   position: absolute;
@@ -811,10 +810,10 @@ strong, b { font-weight: 600; }
 }
 
 /* ---------- Hero interior con imagen ---------- */
-.hero-interior { position: relative; min-height: 360px; display: flex; align-items: flex-end; overflow: hidden; }
+.hero-interior { position: relative; min-height: clamp(600px, 80vh, 900px); display: flex; align-items: center; justify-content: center; overflow: hidden; }
 .hero-interior img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
-.hero-interior__velo { position: absolute; inset: 0; background: linear-gradient(to top, rgba(44, 62, 47, .72), rgba(44, 62, 47, .08)); }
-.hero-interior__texto { position: relative; z-index: 2; color: var(--blanco); padding: 48px 0; }
+.hero-interior__velo { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(44, 62, 47, .3) 0%, rgba(44, 62, 47, .6) 100%); }
+.hero-interior__texto { position: relative; z-index: 2; color: var(--blanco); padding: 80px 40px; text-align: center; }
 .hero-interior h1 { color: var(--blanco); }
 .hero-interior h1::before {
   content: "Finca La Carla · Posada boutique";
@@ -881,7 +880,7 @@ strong, b { font-weight: 600; }
   .menu-sombra { position: fixed; inset: 0; background: rgba(44, 62, 47, .55); z-index: 999; display: none; }
   .menu-sombra.visible { display: block; }
   .formulario__filas { grid-template-columns: 1fr; }
-  .hero__img { height: 78vh; min-height: 460px; }
+  .hero__img { height: 60vh; min-height: 400px; }
   .tarjeta-servicio--grande { grid-row: auto; grid-column: auto; min-height: 0; }
   .tarjeta-servicio--grande .tarjeta-servicio__img { height: 300px; }
 }
@@ -891,10 +890,10 @@ strong, b { font-weight: 600; }
   .contenedor { padding: 0 var(--gutter-movil); }
   .pie__contenido { grid-template-columns: 1fr; }
   .hero__flecha { width: 40px; height: 40px; font-size: 16px; }
-  .hero__subtitulo { letter-spacing: .22em; }
+  .hero__subtitulo { letter-spacing: .02em; }
 }
 
-/* ---------- Encabezado de página interior con imagen (estilo Cloe) ---------- */
+/* HERO interior — especificación Itinere §8 */
 .cabecera-pagina--imagen {
   position: relative;
   background-color: var(--tierra-900);
@@ -902,26 +901,34 @@ strong, b { font-weight: 600; }
   background-position: center;
   padding: 0;
   border-bottom: none;
-  min-height: 440px;
+  min-height: clamp(600px, 80vh, 900px);
   display: flex;
-  align-items: flex-end;
+  align-items: center;
+  justify-content: center;
 }
 .cabecera-pagina--imagen::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(to top, rgba(44, 62, 47, .85), rgba(44, 62, 47, .25));
+  background: linear-gradient(180deg, rgba(44, 62, 47, .3) 0%, rgba(44, 62, 47, .6) 100%);
 }
 .cabecera-pagina--imagen .contenedor {
   position: relative;
   z-index: 2;
-  padding-top: 150px;
-  padding-bottom: 52px;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  text-align: center;
 }
-.cabecera-pagina--imagen h1 { color: var(--blanco); }
-.cabecera-pagina--imagen p { color: rgba(247, 241, 230, .9); }
+.cabecera-pagina--imagen h1 {
+  color: var(--blanco);
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, .3);
+}
+.cabecera-pagina--imagen p { color: rgba(255, 255, 255, .9); max-width: 780px; margin-left: auto; margin-right: auto; }
 .cabecera-pagina--imagen .migas,
-.cabecera-pagina--imagen .migas a { color: rgba(247, 241, 230, .75); }
+.cabecera-pagina--imagen .migas a { color: rgba(255, 255, 255, .75); }
 .cabecera-pagina--imagen .migas a:hover { color: var(--blanco); }
 
 /* ---------- CTA final (estilo Cloe) ---------- */
@@ -1037,27 +1044,22 @@ body { letter-spacing: .01em; }
 .menu a:not(.menu__reservar).activo::after { transform: scaleX(1); }
 .menu__reservar::after { display: none; }
 
-.hero__carrusel { min-height: 100svh; }
-.hero__img { height: min(100svh, 980px); min-height: 700px; animation: heroKenBurns 12s ease-out both; }
-.hero__slide:not(.activo) .hero__img { animation: none; }
-@keyframes heroKenBurns {
-  from { transform: scale(1); }
-  to { transform: scale(1.045); }
-}
-.hero__velo { background: linear-gradient(90deg, rgba(44, 62, 47, .62), rgba(44, 62, 47, .12) 65%), linear-gradient(0deg, rgba(44, 62, 47, .48), transparent 55%); }
+/* HERO — especificación Itinere §8 */
+.hero__carrusel { position: relative; }
+.hero__img { height: 80vh; min-height: 600px; max-height: 900px; animation: none; }
+.hero__velo { background: linear-gradient(180deg, rgba(44, 62, 47, .3) 0%, rgba(44, 62, 47, .6) 100%); }
 .hero__contenido {
-  align-items: flex-start;
-  justify-content: flex-end;
-  text-align: left;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
   max-width: var(--container);
   width: 100%;
   margin: 0 auto;
-  padding: 0 var(--gutter) clamp(72px, 10vw, 126px);
+  padding: 80px 40px;
 }
 .hero__eyebrow { letter-spacing: .32em; }
-.hero__lema { max-width: 820px; font-size: clamp(58px, 8vw, 112px); animation: heroCopyIn .9s .15s ease-out both; }
-.hero__subtitulo { letter-spacing: .26em; }
-.hero__acciones { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 22px; }
+.hero__lema { max-width: 900px; animation: heroCopyIn .9s .15s ease-out both; }
+.hero__acciones { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 22px; justify-content: center; }
 .hero__eyebrow, .hero__subtitulo, .hero__acciones { animation: heroCopyIn .8s ease-out both; }
 @keyframes heroCopyIn {
   from { opacity: 0; transform: translateY(18px); }
@@ -1100,21 +1102,19 @@ body { letter-spacing: .01em; }
 .testimonio { background: transparent; border: 0; border-top: 1px solid rgba(255, 255, 255, .26); border-radius: 0; padding: 28px 0 0; }
 .testimonio p { line-height: 1.8; }
 
-.cabecera-pagina--imagen { min-height: 510px; }
-.cabecera-pagina--imagen .contenedor { padding-bottom: 70px; }
+.cabecera-pagina--imagen { min-height: clamp(600px, 80vh, 900px); }
 .cta-final .contenedor { padding-top: 80px; padding-bottom: 80px; }
 
 @media (max-width: 860px) {
   .encabezado nav { flex: initial; }
   .marca { margin-left: 0; }
-  .hero__contenido { padding-inline: var(--gutter-movil); }
+  .hero__contenido { padding: 60px 20px; }
   .menu__reservar { margin-left: 0; }
 }
 
 @media (max-width: 640px) {
-  .hero__img { height: 100svh; min-height: 620px; }
-  .hero__lema { font-size: clamp(48px, 15vw, 76px); }
-  .hero__contenido { padding-bottom: 82px; }
+  .hero__img { height: 50vh; min-height: 400px; }
+  .hero__contenido { padding: 40px 20px; }
   .hero__acciones .btn { width: 100%; }
   .tarjeta-servicio--grande .tarjeta-servicio__img, .tarjeta-servicio__img { height: 300px; }
 }
@@ -1125,20 +1125,21 @@ body { letter-spacing: .01em; }
 
 /* ---------- Página Gastronomía: relato visual editorial ---------- */
 .gastro-hero {
-  min-height: min(78vh, 760px);
+  min-height: clamp(600px, 80vh, 900px);
   position: relative;
   display: flex;
-  align-items: flex-end;
+  align-items: center;
+  justify-content: center;
   background-size: cover;
   background-position: center;
   overflow: hidden;
 }
-.gastro-hero__velo { position: absolute; inset: 0; background: linear-gradient(90deg, rgba(44, 62, 47, .66), rgba(44, 62, 47, .08) 72%), linear-gradient(0deg, rgba(44, 62, 47, .72), transparent 52%); }
-.gastro-hero__contenido { position: relative; z-index: 1; padding-top: 170px; padding-bottom: 86px; color: var(--blanco); }
+.gastro-hero__velo { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(44, 62, 47, .3) 0%, rgba(44, 62, 47, .6) 100%); }
+.gastro-hero__contenido { position: relative; z-index: 1; padding: 80px 40px; color: var(--blanco); text-align: center; }
 .gastro-hero .migas, .gastro-hero .migas a { color: rgba(255, 255, 255, .78); }
 .gastro-hero .rotulo { color: var(--dorado); margin-bottom: 12px; }
-.gastro-hero h1 { color: var(--blanco); font-size: clamp(58px, 8vw, 106px); font-weight: 400; margin-bottom: 8px; }
-.gastro-hero p:last-child { color: rgba(255, 255, 255, .9); font-size: 19px; max-width: 560px; }
+.gastro-hero h1 { color: var(--blanco); font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 700; letter-spacing: -0.02em; text-shadow: 0 2px 10px rgba(0, 0, 0, .3); margin-bottom: 8px; }
+.gastro-hero p:last-child { color: rgba(255, 255, 255, .9); font-size: clamp(1rem, 1.5vw, 1.25rem); max-width: 780px; margin-left: auto; margin-right: auto; }
 
 .gastro-intro { background: var(--arena-clara); }
 .gastro-intro__grid { display: grid; grid-template-columns: minmax(260px, .78fr) minmax(360px, 1.22fr); gap: clamp(46px, 10vw, 150px); align-items: start; }
@@ -1186,8 +1187,8 @@ body { letter-spacing: .01em; }
 }
 
 @media (max-width: 520px) {
-  .gastro-hero { min-height: 640px; }
-  .gastro-hero__contenido { padding-bottom: 64px; }
+  .gastro-hero { min-height: clamp(400px, 50vh, 600px); }
+  .gastro-hero__contenido { padding: 40px 20px; }
   .gastro-oferta__lista { grid-template-columns: 1fr; }
   .gastro-oferta__lista div, .gastro-oferta__lista div:nth-child(even) { padding-left: 0; border-left: 0; }
   .gastro-espacios__grid img { height: 340px; }
@@ -1195,11 +1196,11 @@ body { letter-spacing: .01em; }
 
 /* ---------- Página Habitaciones: conversión fiel del prototipo Stitch ---------- */
 .habitaciones-page { background: var(--arena-clara); padding-top: 0; }
-.habitaciones-hero { min-height: 510px; }
-.habitaciones-hero h1 { font-size: clamp(52px, 7vw, 86px); font-weight: 400; }
+.habitaciones-hero { min-height: clamp(600px, 80vh, 900px); }
+.habitaciones-hero h1 { font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 700; letter-spacing: -0.02em; }
 .habitaciones-intro { padding: 76px var(--gutter) 92px; text-align: center; }
 .habitaciones-intro__contenido { max-width: 860px; }
-.habitaciones-intro h1 { font-size: clamp(48px, 6vw, 76px); font-weight: 400; line-height: 1.08; margin-bottom: 30px; }
+.habitaciones-intro h1 { font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 700; line-height: 1.1; margin-bottom: 30px; }
 .habitaciones-intro p { max-width: 760px; margin: 0 auto; color: var(--tierra-suave); font-size: 18px; line-height: 1.75; }
 .habitaciones-galeria { display: grid; grid-template-columns: 2fr 1fr; gap: 32px; align-items: center; padding-bottom: 120px; }
 .habitaciones-galeria img { width: 100%; object-fit: cover; border: 1px solid var(--borde); }
@@ -1261,4 +1262,15 @@ body { letter-spacing: .01em; }
 @media (prefers-reduced-motion: reduce) {
   * { animation: none !important; transition: none !important; }
   html { scroll-behavior: auto; }
+}
+
+/* ---------- HERO responsive (Itinere §8: 80vh / 60vh / 50vh) ---------- */
+@media (max-width: 1024px) {
+  .hero__img { height: 60vh; min-height: 400px; }
+  .cabecera-pagina--imagen, .hero-interior, .gastro-hero, .habitaciones-hero { min-height: clamp(400px, 60vh, 700px); }
+}
+@media (max-width: 640px) {
+  .hero__img { height: 50vh; min-height: 400px; }
+  .cabecera-pagina--imagen, .hero-interior, .gastro-hero, .habitaciones-hero { min-height: clamp(400px, 50vh, 600px); }
+  .cabecera-pagina--imagen .contenedor, .hero-interior__texto { padding: 40px 20px; }
 }
