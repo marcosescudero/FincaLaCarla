@@ -17,11 +17,11 @@ window.Finca.galerias = {
                      "images/fotos/j Exterior o jardines/Principales (6)/Finca_La_Carla_Animana_Salta_Argentina_Jardin (3).jpg",
                      "images/fotos/j Exterior o jardines/Principales (6)/Finca_La_Carla_Animana_Salta_Argentina_Jardin (4).jpg",
                      "images/fotos/j Exterior o jardines/Principales (6)/Finca_La_Carla_Animana_Salta_Argentina_Jardin (5).jpg",
-                     "images/fotos/j Exterior o jardines/Principales (6)/Finca_La_Carla_Animana_Salta_Argentina_Jardin.png",
+                     "images/fotos/j Exterior o jardines/Principales (6)/Finca_La_Carla_Animana_Salta_Argentina_Jardin.jpg",
                      "images/fotos/j Exterior o jardines/Secundarias (resto)/Finca_La_Carla_Animana_Salta_Argentina_Jardin (6).jpg"
                  ],
     "quehacer":  [
-                     "images/fotos/g Que hacer/Cabalgatas en Corralito/Destacada (1)/Finca_La_Carla_Animana_Salta_Argentina_Cabalgata.png",
+                     "images/fotos/g Que hacer/Cabalgatas en Corralito/Destacada (1)/Finca_La_Carla_Animana_Salta_Argentina_Cabalgata.jpg",
                      "images/fotos/g Que hacer/Cabalgatas en Corralito/Principales (6)/Animana_Salta_Argentina_Cabalgata_Nano_Escudero(1).jpg",
                      "images/fotos/g Que hacer/Cabalgatas en Corralito/Principales (6)/Animana_Salta_Argentina_Cabalgata_Nano_Escudero(2).jpg",
                      "images/fotos/g Que hacer/Cabalgatas en Corralito/Principales (6)/Animana_Salta_Argentina_Cabalgata_Nano_Escudero(3).jpg",
@@ -51,7 +51,7 @@ window.Finca.galerias = {
                      "images/fotos/g Que hacer/SENDERO FOTO 1.jpg",
                      "images/fotos/g Que hacer/SENDERO FOTO 2.jpg",
                      "images/fotos/g Que hacer/SENDERO FOTO 3.jpg",
-                     "images/fotos/g Que hacer/Trekking por el río/Destacada (1)/Finca_La_Carla_Animana_Salta_Argentina_Trekking_Nano_Escudero.png",
+                     "images/fotos/g Que hacer/Trekking por el río/Destacada (1)/Finca_La_Carla_Animana_Salta_Argentina_Trekking_Nano_Escudero.jpg",
                      "images/fotos/g Que hacer/Trekking por el río/Principales (6)/Finca_La_Carla_Animana_Salta_Argentina_Trekking_Nano_Escudero (1).jpg",
                      "images/fotos/g Que hacer/Trekking por el río/Principales (6)/Finca_La_Carla_Animana_Salta_Argentina_Trekking_Nano_Escudero (2).jpg",
                      "images/fotos/g Que hacer/Trekking por el río/Principales (6)/Finca_La_Carla_Animana_Salta_Argentina_Trekking_Nano_Escudero (3).jpg",
@@ -66,7 +66,7 @@ window.Finca.galerias = {
                  ],
     "livings":  [
                     "images/fotos/d Servicios/10 Living y espacios comunes/Destacada (1)/Finca_La_Carla_Animana_Salta_Argentina_Living.jpg",
-                    "images/fotos/d Servicios/10 Living y espacios comunes/Principales (6)/Finca_La_Carla_Animana_Salta_Argentina_Living (1).png",
+                    "images/fotos/d Servicios/10 Living y espacios comunes/Principales (6)/Finca_La_Carla_Animana_Salta_Argentina_Living (1).jpg",
                     "images/fotos/d Servicios/10 Living y espacios comunes/Principales (6)/Finca_La_Carla_Animana_Salta_Argentina_Living (1b).jpg",
                     "images/fotos/d Servicios/10 Living y espacios comunes/Principales (6)/Finca_La_Carla_Animana_Salta_Argentina_Living (1c).jpeg",
                     "images/fotos/d Servicios/10 Living y espacios comunes/Principales (6)/Finca_La_Carla_Animana_Salta_Argentina_Living (2).jpg",
@@ -77,11 +77,11 @@ window.Finca.galerias = {
                     "images/fotos/d Servicios/10 Living y espacios comunes/Secundarias (resto)/Finca_La_Carla_Animana_Salta_Argentina_Living (22).jpg"
                 ],
     "pileta":  [
-                   "images/fotos/d Servicios/7 Pileta/Destacada (1)/Finca_La_Carla_Animana_Salta_Argentina_Pileta.png",
-                   "images/fotos/d Servicios/7 Pileta/Principales (6)/Finca_La_Carla_Animana_Salta_Argentina_Pileta (1).png",
+                   "images/fotos/d Servicios/7 Pileta/Destacada (1)/Finca_La_Carla_Animana_Salta_Argentina_Pileta.jpg",
+                   "images/fotos/d Servicios/7 Pileta/Principales (6)/Finca_La_Carla_Animana_Salta_Argentina_Pileta (1).jpg",
                    "images/fotos/d Servicios/7 Pileta/Principales (6)/Finca_La_Carla_Animana_Salta_Argentina_Pileta (1b).jpeg",
                    "images/fotos/d Servicios/7 Pileta/Principales (6)/Finca_La_Carla_Animana_Salta_Argentina_Pileta (1c).jpg",
-                   "images/fotos/d Servicios/7 Pileta/Principales (6)/Finca_La_Carla_Animana_Salta_Argentina_Pileta (1d).png",
+                   "images/fotos/d Servicios/7 Pileta/Principales (6)/Finca_La_Carla_Animana_Salta_Argentina_Pileta (1d).jpg",
                    "images/fotos/d Servicios/7 Pileta/Principales (6)/Finca_La_Carla_Animana_Salta_Argentina_Pileta (2).jpeg",
                    "images/fotos/d Servicios/7 Pileta/Principales (6)/Finca_La_Carla_Animana_Salta_Argentina_Pileta (2b).jpg",
                    "images/fotos/d Servicios/7 Pileta/Secundarias (resto)/Finca_La_Carla_Animana_Salta_Argentina_Pileta (24).jpg",
@@ -90,12 +90,12 @@ window.Finca.galerias = {
     "eventos":  [
                     "images/fotos/f Eventos/Destacada (1)/Finca_La_Carla_Animana_Salta_Argentina_Living.jpg",
                     "images/fotos/f Eventos/Principales (6)/Finca_La_Carla_Animana_Salta_Argentina_Galeria.jpg",
-                    "images/fotos/f Eventos/Principales (6)/Finca_La_Carla_Animana_Salta_Argentina_Living (1).png",
+                    "images/fotos/f Eventos/Principales (6)/Finca_La_Carla_Animana_Salta_Argentina_Living (1).jpg",
                     "images/fotos/f Eventos/Principales (6)/Finca_La_Carla_Animana_Salta_Argentina_Parrilla.jpg",
-                    "images/fotos/f Eventos/Principales (6)/Finca_La_Carla_Animana_Salta_Argentina_Pileta.png"
+                    "images/fotos/f Eventos/Principales (6)/Finca_La_Carla_Animana_Salta_Argentina_Pileta.jpg"
                 ],
     "actividad_obras":  [
-                            "images/fotos/g Que hacer/Trekking por el río/Destacada (1)/Finca_La_Carla_Animana_Salta_Argentina_Trekking_Nano_Escudero.png",
+                            "images/fotos/g Que hacer/Trekking por el río/Destacada (1)/Finca_La_Carla_Animana_Salta_Argentina_Trekking_Nano_Escudero.jpg",
                             "images/fotos/g Que hacer/Trekking por el río/Principales (6)/Finca_La_Carla_Animana_Salta_Argentina_Trekking_Nano_Escudero (1).jpg",
                             "images/fotos/g Que hacer/Trekking por el río/Principales (6)/Finca_La_Carla_Animana_Salta_Argentina_Trekking_Nano_Escudero (2).jpg",
                             "images/fotos/g Que hacer/Trekking por el río/Principales (6)/Finca_La_Carla_Animana_Salta_Argentina_Trekking_Nano_Escudero (3).jpg",
@@ -141,21 +141,21 @@ window.Finca.galerias = {
                          "images/fotos/i Arquitectura/Secundarias (resto)/Finca_La_Carla_Animana_Salta_Argentina_Arquitectura (71).jpg",
                          "images/fotos/i Arquitectura/Secundarias (resto)/Finca_La_Carla_Animana_Salta_Argentina_Arquitectura (72).jpg",
                          "images/fotos/i Arquitectura/Secundarias (resto)/Finca_La_Carla_Animana_Salta_Argentina_Arquitectura (73).jpg",
-                         "images/fotos/i Arquitectura/Secundarias (resto)/Finca_La_Carla_Animana_Salta_Argentina_Arquitectura (90).png"
+                         "images/fotos/i Arquitectura/Secundarias (resto)/Finca_La_Carla_Animana_Salta_Argentina_Arquitectura (90).jpg"
                      ],
     "sustentabilidad":  [
                             "images/fotos/m Sustentabilidad/Destacada (1)/Finca_La_Carla_Animana_Salta_Argentina_Sustentabilidad.jpg",
-                            "images/fotos/m Sustentabilidad/Principales (6)/Finca_La_Carla_Animana_Salta_Argentina_Sustentabilidad (1).png",
+                            "images/fotos/m Sustentabilidad/Principales (6)/Finca_La_Carla_Animana_Salta_Argentina_Sustentabilidad (1).jpg",
                             "images/fotos/m Sustentabilidad/Principales (6)/Finca_La_Carla_Animana_Salta_Argentina_Sustentabilidad (1b).jpg",
-                            "images/fotos/m Sustentabilidad/Principales (6)/Finca_La_Carla_Animana_Salta_Argentina_Sustentabilidad (2).png",
+                            "images/fotos/m Sustentabilidad/Principales (6)/Finca_La_Carla_Animana_Salta_Argentina_Sustentabilidad (2).jpg",
                             "images/fotos/m Sustentabilidad/Principales (6)/Finca_La_Carla_Animana_Salta_Argentina_Sustentabilidad (2b).jpg",
                             "images/fotos/m Sustentabilidad/Principales (6)/Finca_La_Carla_Animana_Salta_Argentina_Sustentabilidad (3).jpg",
                             "images/fotos/m Sustentabilidad/Principales (6)/Finca_La_Carla_Animana_Salta_Argentina_Sustentabilidad (4).jpg"
                         ],
     "bano":  [
-                 "images/fotos/b Habitaciones/z Baño/Destacada (1)/Finca_La_Carla_Animana_Salta_Argentina_Baño.png",
+                 "images/fotos/b Habitaciones/z Baño/Destacada (1)/Finca_La_Carla_Animana_Salta_Argentina_Baño.jpg",
                  "images/fotos/b Habitaciones/z Baño/Principales (6)/Finca_La_Carla_Animana_Salta_Argentina_Baño (1).jpg",
-                 "images/fotos/b Habitaciones/z Baño/Principales (6)/Finca_La_Carla_Animana_Salta_Argentina_Baño (1).png",
+                 "images/fotos/b Habitaciones/z Baño/Principales (6)/Finca_La_Carla_Animana_Salta_Argentina_Baño (1).jpg",
                  "images/fotos/b Habitaciones/z Baño/Principales (6)/Finca_La_Carla_Animana_Salta_Argentina_Baño (2).jpg",
                  "images/fotos/b Habitaciones/z Baño/Principales (6)/Finca_La_Carla_Animana_Salta_Argentina_Baño (3).jpg",
                  "images/fotos/b Habitaciones/z Baño/Principales (6)/Finca_La_Carla_Animana_Salta_Argentina_Baño (4).jpg",
@@ -169,12 +169,12 @@ window.Finca.galerias = {
                  "images/fotos/b Habitaciones/z Baño/Secundarias (resto)/Finca_La_Carla_Animana_Salta_Argentina_Baño (16).jpg",
                  "images/fotos/b Habitaciones/z Baño/Secundarias (resto)/Finca_La_Carla_Animana_Salta_Argentina_Baño (17).jpg",
                  "images/fotos/b Habitaciones/z Baño/Secundarias (resto)/Finca_La_Carla_Animana_Salta_Argentina_Baño (8).jpg",
-                 "images/fotos/b Habitaciones/z Baño/Secundarias (resto)/Finca_La_Carla_Animana_Salta_Argentina_Baño (8).png",
+                 "images/fotos/b Habitaciones/z Baño/Secundarias (resto)/Finca_La_Carla_Animana_Salta_Argentina_Baño (8).jpg",
                  "images/fotos/b Habitaciones/z Baño/Secundarias (resto)/Finca_La_Carla_Animana_Salta_Argentina_Baño (9).jpg",
                  "images/fotos/b Habitaciones/z Baño/Secundarias (resto)/Finca_La_Carla_Animana_Salta_Argentina_Gastronomia (3).jpg"
              ],
     "actividad_cabalgata":  [
-                                "images/fotos/g Que hacer/Cabalgatas en Corralito/Destacada (1)/Finca_La_Carla_Animana_Salta_Argentina_Cabalgata.png",
+                                "images/fotos/g Que hacer/Cabalgatas en Corralito/Destacada (1)/Finca_La_Carla_Animana_Salta_Argentina_Cabalgata.jpg",
                                 "images/fotos/g Que hacer/Cabalgatas en Corralito/Principales (6)/Animana_Salta_Argentina_Cabalgata_Nano_Escudero(1).jpg",
                                 "images/fotos/g Que hacer/Cabalgatas en Corralito/Principales (6)/Animana_Salta_Argentina_Cabalgata_Nano_Escudero(2).jpg",
                                 "images/fotos/g Que hacer/Cabalgatas en Corralito/Principales (6)/Animana_Salta_Argentina_Cabalgata_Nano_Escudero(3).jpg",
@@ -187,7 +187,7 @@ window.Finca.galerias = {
     "recreacion":  [
                        "images/fotos/d Servicios/5 Recreacion/Destacada (1)/Finca_La_Carla_Animana_Salta_Argentina_Living.jpg",
                        "images/fotos/d Servicios/5 Recreacion/Principales (6)/Finca_La_Carla_Animana_Salta_Argentina_Living (3).jpg",
-                       "images/fotos/d Servicios/5 Recreacion/Principales (6)/Finca_La_Carla_Animana_Salta_Argentina_Recreacion (2).png",
+                       "images/fotos/d Servicios/5 Recreacion/Principales (6)/Finca_La_Carla_Animana_Salta_Argentina_Recreacion (2).jpg",
                        "images/fotos/d Servicios/5 Recreacion/Principales (6)/Finca_La_Carla_Animana_Salta_Argentina_Recreacion.jpeg"
                    ],
     "habitaciones":  [
@@ -238,14 +238,14 @@ window.Finca.galerias = {
     "galeria_arq":  [
                         "images/fotos/d Servicios/11 Galería/Destacada (1)/Finca_La_Carla_Animana_Salta_Argentina_Galeria.jpg",
                         "images/fotos/d Servicios/11 Galería/Principales (6)/Finca_La_Carla_Animana_Salta_Argentina_Galeria (1).jpg",
-                        "images/fotos/d Servicios/11 Galería/Principales (6)/Finca_La_Carla_Animana_Salta_Argentina_Galeria (1b).png",
+                        "images/fotos/d Servicios/11 Galería/Principales (6)/Finca_La_Carla_Animana_Salta_Argentina_Galeria (1b).jpg",
                         "images/fotos/d Servicios/11 Galería/Principales (6)/Finca_La_Carla_Animana_Salta_Argentina_Galeria (2).jpg",
-                        "images/fotos/d Servicios/11 Galería/Principales (6)/Finca_La_Carla_Animana_Salta_Argentina_Galeria (2b).png",
+                        "images/fotos/d Servicios/11 Galería/Principales (6)/Finca_La_Carla_Animana_Salta_Argentina_Galeria (2b).jpg",
                         "images/fotos/d Servicios/11 Galería/Principales (6)/Finca_La_Carla_Animana_Salta_Argentina_Galeria (3).jpg",
                         "images/fotos/d Servicios/11 Galería/Principales (6)/Finca_La_Carla_Animana_Salta_Argentina_Galeria (4).jpg",
                         "images/fotos/d Servicios/11 Galería/Secundarias (resto)/Finca_La_Carla_Animana_Salta_Argentina_Galeria (30).jpeg",
                         "images/fotos/d Servicios/11 Galería/Secundarias (resto)/Finca_La_Carla_Animana_Salta_Argentina_Galeria (31 b).jpg",
-                        "images/fotos/d Servicios/11 Galería/Secundarias (resto)/Finca_La_Carla_Animana_Salta_Argentina_Galeria (31 c).png",
+                        "images/fotos/d Servicios/11 Galería/Secundarias (resto)/Finca_La_Carla_Animana_Salta_Argentina_Galeria (31 c).jpg",
                         "images/fotos/d Servicios/11 Galería/Secundarias (resto)/Finca_La_Carla_Animana_Salta_Argentina_Galeria (31).jpeg",
                         "images/fotos/d Servicios/11 Galería/Secundarias (resto)/Finca_La_Carla_Animana_Salta_Argentina_Galeria (32 b).jpg",
                         "images/fotos/d Servicios/11 Galería/Secundarias (resto)/Finca_La_Carla_Animana_Salta_Argentina_Galeria (32).jpeg",
@@ -258,7 +258,7 @@ window.Finca.galerias = {
                         "images/fotos/d Servicios/11 Galería/Secundarias (resto)/Finca_La_Carla_Animana_Salta_Argentina_Galeria (37).jpg",
                         "images/fotos/d Servicios/11 Galería/Secundarias (resto)/Finca_La_Carla_Animana_Salta_Argentina_Galeria (38).jpg",
                         "images/fotos/d Servicios/11 Galería/Secundarias (resto)/Finca_La_Carla_Animana_Salta_Argentina_Galeria (40).jpg",
-                        "images/fotos/d Servicios/11 Galería/Secundarias (resto)/Finca_La_Carla_Animana_Salta_Argentina_Galeria (50).png"
+                        "images/fotos/d Servicios/11 Galería/Secundarias (resto)/Finca_La_Carla_Animana_Salta_Argentina_Galeria (50).jpg"
                     ],
     "artesanias":  [
                        "images/fotos/d Servicios/9 Artesanías y Product Regional/Destacada (1)/Finca_La_Carla_Animana_Salta_Argentina_Artesanias_Productos.jpg",
@@ -269,7 +269,7 @@ window.Finca.galerias = {
                        "images/fotos/d Servicios/9 Artesanías y Product Regional/Principales (6)/Finca_La_Carla_Animana_Salta_Argentina_Artesanias_Productos (5).jpg",
                        "images/fotos/d Servicios/9 Artesanías y Product Regional/Principales (6)/Finca_La_Carla_Animana_Salta_Argentina_Artesanias_Productos (6).jpg",
                        "images/fotos/d Servicios/9 Artesanías y Product Regional/Secundarias (resto)/Finca_La_Carla_Animana_Salta_Argentina_Artesanias_Productos (19).jpg",
-                       "images/fotos/d Servicios/9 Artesanías y Product Regional/Secundarias (resto)/Finca_La_Carla_Animana_Salta_Argentina_Artesanias_Productos (19).png",
+                       "images/fotos/d Servicios/9 Artesanías y Product Regional/Secundarias (resto)/Finca_La_Carla_Animana_Salta_Argentina_Artesanias_Productos (19).jpg",
                        "images/fotos/d Servicios/9 Artesanías y Product Regional/Secundarias (resto)/Finca_La_Carla_Animana_Salta_Argentina_Artesanias_Productos (20).jpg",
                        "images/fotos/d Servicios/9 Artesanías y Product Regional/Secundarias (resto)/Finca_La_Carla_Animana_Salta_Argentina_Artesanias_Productos (21).jpg",
                        "images/fotos/d Servicios/9 Artesanías y Product Regional/Secundarias (resto)/Finca_La_Carla_Animana_Salta_Argentina_Artesanias_Productos (22).jpg"
@@ -284,11 +284,11 @@ window.Finca.galerias = {
                     "images/fotos/h Quienes somos/Principales (6)/Finca_La_Carla_Animana_Salta_Argentina_Quienes_Somos (3).jpg"
                 ],
     "gastronomia":  [
-                        "images/fotos/c Gastronomía/Destacada (1)/Finca_La_Carla_Animana_Salta_Argentina_Gastronomia.png",
+                        "images/fotos/c Gastronomía/Destacada (1)/Finca_La_Carla_Animana_Salta_Argentina_Gastronomia.jpg",
                         "images/fotos/c Gastronomía/Imagen2.png",
                         "images/fotos/c Gastronomía/Principales (6)/Empanadas_Nano_Escudero 2 .jpg",
                         "images/fotos/c Gastronomía/Principales (6)/Finca_La_Carla_Animana_Salta_Argentina_Gastronomia (1).jpg",
-                        "images/fotos/c Gastronomía/Principales (6)/Finca_La_Carla_Animana_Salta_Argentina_Gastronomia (111).png",
+                        "images/fotos/c Gastronomía/Principales (6)/Finca_La_Carla_Animana_Salta_Argentina_Gastronomia (111).jpg",
                         "images/fotos/c Gastronomía/Principales (6)/Finca_La_Carla_Animana_Salta_Argentina_Gastronomia (112).jpg",
                         "images/fotos/c Gastronomía/Principales (6)/Finca_La_Carla_Animana_Salta_Argentina_Gastronomia (2).jpg",
                         "images/fotos/c Gastronomía/Principales (6)/Locro_EM_MinTurSla (1).jpg",
@@ -296,10 +296,10 @@ window.Finca.galerias = {
                         "images/fotos/c Gastronomía/z Otras/Desayunos/Destacada (1)/Finca_La_Carla_Animana_Salta_Argentina_Desayuno.jpeg",
                         "images/fotos/c Gastronomía/z Otras/Salón Comedor/Destacada (1)/Finca_La_Carla_Animana_Salta_Argentina_Comedor.jpg",
                         "images/fotos/c Gastronomía/z Otras/Salón Comedor/Principales (6)/Finca_La_Carla_Animana_Salta_Argentina_Comedor (1).jpg",
-                        "images/fotos/c Gastronomía/z Otras/Salón Comedor/Principales (6)/Finca_La_Carla_Animana_Salta_Argentina_Comedor (1).png",
+                        "images/fotos/c Gastronomía/z Otras/Salón Comedor/Principales (6)/Finca_La_Carla_Animana_Salta_Argentina_Comedor (1).jpg",
                         "images/fotos/c Gastronomía/z Otras/Salón Comedor/Principales (6)/Finca_La_Carla_Animana_Salta_Argentina_Comedor (2).jpg",
-                        "images/fotos/c Gastronomía/z Otras/Salón Comedor/Principales (6)/Finca_La_Carla_Animana_Salta_Argentina_Comedor (2).png",
-                        "images/fotos/c Gastronomía/z Otras/Salón Desayunador/Destacada (1)/Finca_La_Carla_Animana_Salta_Argentina_Desayunador (1).png",
+                        "images/fotos/c Gastronomía/z Otras/Salón Comedor/Principales (6)/Finca_La_Carla_Animana_Salta_Argentina_Comedor (2).jpg",
+                        "images/fotos/c Gastronomía/z Otras/Salón Desayunador/Destacada (1)/Finca_La_Carla_Animana_Salta_Argentina_Desayunador (1).jpg",
                         "images/fotos/c Gastronomía/z Otras/Salón Desayunador/Principales (6)/Finca_La_Carla_Animana_Salta_Argentina_Desayunador (1).jpeg",
                         "images/fotos/c Gastronomía/z Otras/Salón Desayunador/Principales (6)/Finca_La_Carla_Animana_Salta_Argentina_Desayunador (1).jpg",
                         "images/fotos/c Gastronomía/z Otras/Salón Desayunador/Principales (6)/Finca_La_Carla_Animana_Salta_Argentina_Desayunador (2).jpeg",
