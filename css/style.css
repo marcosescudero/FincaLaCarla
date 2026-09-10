@@ -804,7 +804,8 @@ strong, b { font-weight: 600; }
 .cabecera-pagina p { max-width: 780px; color: var(--tierra-suave); font-size: 17px; }
 
 /* Eyebrow automático sobre el título de cada página interior */
-.cabecera-pagina h1::before {
+.cabecera-pagina h1::before,
+.gastro-hero h1::before {
   content: "Finca La Carla · Posada boutique";
   display: block;
   font-family: var(--font-texto);
