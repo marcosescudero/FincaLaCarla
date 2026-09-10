@@ -155,7 +155,7 @@ window.Finca.galerias = {
     "bano":  [
                  "images/fotos/b Habitaciones/z Baño/Destacada (1)/Finca_La_Carla_Animana_Salta_Argentina_Baño.jpg",
                  "images/fotos/b Habitaciones/z Baño/Principales (6)/Finca_La_Carla_Animana_Salta_Argentina_Baño (1).jpg",
-                 "images/fotos/b Habitaciones/z Baño/Principales (6)/Finca_La_Carla_Animana_Salta_Argentina_Baño (1).jpg",
+                 "images/fotos/b Habitaciones/z Baño/Principales (6)/Finca_La_Carla_Animana_Salta_Argentina_Baño (1).png",
                  "images/fotos/b Habitaciones/z Baño/Principales (6)/Finca_La_Carla_Animana_Salta_Argentina_Baño (2).jpg",
                  "images/fotos/b Habitaciones/z Baño/Principales (6)/Finca_La_Carla_Animana_Salta_Argentina_Baño (3).jpg",
                  "images/fotos/b Habitaciones/z Baño/Principales (6)/Finca_La_Carla_Animana_Salta_Argentina_Baño (4).jpg",
@@ -169,7 +169,7 @@ window.Finca.galerias = {
                  "images/fotos/b Habitaciones/z Baño/Secundarias (resto)/Finca_La_Carla_Animana_Salta_Argentina_Baño (16).jpg",
                  "images/fotos/b Habitaciones/z Baño/Secundarias (resto)/Finca_La_Carla_Animana_Salta_Argentina_Baño (17).jpg",
                  "images/fotos/b Habitaciones/z Baño/Secundarias (resto)/Finca_La_Carla_Animana_Salta_Argentina_Baño (8).jpg",
-                 "images/fotos/b Habitaciones/z Baño/Secundarias (resto)/Finca_La_Carla_Animana_Salta_Argentina_Baño (8).jpg",
+                 "images/fotos/b Habitaciones/z Baño/Secundarias (resto)/Finca_La_Carla_Animana_Salta_Argentina_Baño (8).png",
                  "images/fotos/b Habitaciones/z Baño/Secundarias (resto)/Finca_La_Carla_Animana_Salta_Argentina_Baño (9).jpg",
                  "images/fotos/b Habitaciones/z Baño/Secundarias (resto)/Finca_La_Carla_Animana_Salta_Argentina_Gastronomia (3).jpg"
              ],
@@ -269,7 +269,7 @@ window.Finca.galerias = {
                        "images/fotos/d Servicios/9 Artesanías y Product Regional/Principales (6)/Finca_La_Carla_Animana_Salta_Argentina_Artesanias_Productos (5).jpg",
                        "images/fotos/d Servicios/9 Artesanías y Product Regional/Principales (6)/Finca_La_Carla_Animana_Salta_Argentina_Artesanias_Productos (6).jpg",
                        "images/fotos/d Servicios/9 Artesanías y Product Regional/Secundarias (resto)/Finca_La_Carla_Animana_Salta_Argentina_Artesanias_Productos (19).jpg",
-                       "images/fotos/d Servicios/9 Artesanías y Product Regional/Secundarias (resto)/Finca_La_Carla_Animana_Salta_Argentina_Artesanias_Productos (19).jpg",
+                       "images/fotos/d Servicios/9 Artesanías y Product Regional/Secundarias (resto)/Finca_La_Carla_Animana_Salta_Argentina_Artesanias_Productos (19).png",
                        "images/fotos/d Servicios/9 Artesanías y Product Regional/Secundarias (resto)/Finca_La_Carla_Animana_Salta_Argentina_Artesanias_Productos (20).jpg",
                        "images/fotos/d Servicios/9 Artesanías y Product Regional/Secundarias (resto)/Finca_La_Carla_Animana_Salta_Argentina_Artesanias_Productos (21).jpg",
                        "images/fotos/d Servicios/9 Artesanías y Product Regional/Secundarias (resto)/Finca_La_Carla_Animana_Salta_Argentina_Artesanias_Productos (22).jpg"
@@ -296,9 +296,9 @@ window.Finca.galerias = {
                         "images/fotos/c Gastronomía/z Otras/Desayunos/Destacada (1)/Finca_La_Carla_Animana_Salta_Argentina_Desayuno.jpeg",
                         "images/fotos/c Gastronomía/z Otras/Salón Comedor/Destacada (1)/Finca_La_Carla_Animana_Salta_Argentina_Comedor.jpg",
                         "images/fotos/c Gastronomía/z Otras/Salón Comedor/Principales (6)/Finca_La_Carla_Animana_Salta_Argentina_Comedor (1).jpg",
-                        "images/fotos/c Gastronomía/z Otras/Salón Comedor/Principales (6)/Finca_La_Carla_Animana_Salta_Argentina_Comedor (1).jpg",
+                        "images/fotos/c Gastronomía/z Otras/Salón Comedor/Principales (6)/Finca_La_Carla_Animana_Salta_Argentina_Comedor (1).png",
                         "images/fotos/c Gastronomía/z Otras/Salón Comedor/Principales (6)/Finca_La_Carla_Animana_Salta_Argentina_Comedor (2).jpg",
-                        "images/fotos/c Gastronomía/z Otras/Salón Comedor/Principales (6)/Finca_La_Carla_Animana_Salta_Argentina_Comedor (2).jpg",
+                        "images/fotos/c Gastronomía/z Otras/Salón Comedor/Principales (6)/Finca_La_Carla_Animana_Salta_Argentina_Comedor (2).png",
                         "images/fotos/c Gastronomía/z Otras/Salón Desayunador/Destacada (1)/Finca_La_Carla_Animana_Salta_Argentina_Desayunador (1).jpg",
                         "images/fotos/c Gastronomía/z Otras/Salón Desayunador/Principales (6)/Finca_La_Carla_Animana_Salta_Argentina_Desayunador (1).jpeg",
                         "images/fotos/c Gastronomía/z Otras/Salón Desayunador/Principales (6)/Finca_La_Carla_Animana_Salta_Argentina_Desayunador (1).jpg",
