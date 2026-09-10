@@ -857,7 +857,8 @@ strong, b { font-weight: 600; }
   .resumen-historia { grid-template-columns: 1fr; gap: 30px; }
 }
 
-@media (max-width: 860px) {
+/* Menú: el horizontal no entra en el contenedor de 1200px, así que el drawer va hasta 1279px */
+@media (max-width: 1279px) {
   .menu-boton { display: inline-flex; }
   .menu {
     position: fixed;
@@ -883,6 +884,9 @@ strong, b { font-weight: 600; }
   .menu__reservar { text-align: center; }
   .menu-sombra { position: fixed; inset: 0; background: rgba(44, 62, 47, .55); z-index: 999; display: none; }
   .menu-sombra.visible { display: block; }
+}
+
+@media (max-width: 860px) {
   .formulario__filas { grid-template-columns: 1fr; }
   .hero__img { height: 60vh; min-height: 400px; }
   .tarjeta-servicio--grande { grid-row: auto; grid-column: auto; min-height: 0; }
@@ -1021,8 +1025,8 @@ body { letter-spacing: .01em; }
   background: rgba(44, 62, 47, .88);
   transition: border-color .3s ease, color .3s ease, background .3s ease;
 }
-.marca__nombre { font-size: 25px; }
-.encabezado nav { flex: 1 1 auto; min-width: 0; }
+.marca__nombre { font-size: 21px; }
+.encabezado nav { flex: 1 1 auto; }
 .menu { gap: 0; }
 .menu { justify-content: flex-end; }
 .menu a { padding: 8px 10px; font-size: 11px; letter-spacing: .12em; white-space: nowrap; }
@@ -1109,11 +1113,14 @@ body { letter-spacing: .01em; }
 .cabecera-pagina--imagen { min-height: clamp(600px, 80vh, 900px); }
 .cta-final .contenedor { padding-top: 80px; padding-bottom: 80px; }
 
-@media (max-width: 860px) {
+@media (max-width: 1279px) {
   .encabezado nav { flex: initial; }
   .marca { margin-left: 0; }
-  .hero__contenido { padding: 60px 20px; }
   .menu__reservar { margin-left: 0; }
+}
+
+@media (max-width: 860px) {
+  .hero__contenido { padding: 60px 20px; }
 }
 
 @media (max-width: 640px) {
@@ -1278,16 +1285,17 @@ body { letter-spacing: .01em; }
   .cabecera-pagina--imagen, .hero-interior, .gastro-hero, .habitaciones-hero { min-height: clamp(400px, 50vh, 600px); }
   .cabecera-pagina--imagen .contenedor, .hero-interior__texto { padding: 40px 20px; }
   .marca__nombre { font-size: 20px; }
+  .encabezado__fila { gap: 8px; }
 }
 
 /* ---------- Menú móvil y controles: área táctil mínima 44x44px (Itinere §9.3) ---------- */
 /* Este bloque va al final a propósito: el bloque de overrides anterior pisaba el menú móvil. */
-@media (max-width: 860px) {
+@media (max-width: 1279px) {
   .menu a { padding: 13px 14px; font-size: 15px; letter-spacing: .06em; }
   .menu__reservar { min-height: 44px; text-align: center; }
 }
-@media (min-width: 861px) {
-  .menu a { min-height: 44px; display: inline-flex; align-items: center; }
+@media (min-width: 1280px) {
+  .menu a { min-height: 44px; display: inline-flex; align-items: center; padding: 8px 6px; letter-spacing: .05em; }
 }
 .idioma button { min-width: 44px; min-height: 44px; }
 .menu-boton { min-width: 44px; min-height: 44px; }
