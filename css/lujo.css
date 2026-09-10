@@ -220,23 +220,44 @@ h1 { font-weight: 400; }
   .idioma button { min-width: 44px; min-height: 44px; }
 }
 
-/* ---------- HERO: cinematográfico ---------- */
+/* ---------- HERO: cinematográfico ----------
+   La foto se muestra con su color real: en lugar de un velo uniforme que
+   apaga toda la imagen, quedan sólo dos degradados en los bordes (arriba
+   para el encabezado, abajo para flechas y puntos) más un foco oscuro
+   localizado detrás del bloque de texto, que es el que asegura el
+   contraste de la tipografía. */
 .hero__img { height: 88vh; min-height: 620px; max-height: 1000px; }
 .hero__velo {
-  background: linear-gradient(180deg, rgba(15, 23, 18, .62) 0%, rgba(15, 23, 18, .34) 38%, rgba(15, 23, 18, .82) 100%);
+  background: linear-gradient(180deg,
+    rgba(15, 23, 18, .62) 0%,
+    rgba(15, 23, 18, .05) 24%,
+    rgba(15, 23, 18, .05) 64%,
+    rgba(15, 23, 18, .62) 100%);
+}
+.hero__contenido::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(ellipse 58% 42% at 50% 50%,
+    rgba(15, 23, 18, .80) 0%,
+    rgba(15, 23, 18, .74) 66%,
+    rgba(15, 23, 18, .34) 88%,
+    rgba(15, 23, 18, 0) 100%);
 }
 .hero__lema {
   font-size: clamp(46px, 7vw, 96px);
   font-weight: 400;
   letter-spacing: .005em;
   line-height: 1.04;
-  text-shadow: 0 2px 30px rgba(0, 0, 0, .45);
+  text-shadow: 0 1px 2px rgba(15, 23, 18, .7), 0 2px 18px rgba(15, 23, 18, .5);
 }
 .hero__eyebrow { color: var(--oro-claro); font-size: 10px; letter-spacing: .42em; font-weight: 500; }
 .hero__subtitulo { color: rgba(248, 245, 238, .82); font-size: 12px; letter-spacing: .3em; }
+.hero__eyebrow, .hero__subtitulo { text-shadow: 0 1px 2px rgba(15, 23, 18, .85), 0 1px 10px rgba(15, 23, 18, .6); }
 .hero__punto { background-color: rgba(248, 245, 238, .4); }
 .hero__punto.activo { background-color: var(--oro); }
-.hero__flecha { border-color: rgba(224, 203, 154, .5); background: rgba(15, 23, 18, .35); }
+.hero__flecha { border-color: rgba(224, 203, 154, .5); background: rgba(15, 23, 18, .55); }
 .hero__flecha:hover { background: rgba(198, 166, 100, .9); color: var(--noche); border-color: var(--oro); }
 .btn--hero-ghost { color: var(--marfil); border-color: rgba(224, 203, 154, .7); }
 .btn--hero-ghost:hover { background: var(--oro); color: var(--noche); border-color: var(--oro); }
