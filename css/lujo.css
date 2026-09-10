@@ -200,6 +200,23 @@ h1 { font-weight: 400; }
 .idioma button.activo { background: transparent; color: var(--oro); }
 .idioma button:not(.activo):hover { background: transparent; color: var(--oro-claro); }
 
+/* Con scroll el header pasa a `.encabezado--solido` y `style.css` recupera el control:
+   `.encabezado--solido .idioma button` (0-2-1) y `.encabezado--solido .idioma button.activo`
+   (0-3-1) le ganan a `.idioma button` (0-1-1) y `.idioma button.activo` (0-2-1).
+   Hay que replicar esos selectores para que el diseño plano siga valiendo con el header sólido. */
+.encabezado--solido .idioma { border-color: rgba(224, 203, 154, .38); }
+.encabezado--solido .idioma__globo { color: var(--marfil); }
+.encabezado--solido .idioma__sep { color: rgba(248, 245, 238, .3); }
+.encabezado--solido .idioma button { background: transparent; color: rgba(248, 245, 238, .55); }
+.encabezado--solido .idioma button.activo { background: transparent; color: var(--oro); }
+.encabezado--solido .idioma button:not(.activo):hover { background: transparent; color: var(--oro-claro); }
+
+/* `style.css` fija 44x44px para el área táctil en el bloque móvil; esta regla base
+   la pisaba y la dejaba en 24px. Se restaura en las mismas medidas que activan el drawer. */
+@media (max-width: 1279px) {
+  .idioma button { min-width: 44px; min-height: 44px; }
+}
+
 /* ---------- HERO: cinematográfico ---------- */
 .hero__img { height: 88vh; min-height: 620px; max-height: 1000px; }
 .hero__velo {
