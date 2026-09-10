@@ -31,7 +31,7 @@
 
   /* Texto */
   --texto: #1a1f1b;
-  --texto-suave: #5d665e;
+  --texto-suave: #454d46;
 
   /* Remapeo de los tokens del sistema anterior */
   --adobe: #c6a664;
@@ -45,7 +45,7 @@
   --madera: #5d665e;
   --piedra: #5d665e;
   --tierra: #16211b;
-  --tierra-suave: #5d665e;
+  --tierra-suave: #454d46;
   --tierra-900: #16211b;
   --tierra-800: #0f1712;
   --arena-clara: #f8f5ee;
@@ -74,11 +74,11 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-weight: 400;
+  font-weight: 500;
   letter-spacing: .01em;
   color: var(--tierra);
 }
-h1 { font-weight: 400; }
+h1 { font-weight: 500; }
 
 /* Rótulos: versalitas espaciadas en oro */
 .rotulo {
@@ -90,7 +90,7 @@ h1 { font-weight: 400; }
 
 .titulo-seccion {
   font-size: clamp(34px, 4.8vw, 60px);
-  font-weight: 400;
+  font-weight: 500;
   line-height: 1.08;
   letter-spacing: .01em;
 }
@@ -167,7 +167,7 @@ h1 { font-weight: 400; }
 .encabezado--solido .marca::before { background: var(--oro); color: var(--noche); border-color: var(--oro); }
 .marca::before { background: rgba(198, 166, 100, .92); color: var(--noche); border-color: rgba(224, 203, 154, .8); }
 .marca__nombre { font-family: var(--font-titulo); letter-spacing: .02em; }
-.menu a { font-size: 10px; letter-spacing: .18em; }
+.menu a { font-size: 12px; letter-spacing: .13em; }
 .menu__reservar { background: var(--oro) !important; color: var(--noche) !important; border-radius: 0 !important; }
 .menu__reservar:hover { background: var(--oro-claro) !important; color: var(--noche) !important; }
 .idioma { border-radius: 0; border-color: rgba(224, 203, 154, .5); }
@@ -232,12 +232,12 @@ h1 { font-weight: 400; }
 }
 .hero__lema {
   font-size: clamp(46px, 7vw, 96px);
-  font-weight: 400;
+  font-weight: 500;
   letter-spacing: .005em;
   line-height: 1.04;
   text-shadow: 0 2px 30px rgba(0, 0, 0, .45);
 }
-.hero__eyebrow { color: var(--oro-claro); font-size: 10px; letter-spacing: .42em; font-weight: 500; }
+.hero__eyebrow { color: var(--oro-claro); font-size: 10px; letter-spacing: .22em; font-weight: 500; }
 .hero__subtitulo { color: rgba(248, 245, 238, .82); font-size: 12px; letter-spacing: .3em; }
 .hero__punto { background-color: rgba(248, 245, 238, .4); }
 .hero__punto.activo { background-color: var(--oro); }
@@ -262,7 +262,7 @@ h1 { font-weight: 400; }
   padding: 80px 26px 26px;
 }
 .tarjeta-servicio__info .rotulo { color: var(--oro-claro); letter-spacing: .3em; }
-.tarjeta-servicio h3 { font-weight: 400; font-size: 30px; letter-spacing: .01em; }
+.tarjeta-servicio h3 { font-weight: 500; font-size: 30px; letter-spacing: .01em; }
 
 /* ---------- Imágenes: tratamiento cinematográfico ---------- */
 .resumen-historia img {
@@ -461,7 +461,7 @@ h1 { font-weight: 400; }
 
 /* ---------- CTA final ---------- */
 .cta-final { background: var(--noche); border-top: 1px solid rgba(198, 166, 100, .25); }
-.cta-final__titulo { font-weight: 400; color: var(--marfil); }
+.cta-final__titulo { font-weight: 500; color: var(--marfil); }
 .cta-final .rotulo { color: var(--oro-claro); }
 .cta-final__texto { color: rgba(248, 245, 238, .75); }
 .cta-final .btn--ghost { color: var(--marfil); border-color: rgba(224, 203, 154, .6); }
