@@ -2,6 +2,8 @@
 
 **Inspiración:** Fusión de "La Posada de Cloe" (calidez y autenticidad), "Buenas Vibras Lodge" (claridad y confianza) y estilo "Emergent" (fluidez y modernidad técnica).
 
+> **Estado del proyecto Finca La Carla (2026-09-09):** los tokens visuales de este documento (paleta, tipografía, componentes, espaciado y HERO) fueron **alineados al sistema realmente implementado** en el sitio, basado en el estilo de "La Posada de Cloe" (adobe / cream / earth, `Cormorant Garamond` + `Inter`). Este documento es la fuente única de verdad visual y refleja lo que está en `css/style.css`.
+
 ---
 
 ## 1. Filosofía Visual General
@@ -12,57 +14,70 @@
 
 ---
 
-## 2. Paleta de Colores (Sistema Híbrido)
+## 2. Paleta de Colores (Tonos de la Tierra)
 
-| Uso | Color (Hex) | Nombre Descriptivo | Fuente de Inspiración |
-| :--- | :--- | :--- | :--- |
-| **Fondo Principal** | `#F9F6F0` | Crema / Lino | Posada Cloe / Buenas Vibras |
-| **Fondo de Tarjetas / Secciones** | `#FFFFFF` | Blanco Puro | Todos |
-| **Color Primario (Títulos y Acentos)** | `#2C3E2F` | Verde Oscuro / Bosque | Buenas Vibras |
-| **Color Secundario (Texto)** | `#4A5B4E` | Verde Grisáceo / Musgo | Buenas Vibras |
-| **Color Terciario (Detalles)** | `#7A6B5D` | Marrón Suave / Piedra | Posada Cloe |
-| **Color de Acento (Botones y Links)** | `#D4A373` | Arena / Terracota | Posada Cloe / Buenas Vibras |
-| **Color de Acento (Hover)** | `#C28F5F` | Arena Oscuro | Buenas Vibras |
-| **Color para Fondos de Detalles** | `#E8E0D5` | Crema / Paja | Buenas Vibras |
-| **Color de Acento para Acciones** | `#3B82F6` | Azul Eléctrico | Emergent (para acciones digitales) |
+> Estos tokens son los declarados en `css/style.css` (`:root`). **Ningún color debe usarse si no está acá**; primero se agrega como variable y luego se aplica.
+
+| Token CSS | Color (Hex) | Uso |
+| :--- | :--- | :--- |
+| `--adobe` | `#b56a3d` | Primario: botones, acentos (clay-500) |
+| `--adobe-osc` | `#8f5230` | Primario hover y texto de enlaces (clay-600) |
+| `--adobe-claro` | `#f3d9c8` | Fondos suaves de acento |
+| `--dorado` | `#c69769` | Rótulos "eyebrow" y detalles finos (clay-400) |
+| `--vegetacion` | `#5b6b3a` | Acentos verdes (huerta, valle) |
+| `--vegetacion-osc` | `#485728` | Verde en hover |
+| `--madera` | `#6b4f35` | Tonos profundos cálidos |
+| `--piedra` | `#8a8578` | Detalles y texto terciario |
+| `--arena` | `#f7f1e6` | Fondo de secciones alternadas (cream-100) |
+| `--arena-clara` | `#fbf7ee` | Fondo general del sitio (cream-50) |
+| `--arena-osc` | `#ece1cc` | Bordes suaves y fondos apagados |
+| `--tierra` | `#2b201a` | Texto principal (earth-900) |
+| `--tierra-suave` | `rgba(43,32,26,.72)` | Texto secundario |
+| `--tierra-900` | `#1a120e` | Fondo de secciones oscuras (earth-950) |
+| `--tierra-800` | `#241a13` | Fondo oscuro secundario |
+| `--borde` | `#dad2c8` | Bordes de 1 px |
+| `--error` | `#a83836` | Estados de error (formularios) |
+
+**Regla 80/20:** 80 % neutros cálidos (`--arena`, `--arena-clara`, `--tierra`) y 20 % acentos tierra (`--adobe`, `--dorado`, `--vegetacion`).
 
 ---
 
-## 3. Tipografía (Dúo Dinámico)
+## 3. Tipografía (Dúo Editorial)
 
-- **Fuente Principal (Títulos y Encabezados):**
-    - *Recomendación:* `'Lora'` o `'Merriweather'` (serif).
-    - *Estilo:* Transmite tradición, calidez y autenticidad. Úsala para H1, H2 y citas destacadas.
-    - *Pesos:* `Bold (700)` para H1 y `Semi-Bold (600)` para H2.
+> Cargadas desde Google Fonts en el `<head>` de **todas** las páginas:
+> `family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500;600`
 
-- **Fuente Secundaria (Cuerpo y Subtítulos):**
-    - *Recomendación:* `'Inter'` o `'Nunito Sans'` (sans-serif).
-    - *Estilo:* Aporta claridad, legibilidad y un contraste moderno. Úsala para todo el texto de apoyo, botones, inputs y datos.
-    - *Pesos:* `Regular (400)` para el cuerpo y `Medium (500)` o `Semi-Bold (600)` para énfasis.
+- **Fuente de Títulos (`--font-titulo`): `Cormorant Garamond`** (serif).
+    - *Estilo:* serif editorial y cálida. Úsala en `h1`–`h6`, títulos de sección y citas.
+    - *Pesos:* `500` (Medium) como base; `400` y `600` para casos puntuales.
+    - Escala: título de sección `clamp(36px, 4.8vw, 48px)`; lema del HERO `clamp(58px, 8vw, 112px)`.
+
+- **Fuente de Texto / UI (`--font-texto`): `Inter`** (sans-serif).
+    - *Estilo:* claridad y contraste moderno. Cuerpo, botones, inputs, navegación, rótulos y datos.
+    - *Pesos:* `300`–`600`; `400` para el cuerpo y `500`/`600` para énfasis.
+    - Cuerpo base: `16px` con `line-height: 1.6`.
+
+- **Rótulos "eyebrow" (`.rotulo`):** `Inter`, `11px`, peso `600`, `uppercase`, `letter-spacing: .26em`, color `--dorado`. Se colocan sobre los títulos de sección y en el HERO.
 
 ---
 
 ## 4. Estilo de Componentes Clave
 
-- **Botones:**
-    - **Primarios:** Fondo sólido en el color de acento (Arena `#D4A373`), texto blanco. Forma de píldora (`border-radius: 50px`). Sombra suave.
-    - **Secundarios:** Contorno delgado del color de acento (Arena), con texto en el mismo color.
-    - **Acción Digital:** Botones para "Enviar mensaje" o "Conectar con API" usarán el color de acento para acciones (Azul Eléctrico `#3B82F6`).
-    - **Hover (Todos):** El color de fondo o borde se oscurece, con una transición suave (`transition: all 0.3s ease`) y una ligera elevación.
+- **Botones (`.btn`):** esquinas rectas (`border-radius: 0`), `uppercase`, `font-size: 11px`, `letter-spacing: .18em`, `padding: 10px 18px`, `display: inline-flex`.
+    - **Primario (`.btn--primario`):** fondo `--adobe`, texto blanco. Hover: `--adobe-osc`, `translateY(-2px)` y sombra media.
+    - **Secundario / Ghost (`.btn--ghost`):** fondo transparente, borde 1 px `--adobe`, texto `--adobe-osc`. Hover: se rellena con `--adobe` y texto blanco.
+    - **Oscuro (`.btn--oscuro`):** fondo `--tierra`, texto blanco (para fondos claros dentro de secciones oscuras).
+    - **WhatsApp (`.btn--whatsapp`):** fondo `#25d366`, texto blanco.
+    - **Grande (`.btn--grande`):** `padding: 13px 28px`, `font-size: 12px`.
+    - **Íconos en botones:** un `<svg>` hermano con clase `.btn__icono` (transición `translateX` en hover). ⚠️ **No colocar SVG dentro de un elemento con `data-i18n`**: el motor de idiomas reemplaza `textContent` y borra los hijos; el texto debe ir en un `<span data-i18n="...">`.
 
-- **Tarjetas (Habitaciones, Servicios, Mensajes del Chat):**
-    - **Fondo:** Blanco (`#FFFFFF`) con una sombra muy sutil (`box-shadow: 0 4px 15px rgba(0,0,0,0.05)`).
-    - **Efecto Hover:** La sombra se intensifica (`0 8px 30px rgba(0,0,0,0.12)`) y la tarjeta se eleva ligeramente (`transform: translateY(-5px)`).
-    - **Detalle:** Un borde superior delgado en el color de acento (Arena) para darle un toque de distinción.
+- **Tarjetas de servicio (`.tarjeta-servicio`):** imagen full-bleed + overlay con degradado y rótulo "Descubrir"; borde y redondeo `0`, sin sombra.
+    - Alto por grilla: `min-height: 330px`; la tarjeta destacada (`.tarjeta-servicio--grande`) ocupa 2×2 en desktop (`min-height: 500px`).
+    - Hover: zoom suave de la imagen y aclarado del overlay. En móvil, la información esencial queda visible sin depender del hover.
 
-- **Inputs de Texto (Chat y Formularios):**
-    - **Estilo:** Línea inferior o contorno muy delgado (`border: 1px solid #E0E0E0`).
-    - **Foco:** El borde cambia al color de acento (Arena o Azul) y se añade una sombra exterior (glow) de ese mismo color.
-    - **Fondo:** Blanco o ligeramente gris (`#FAFAFA`).
+- **Inputs y formularios (`.formulario`):** borde inferior de 1 px en tonos arena, fondo transparente, `border-radius: 0`. Foco: el borde pasa a `--adobe`. Rótulos en estilo `label-caps`.
 
-- **Íconos:**
-    - **Estilo:** Línea fina y moderna (ej. Lucide o Feather).
-    - **Color:** Principalmente el color primario (Verde Oscuro) o el de acento (Arena) para llamar la atención.
+- **Íconos:** ver sección 11 (SVG inline estilo Lucide + `mask` CSS con data-URI). No se carga ninguna librería externa.
 
 ---
 
@@ -70,31 +85,32 @@
 
 - **Fotografía de Alta Calidad:** Esencial para transmitir la calidez del proyecto. Fotos con luz natural, paisajes, detalles (una taza de café, una textura) y personas.
 - **Fondos Evocadores:** Secciones principales pueden tener una imagen de fondo a pantalla completa con una superposición de color suave (ej. un degradado del crema) para asegurar la legibilidad del texto.
-- **Animación en Imágenes (Inspiración Emergent):** Al hacer scroll, las imágenes pueden tener un ligero efecto de "zoom out" o "revelado" para dar dinamismo.
+- **Animación en Imágenes:** el HERO aplica un Ken Burns suave (`heroKenBurns`, 12 s). El "zoom out" / "revelado" general al hacer scroll **no está implementado** (mejora pendiente).
 
 ---
 
 ## 6. Espaciado, Layout y Animaciones
 
 - **Espaciado Generoso:**
-    - Padding de secciones: `80px` arriba y abajo.
-    - Margen entre elementos: `24px` o `32px`.
-    - Contenedor principal: `max-width: 1200px`, centrado.
+    - Padding de secciones (`.seccion`): `clamp(84px, 11vw, 128px)` arriba y abajo.
+    - Contenedor principal (`.contenedor`): `max-width: 1320px`, centrado.
+    - Gutter lateral: `28px` en desktop (`--gutter`) y `20px` en móvil (`--gutter-movil`).
 
 - **Layouts Flexibles:**
     - Uso de **CSS Grid** para layouts de servicios, habitaciones o testimonios (ej. 3 columnas en escritorio, 2 en tablet, 1 en móvil).
     - Uso de **Flexbox** para alineaciones internas y componentes como el header.
 
-- **Animaciones y Micro-interacciones (Clave para el Look & Feel Profesional):**
-    - **Revelado al Hacer Scroll:** Los elementos aparecen con animaciones suaves (`fade-in`, `slide-up`) a medida que el usuario navega.
-    - **Transiciones:** Todas las interacciones (hover, focus, cambio de estado) deben tener transiciones suaves de `0.3s` de duración.
-    - **Carga (Typing Indicator):** Para el chat, un indicador de "escribiendo..." con tres puntos animados.
+- **Animaciones y Micro-interacciones:**
+    - **HERO:** `fadeIn` entre slides (0.8 s), `heroCopyIn` en eyebrow/título/subtítulo/acciones (0.8–0.9 s) y `heroKenBurns` en la imagen (12 s).
+    - **Header:** pasa de transparente a sólido al superar los `30px` de scroll (`.encabezado--solido`).
+    - **Transiciones:** todas las interacciones (hover, focus, cambio de estado) usan transiciones suaves de `0.25–0.3s`.
+    - **Accesibilidad:** `@media (prefers-reduced-motion: reduce)` desactiva las animaciones.
 
 ---
 
 ## 7. Toques Finales: El "Secreto" de la Fusión
 
-- **Consistencia Absoluta:** Usar **variables CSS (`:root`)** para colores, tipografías, sombras y radios de borde (`8px` en general, `50px` para botones-píldora). Esto asegura que cualquier cambio sea global y el diseño sea homogéneo.
+- **Consistencia Absoluta:** Usar **variables CSS (`:root`)** para colores, tipografías, sombras y radios (`--radio: 0px` y `--radio-suave: 4px`; esquinas rectas como sello editorial). Esto asegura que cualquier cambio sea global y el diseño sea homogéneo.
 - **Contraste Narrativo:** Combinar la serif cálida (para la "historia" y la emoción) con la sans-serif fría (para la "función" y la claridad).
 - **Toque Humano:** Incluir pequeños detalles que hagan el diseño único, como un ícono personalizado, un borde decorativo o una línea de separación con estilo.
 
@@ -111,51 +127,53 @@ sección antes de mostrar su contenido.
 Cada HERO debe contener, como mínimo:
 
 1. **Imagen de fondo** (o imagen principal) a pantalla completa del contenedor.
-2. **Overlay** (superposición) con degradado suave del color base (`#F9F6F0`) 
+2. **Overlay** (superposición) con degradado de tonos tierra (`rgba(20,14,9,…)`) 
    para asegurar la legibilidad del texto.
-3. **Título principal** (H1) usando la tipografía serif cálida (`'Lora'` o 
-   `'Merriweather'`), en color blanco o crema según contraste.
+3. **Título principal** (H1) usando la tipografía serif cálida (`Cormorant Garamond`), 
+   en color blanco.
 4. **Subtítulo opcional** (hasta 70 caracteres) en tipografía sans-serif 
-   (`'Inter'` o `'Nunito Sans'`), color blanco con opacidad 0.9.
-5. **CTA opcional** (botón primario) si la sección lo requiere.
+   (`Inter`), color crema con opacidad 0.85.
+5. **CTA opcional** (botón primario o ghost claro) si la sección lo requiere.
 
 ### 8.2 Especificaciones Técnicas del HERO
 
 | Atributo | Valor |
 | :--- | :--- |
-| **Altura Desktop** | `80vh` (mínimo `600px`, máximo `900px`) |
-| **Altura Tablet** | `60vh` |
-| **Altura Móvil** | `50vh` (mínimo `400px`) |
+| **Altura Desktop** (`>860px`) | `min(100svh, 980px)` (mínimo `700px`) |
+| **Altura Tablet** (`≤860px`) | `78vh` (mínimo `460px`) |
+| **Altura Móvil** (`≤640px`) | `100svh` (mínimo `620px`) |
 | **Ancho** | `100%` (full-width, sin márgenes laterales) |
-| **Posición del contenido** | Centrado horizontal y verticalmente |
-| **Padding interno** | `80px 40px` en desktop, `40px 20px` en móvil |
-| **Overlay** | `linear-gradient(180deg, rgba(44,62,47,0.3) 0%, rgba(44,62,47,0.6) 100%)` |
+| **Posición del contenido** | Abajo a la izquierda, alineado al contenedor |
+| **Padding interno** | `padding: 0 28px clamp(72px, 10vw, 126px)` (20 px laterales en móvil) |
+| **Overlay** | `linear-gradient(90deg, rgba(20,14,9,.62), rgba(20,14,9,.12) 65%)` + `linear-gradient(0deg, rgba(20,14,9,.48), transparent 55%)` |
 | **Border-radius** | `0px` (bordes rectos, sin redondeo) |
+| **Movimiento** | Ken Burns (`heroKenBurns`, 12 s) sobre la imagen activa |
 
 ### 8.3 Tipografía del HERO
 
-- **Título (H1):**
-  - Fuente: `'Lora'` o `'Merriweather'`, serif
-  - Tamaño: `clamp(2.5rem, 5vw, 4rem)` (responsive)
-  - Peso: `700` (Bold)
-  - Color: `#FFFFFF` o `#F9F6F0`
-  - Letter-spacing: `-0.02em`
-  - Sombra de texto: `0 2px 10px rgba(0,0,0,0.3)` para asegurar contraste
+- **Eyebrow / Rótulo (`.hero__eyebrow`):**
+  - Fuente: `Inter`, `12px`, `500`, `uppercase`, `letter-spacing: .32em`
+  - Color: `--dorado`
 
-- **Subtítulo:**
-  - Fuente: `'Inter'` o `'Nunito Sans'`, sans-serif
-  - Tamaño: `clamp(1rem, 1.5vw, 1.25rem)`
-  - Peso: `400` (Regular)
-  - Color: `#FFFFFF` con opacidad `0.9`
-  - Margin-top: `16px`
+- **Título / Lema (`.hero__lema`, H1):**
+  - Fuente: `Cormorant Garamond`, serif
+  - Tamaño: `clamp(58px, 8vw, 112px)` (móvil: `clamp(48px, 15vw, 76px)`)
+  - Peso: `500`
+  - Color: `#FFFFFF`
+  - `max-width: 820px`, `line-height: 1.05`
+  - Sombra de texto: `0 3px 22px rgba(0,0,0,.45)`
+
+- **Subtítulo (`.hero__subtitulo`):**
+  - Fuente: `Inter`, `14px`, `400`, `uppercase`, `letter-spacing: .26em`
+  - Color: `rgba(247,241,230,.85)`
+
+- **Acciones (`.hero__acciones`):** botón primario + botón ghost claro (`.btn--hero-ghost`), `gap: 12px`. En móvil los botones ocupan el ancho completo.
 
 ### 8.4 Comportamiento en Scroll (Inspiración Emergent)
 
-- El HERO puede tener un **efecto sutil de parallax**: la imagen se mueve a 
-  `0.5x` la velocidad del scroll.
-- El texto del HERO puede **desvanecerse suavemente** (`opacity: 1 → 0`) 
-  durante los primeros `200px` de scroll.
-- En móvil, **desactivar el parallax** por rendimiento.
+- El HERO **no usa parallax**. La imagen activa aplica un **Ken Burns** suave (`heroKenBurns`, 12 s) y el texto entra con `heroCopyIn` (0.8–0.9 s).
+- El carrusel avanza con `fadeIn` (0.8 s) entre slides (3 imágenes del Banner de Home, orden Banner 1 → 2 → 3).
+- Con `prefers-reduced-motion: reduce` se desactivan las animaciones del HERO; en móvil también se desactivan el Ken Burns y las entradas de texto por rendimiento.
 
 ### 8.5 Reglas del HERO (No negociables)
 
@@ -164,7 +182,7 @@ Cada HERO debe contener, como mínimo:
 - ❌ **NUNCA** dejar el HERO sin overlay si lleva texto encima.
 - ✅ **SIEMPRE** usar la fotografía "Destacada" (1) de la carpeta correspondiente.
 - ✅ **SIEMPRE** asegurar contraste WCAG AA entre texto e imagen.
-- ✅ **SIEMPRE** optimizar la imagen (WebP, lazy loading excepto el HERO principal).
+- ✅ **SIEMPRE** optimizar la imagen. **Estado actual:** JPG/PNG (el WebP quedó como mejora pendiente); el HERO principal no usa `lazy loading`, el resto de las imágenes sí.
 
 ### 8.6 Secciones que DEBEN tener HERO en Itinere
 
@@ -218,34 +236,33 @@ Todos los diseños y desarrollos deben contemplar estos breakpoints:
 | Nombre | Ancho | Uso |
 | :--- | :--- | :--- |
 | **Mobile S** | `320px` – `479px` | Celulares pequeños |
-| **Mobile M** | `480px` – `767px` | Celulares estándar |
-| **Tablet** | `768px` – `1023px` | Tablets verticales |
-| **Desktop S** | `1024px` – `1279px` | Laptops pequeñas |
-| **Desktop M** | `1280px` – `1439px` | Laptops estándar |
-| **Desktop L** | `1440px` – `1919px` | Monitores grandes |
-| **Desktop XL** | `1920px+` | Monitores ultra wide |
+| **Mobile M** | `480px` – `639px` | Celulares estándar |
+| **Mobile L / Tablet vertical** | `640px` – `800px` | Celulares grandes y tablets chicas |
+| **Tablet / Desktop S** | `801px` – `1024px` | Tablets y laptops pequeñas |
+| **Desktop** | `1025px` en adelante | Laptops y monitores |
 
-**Media queries recomendadas:**
+**Media queries implementadas (en `css/style.css`):** el proyecto se construyó *desktop-first*, con estos cortes:
 
 ```css
-/* Mobile first */
-@media (min-width: 768px)  { /* Tablet */ }
-@media (min-width: 1024px) { /* Desktop S */ }
-@media (min-width: 1280px) { /* Desktop M */ }
-@media (min-width: 1440px) { /* Desktop L */ }
-@media (min-width: 1920px) { /* Desktop XL */ }
+@media (max-width: 1024px) { /* Tablet / ajustes generales */ }
+@media (max-width: 860px)  { /* menú móvil y header */ }
+@media (max-width: 800px)  { /* secciones a una columna */ }
+@media (max-width: 640px)  { /* móvil */ }
+@media (max-width: 520px)  { /* móvil chico */ }
 ```
+
+> **Regla de verificación:** todo componente nuevo debe probarse al menos en `320px`, `768px` y `1280px`, en línea con el checklist de la sección 9.4.
 
 ---
 ### 9.3 Reglas Obligatorias de Responsive
 
-- **Mobile First:** Estilos base pensados primero en móvil.
+- **Enfoque responsive:** el CSS base es *desktop-first* con cortes `max-width` (ver 9.2). Todo componente nuevo debe quedar verificado en `320px`, `768px` y `1280px` antes de cerrarse.
 - **Unidades relativas:** Usar `rem`, `em`, `%`, `vw`, `vh`, `clamp()`.
 - **Imágenes fluidas:** `max-width: 100%` y `height: auto`.
 - **Tipografía fluida:** `clamp(min, preferido, max)`.
 - **Contenedores flexibles:** CSS Grid y Flexbox.
 - **Navegación adaptativa:** Menú hamburguesa en móvil.
-- **HERO adaptativo:** Reducir altura en móvil, desactivar parallax.
+- **HERO adaptativo:** ajustar la altura y el tamaño del título en tablet y móvil. No se implementa parallax (ver 8.4).
 - **Touch targets:** Área táctil mínima de `44x44px`.
 - **No depender del `:hover`:** Toda interacción debe tener equivalente táctil.
 
@@ -302,32 +319,30 @@ Todos los diseños y desarrollos deben contemplar estos breakpoints:
 
 ## 10. Animaciones y Micro-interacciones
 
-- **Revelado al Hacer Scroll:** Elementos aparecen con `fade-in` y `slide-up` suave.
-- **Transiciones:** Todas las interacciones usan `0.3s ease`.
-- **Hover en Botones:** Elevación (`translateY(-2px)`) y cambio de sombra.
-- **Hover en Tarjetas:** Elevación (`translateY(-5px)`) y sombra intensificada.
-- **Typing Indicator (chat):** Tres puntos animados.
-- **Carga de Imágenes:** Efecto blur-up (blur inicial → nítido).
+- **Entradas del HERO:** `fadeIn` (0.8 s) entre slides, `heroCopyIn` (0.8–0.9 s) para eyebrow/título/subtítulo/acciones, `heroKenBurns` (12 s) para la imagen.
+- **Header:** transición de transparente a sólido al superar los `30px` de scroll (`.encabezado--solido`), con `blur` y borde inferior.
+- **Hover en botones:** `translateY(-2px)` + sombra media, transición `0.25 s`.
+- **Hover en tarjetas de servicio:** zoom suave de la imagen y aclarado del overlay.
+- **Hover en enlaces del menú:** subrayado que crece (`transform: scaleX`), transición `0.3 s ease`.
 
-**Duraciones estándar:**
-- Rápida: `150ms` (hover pequeños)
-- Media: `300ms` (transiciones generales)
-- Lenta: `500ms` (revelados al scroll)
+**Duraciones estándar observadas:**
+- Rápida: `150–200ms` (hover de color en enlaces)
+- Media: `250–300ms` (transiciones generales y botones)
+- Lenta: `800–900ms` (entradas de texto del HERO); Ken Burns `12s`
 
-**Easings:**
-- `ease-out` para entradas.
-- `ease-in` para salidas.
-- `cubic-bezier(0.4, 0, 0.2, 1)` para transiciones suaves.
+**Accesibilidad de movimiento:** `@media (prefers-reduced-motion: reduce)` desactiva las animaciones (HERO y componentes animados).
+
+> **Pendientes opcionales (no implementados):** el "revelado al hacer scroll" (fade-in / slide-up con IntersectionObserver) y el efecto *blur-up* en la carga de imágenes. Se documentan como mejoras futuras, no como comportamiento actual.
 
 ---
 
 ## 11. Iconografía
 
-- **Librería recomendada:** Lucide Icons o Feather Icons.
-- **Estilo:** Línea fina y moderna.
-- **Tamaños:** `16px`, `20px`, `24px`, `32px`.
-- **Color:** `--itinere-primary` o `--itinere-accent`.
-- **Regla:** No mezclar librerías de iconos. Una sola para todo el proyecto.
+- **Implementación:** SVG **inline** dibujados a mano con el lenguaje visual de Lucide/Feather (`stroke="currentColor"`, `stroke-width` 1.5–2, `stroke-linecap="round"`). No se carga ninguna librería de iconos externa.
+- **Íconos utilitarios** (RESERVAR, CTA de WhatsApp, footer): resueltos con **CSS `mask` + data-URI** en variables (`--ic-msg`, `--ic-send`, `--ic-pin`, `--ic-phone`, `--ic-mail`).
+- **Tamaños en uso:** `16px`, `20px`, `22px` (chevrons del HERO), `24px`, `30px` (comillas de testimonios), `56px` (caja de los diferenciales).
+- **Color:** `currentColor` (hereda del contexto): `--adobe`, `--dorado` o `--tierra` según el fondo.
+- **Regla:** mantener un único lenguaje de trazo en todo el proyecto. No mezclar estilos.
 
 ---
 
