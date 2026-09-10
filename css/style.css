@@ -69,6 +69,7 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.15;
   color: var(--tierra);
   margin: 0 0 .45em;
+  overflow-wrap: break-word;
 }
 h1 { font-weight: 700; }
 p { margin: 0 0 1em; }
@@ -119,6 +120,7 @@ strong, b { font-weight: 600; }
   justify-content: center;
   gap: 8px;
   padding: 13px 28px;
+  min-height: 44px;
   border-radius: 50px;
   font-family: var(--font-texto);
   font-size: 12px;
@@ -340,18 +342,20 @@ strong, b { font-weight: 600; }
   right: 0;
   display: flex;
   justify-content: center;
-  gap: 9px;
+  gap: 0;
 }
 .hero__punto {
-  width: 9px;
-  height: 9px;
+  width: 31px;
+  height: 31px;
+  padding: 11px;
+  background-color: rgba(255, 255, 255, .45);
+  background-clip: content-box;
   border-radius: 50%;
-  background: rgba(255, 255, 255, .45);
   border: none;
   cursor: pointer;
-  transition: background .2s, transform .2s;
+  transition: background-color .2s, transform .2s;
 }
-.hero__punto.activo { background: var(--dorado); transform: scale(1.15); }
+.hero__punto.activo { background-color: var(--dorado); background-clip: content-box; transform: scale(1.15); }
 
 /* ---------- Presentación ---------- */
 .presentacion { text-align: center; }
@@ -734,8 +738,8 @@ strong, b { font-weight: 600; }
 .pie__marca { font-family: var(--font-titulo); font-size: 26px; color: var(--blanco); margin-bottom: 12px; }
 .pie__redes { display: flex; gap: 10px; margin-top: 16px; }
 .pie__redes a {
-  width: 40px;
-  height: 40px;
+  width: 44px;
+  height: 44px;
   border-radius: 50%;
   border: 1px solid rgba(255, 255, 255, .25);
   display: flex;
@@ -889,7 +893,7 @@ strong, b { font-weight: 600; }
   .seccion { padding: 76px 0; }
   .contenedor { padding: 0 var(--gutter-movil); }
   .pie__contenido { grid-template-columns: 1fr; }
-  .hero__flecha { width: 40px; height: 40px; font-size: 16px; }
+  .hero__flecha { width: 44px; height: 44px; font-size: 16px; }
   .hero__subtitulo { letter-spacing: .02em; }
 }
 
@@ -970,7 +974,7 @@ strong, b { font-weight: 600; }
 /* Iconos en footer (contacto) */
 .pie p[data-i18n="direccion_corta"],
 .pie li a[data-whatsapp="msg"],
-.pie li a[href^="mailto:"] { display: inline-flex; align-items: center; gap: 8px; }
+.pie li a[href^="mailto:"] { display: inline-flex; align-items: center; gap: 8px; min-height: 24px; }
 .pie p[data-i18n="direccion_corta"]::before,
 .pie li[data-i18n="footer_cel"]::before,
 .pie li a[data-whatsapp="msg"]::before,
@@ -1068,7 +1072,7 @@ body { letter-spacing: .01em; }
 .btn--hero-ghost { color: var(--blanco); border-color: rgba(255, 255, 255, .72); }
 .btn--hero-ghost:hover { background: var(--blanco); color: var(--tierra); }
 
-.titulo-seccion { font-size: clamp(34px, 4.2vw, 46px); font-weight: 600; }
+.titulo-seccion { font-size: clamp(24px, 5vw, 46px); font-weight: 600; }
 .intro-seccion { font-size: 18px; line-height: 1.7; }
 .presentacion { max-width: 900px; }
 .presentacion > p[data-i18n="pres_texto"] { line-height: 1.85 !important; color: var(--tierra-suave); }
@@ -1200,7 +1204,7 @@ body { letter-spacing: .01em; }
 .habitaciones-hero h1 { font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 700; letter-spacing: -0.02em; }
 .habitaciones-intro { padding: 76px var(--gutter) 92px; text-align: center; }
 .habitaciones-intro__contenido { max-width: 860px; }
-.habitaciones-intro h1 { font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 700; line-height: 1.1; margin-bottom: 30px; }
+.habitaciones-intro h2 { font-size: clamp(28px, 4.5vw, 56px); font-weight: 700; line-height: 1.1; margin-bottom: 30px; }
 .habitaciones-intro p { max-width: 760px; margin: 0 auto; color: var(--tierra-suave); font-size: 18px; line-height: 1.75; }
 .habitaciones-galeria { display: grid; grid-template-columns: 2fr 1fr; gap: 32px; align-items: center; padding-bottom: 120px; }
 .habitaciones-galeria img { width: 100%; object-fit: cover; border: 1px solid var(--borde); }
@@ -1217,7 +1221,7 @@ body { letter-spacing: .01em; }
 .habitaciones-lista--no li::before { content: "×"; position: absolute; left: 0; color: var(--madera); font-size: 18px; line-height: 1; }
 .habitaciones-nota { color: var(--tierra-suave); font-size: 14px; font-style: italic; line-height: 1.6; }
 .habitaciones-capacidad { display: grid; grid-template-columns: 7fr 5fr; gap: clamp(40px, 7vw, 90px); margin-bottom: 120px; }
-.habitaciones-capacidad h2 { font-size: 42px; font-weight: 400; margin-bottom: 38px; }
+.habitaciones-capacidad h2 { font-size: clamp(28px, 4.5vw, 42px); font-weight: 600; margin-bottom: 38px; }
 .habitaciones-filas > div { display: flex; justify-content: space-between; align-items: baseline; gap: 20px; padding: 18px 0; border-bottom: 1px solid var(--borde); font-size: 17px; }
 .habitaciones-filas strong { color: var(--adobe); font-family: var(--font-titulo); font-size: 26px; font-weight: 500; }
 .habitaciones-pastillas { display: flex; flex-wrap: wrap; gap: 12px; margin: 28px 0 18px; }
@@ -1248,7 +1252,7 @@ body { letter-spacing: .01em; }
 }
 
 @media (max-width: 520px) {
-  .habitaciones-intro h1 { font-size: 44px; }
+  .habitaciones-intro h2 { font-size: 28px; }
   .habitaciones-intro p { font-size: 16px; }
   .habitaciones-galeria__principal img { height: 340px; }
   .habitaciones-galeria__secundarias { gap: 14px; }
@@ -1273,4 +1277,18 @@ body { letter-spacing: .01em; }
   .hero__img { height: 50vh; min-height: 400px; }
   .cabecera-pagina--imagen, .hero-interior, .gastro-hero, .habitaciones-hero { min-height: clamp(400px, 50vh, 600px); }
   .cabecera-pagina--imagen .contenedor, .hero-interior__texto { padding: 40px 20px; }
+  .marca__nombre { font-size: 20px; }
 }
+
+/* ---------- Menú móvil y controles: área táctil mínima 44x44px (Itinere §9.3) ---------- */
+/* Este bloque va al final a propósito: el bloque de overrides anterior pisaba el menú móvil. */
+@media (max-width: 860px) {
+  .menu a { padding: 13px 14px; font-size: 15px; letter-spacing: .06em; }
+  .menu__reservar { min-height: 44px; text-align: center; }
+}
+@media (min-width: 861px) {
+  .menu a { min-height: 44px; display: inline-flex; align-items: center; }
+}
+.idioma button { min-width: 44px; min-height: 44px; }
+.menu-boton { min-width: 44px; min-height: 44px; }
+.hero__flecha { min-width: 44px; min-height: 44px; }
