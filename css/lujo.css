@@ -396,6 +396,23 @@ h1 { font-weight: 400; }
 }
 .cita-carrusel__flecha:hover { color: var(--oro-claro); }
 
+/* Control de pausa del carrusel (WCAG 2.2.2) */
+.cita-carrusel__pausa {
+  background: transparent;
+  border: 1px solid rgba(224, 203, 154, .38);
+  color: var(--oro);
+  font-size: 11px;
+  line-height: 1;
+  cursor: pointer;
+  min-width: 44px;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: color .3s ease, border-color .3s ease;
+}
+.cita-carrusel__pausa:hover { color: var(--oro-claro); border-color: var(--oro); }
+
 .cita-carrusel__puntos { display: flex; align-items: center; gap: 12px; }
 
 .cita-carrusel__punto {

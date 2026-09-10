@@ -13,13 +13,15 @@
 </head>
 <body>
 
+<a class="salto-contenido" href="#contenido-principal">Saltar al contenido</a>
+
 <header class="encabezado">
   <div class="contenedor encabezado__fila">
     <a class="marca" href="../index.html" aria-label="Finca La Carla — Inicio">
       <span class="marca__nombre">Finca La Carla<small>Valle Calchaquí · Salta</small></span>
     </a>
     <nav aria-label="Navegación principal">
-      <ul class="menu">
+      <ul class="menu" id="menu-principal">
         <li><a href="../index.html" data-i18n="nav_home">Home</a></li>
         <li><a href="habitaciones.html" data-i18n="nav_habitaciones">Habitaciones</a></li>
         <li><a href="gastronomia.html" data-i18n="nav_gastronomia">Gastronomía</a></li>
@@ -39,13 +41,13 @@
         <span class="idioma__sep" aria-hidden="true">|</span>
         <button type="button" data-idioma="en" aria-pressed="false">EN</button>
       </div>
-      <button class="menu-boton" type="button" aria-label="Abrir menú" aria-expanded="false">☰</button>
+      <button class="menu-boton" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu-principal">☰</button>
     </div>
   </div>
 </header>
 <div class="menu-sombra" aria-hidden="true"></div>
 
-<main>
+<main id="contenido-principal">
   <section class="cabecera-pagina cabecera-pagina--imagen" style="background-image:url('../images/fotos/h%20Quienes%20somos/Destacada%20(1)/Finca_La_Carla_Animana_Salta_Argentina_Quienes_Somos.jpg');">
     <div class="contenedor">
       <p class="migas"><a href="../index.html" data-i18n="nav_home">Home</a> / <span data-i18n="nav_quienessomos">Quiénes somos</span></p>

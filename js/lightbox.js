@@ -14,6 +14,8 @@
     lightbox.className = "lightbox";
     lightbox.setAttribute("role", "dialog");
     lightbox.setAttribute("aria-modal", "true");
+    lightbox.setAttribute("aria-label", "Visor de fotos");
+    lightbox.setAttribute("tabindex", "-1");
     lightbox.innerHTML =
       '<button class="lightbox__cerrar" data-lb-cerrar aria-label="Cerrar">&times;</button>' +
       '<button class="lightbox__nav lightbox__nav--prev" data-lb-prev aria-label="Anterior">&#10094;</button>' +
@@ -34,7 +36,35 @@
       if (e.key === "Escape") cerrar();
       if (e.key === "ArrowLeft") anterior();
       if (e.key === "ArrowRight") siguiente();
+      if (e.key === "Tab") atraparFoco(e);
     });
+  }
+
+  var origen = null;
+
+  function enfocables() {
+    return [].slice.call(lightbox.querySelectorAll("button")).filter(function (b) {
+      return b.getClientRects().length > 0;
+    });
+  }
+
+  /* Mientras el visor está abierto el foco no debe escaparse del diálogo */
+  function atraparFoco(e) {
+    var els = enfocables();
+    if (!els.length) return;
+    var primero = els[0];
+    var ultimo = els[els.length - 1];
+    var activo = document.activeElement;
+    if (!lightbox.contains(activo)) {
+      e.preventDefault();
+      primero.focus();
+    } else if (e.shiftKey && activo === primero) {
+      e.preventDefault();
+      ultimo.focus();
+    } else if (!e.shiftKey && activo === ultimo) {
+      e.preventDefault();
+      primero.focus();
+    }
   }
 
   function mostrar() {
@@ -54,18 +84,23 @@
   function cerrar() {
     lightbox.classList.remove("abierto");
     document.body.style.overflow = "";
+    /* Devolver el foco al elemento que abrió el visor */
+    if (origen && typeof origen.focus === "function") origen.focus();
   }
   function siguiente() { indice++; mostrar(); }
   function anterior() { indice--; mostrar(); }
 
-  function abrir(lista, desde) {
+  function abrir(lista, desde, disparador) {
     if (!lightbox) crearEstructura();
+    origen = disparador || (document.activeElement instanceof HTMLElement ? document.activeElement : null);
     items = lista.map(function (x) {
       if (typeof x === "string") return { src: x, caption: "" };
       return { src: x.src, caption: x.caption || "" };
     });
     indice = (typeof desde === "number") ? desde : 0;
     mostrar();
+    /* Llevar el foco dentro del diálogo */
+    lightbox.querySelector("[data-lb-cerrar]").focus();
   }
 
   /* Vincula galerías normales: .galeria-grid a */
@@ -78,7 +113,7 @@
         var lista = Array.prototype.map.call(enlaces, function (el) {
           return { src: el.getAttribute("href"), caption: el.getAttribute("data-lb-caption") || "" };
         });
-        abrir(lista, i);
+        abrir(lista, i, a);
       });
     });
   }
@@ -91,7 +126,7 @@
         var clave = t.getAttribute("data-galeria");
         var gal = window.Finca && window.Finca.galerias && window.Finca.galerias[clave];
         if (gal && gal.length) {
-          abrir(gal.map(function (src) { return { src: src, caption: "" }; }));
+          abrir(gal.map(function (src) { return { src: src, caption: "" }; }), 0, t);
         }
       });
     });

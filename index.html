@@ -13,6 +13,8 @@
 </head>
 <body>
 
+<a class="salto-contenido" href="#contenido-principal">Saltar al contenido</a>
+
 <!-- ===================== ENCABEZADO ===================== -->
 <header class="encabezado">
   <div class="contenedor encabezado__fila">
@@ -21,7 +23,7 @@
     </a>
 
     <nav aria-label="Navegación principal">
-      <ul class="menu">
+      <ul class="menu" id="menu-principal">
         <li><a href="index.html" data-i18n="nav_home" class="activo">Home</a></li>
         <li><a href="html/habitaciones.html" data-i18n="nav_habitaciones">Habitaciones</a></li>
         <li><a href="html/gastronomia.html" data-i18n="nav_gastronomia">Gastronomía</a></li>
@@ -47,6 +49,8 @@
   </div>
 </header>
 <div class="menu-sombra" aria-hidden="true"></div>
+
+<main id="contenido-principal">
 
 <!-- ===================== HERO / BANNER ===================== -->
 <section class="hero" aria-label="Bienvenida">
@@ -249,6 +253,7 @@
           <button class="cita-carrusel__punto" type="button" aria-label="Testimonio 5"></button>
         </div>
         <button class="cita-carrusel__flecha cita-carrusel__flecha--next" type="button" aria-label="Testimonio siguiente">&#10095;</button>
+        <button class="cita-carrusel__pausa" type="button" aria-label="Pausar los testimonios">&#10074;&#10074;</button>
       </div>
     </div>
   </div>
@@ -269,6 +274,8 @@
     </div>
   </div>
 </section>
+
+</main>
 
 <!-- ===================== FOOTER ===================== -->
 <footer class="pie">
@@ -340,7 +347,9 @@
   var puntos = [].slice.call(raiz.querySelectorAll(".cita-carrusel__punto"));
   var prev = raiz.querySelector(".cita-carrusel__flecha--prev");
   var next = raiz.querySelector(".cita-carrusel__flecha--next");
+  var botonPausa = raiz.querySelector(".cita-carrusel__pausa");
   var i = 0, timer = null, PAUSA = 8000;
+  var pausadoManual = false;
 
   function ver(n) {
     i = (n + citas.length) % citas.length;
@@ -351,7 +360,12 @@
     });
   }
   function parar() { if (timer) { clearInterval(timer); timer = null; } }
-  function arrancar() { parar(); timer = setInterval(function () { ver(i + 1); }, PAUSA); }
+  function arrancar() {
+    parar();
+    /* Si el usuario lo detuvo a propósito, no se reanuda solo */
+    if (pausadoManual) return;
+    timer = setInterval(function () { ver(i + 1); }, PAUSA);
+  }
   function ir(n) { ver(n); arrancar(); }
 
   prev.addEventListener("click", function () { ir(i - 1); });
@@ -366,8 +380,26 @@
     if (e.key === "ArrowLeft") { ir(i - 1); }
     if (e.key === "ArrowRight") { ir(i + 1); }
   });
-  if (window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
-  arrancar();
+
+  /* Control de pausa (WCAG 2.2.2): una vez detenido, el carrusel no vuelve a
+     arrancar solo — ni al salir con el mouse ni al perder el foco. */
+  function pintarPausa() {
+    if (!botonPausa) return;
+    botonPausa.innerHTML = pausadoManual ? "\u25B6" : "\u275A\u275A";
+    botonPausa.setAttribute("aria-label", pausadoManual ? "Reanudar los testimonios" : "Pausar los testimonios");
+  }
+  if (botonPausa) {
+    botonPausa.addEventListener("click", function () {
+      pausadoManual = !pausadoManual;
+      if (pausadoManual) { parar(); } else { arrancar(); }
+      pintarPausa();
+    });
+  }
+
+  var sinMovimiento = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if (sinMovimiento) { pausadoManual = true; parar(); }
+  pintarPausa();
+  if (!sinMovimiento) { arrancar(); }
 })();
 </script>
 </body>
