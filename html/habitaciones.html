@@ -42,83 +42,69 @@
 </header>
 <div class="menu-sombra" aria-hidden="true"></div>
 
-<main>
-  <section class="cabecera-pagina cabecera-pagina--imagen" style="background-image:url('../images/fotos/b%20Habitaciones/Habitacion%20Categor%C3%ADa%20A/Destacada%20(1)/Finca_La_Carla_Animana_Salta_Argentina_HabitacionDest.jpg');">
+<main class="habitaciones-page">
+  <section class="cabecera-pagina cabecera-pagina--imagen habitaciones-hero" style="background-image:url('../images/fotos/b%20Habitaciones/Habitacion%20Categor%C3%ADa%20A/Destacada%20(1)/Finca_La_Carla_Animana_Salta_Argentina_HabitacionDest.jpg');">
     <div class="contenedor">
       <p class="migas"><a href="../index.html" data-i18n="nav_home">Home</a> / <span data-i18n="nav_habitaciones">Habitaciones</span></p>
+      <h1 data-i18n="nav_habitaciones">Habitaciones</h1>
+      <p data-i18n="hab_intro_corto">Calma, tierra y descanso en el Valle Calchaquí</p>
+    </div>
+  </section>
+  <section class="habitaciones-intro">
+    <div class="contenedor habitaciones-intro__contenido">
       <h1 data-i18n="hab_titulo">Siete habitaciones cálidas, simples y pensadas para descansar</h1>
       <p data-i18n="hab_intro">Las siete habitaciones forman parte de una misma categoría y comparten el carácter rústico y minimalista de la finca, con materiales y tonos vinculados a la tierra. Todas cuentan con baño privado, calefacción por radiadores, Wi-Fi, placard y secador de pelo. Cinco están en planta baja y dos en planta alta. La mayoría son triples y una de ellas ofrece un gran ventanal con vista al valle y al cielo nocturno.</p>
     </div>
   </section>
 
-  <section class="seccion">
-    <div class="contenedor">
-      <p class="rotulo" data-i18n="nav_habitaciones">Habitaciones</p>
-      <h2 class="titulo-seccion" data-i18n="hab_galeria">Galería de habitaciones</h2>
-      <div class="galeria-grid" data-render-galeria="habitaciones" data-max="6"></div>
-      <p style="margin-top:18px;">
-        <button class="btn btn--primario" type="button" data-galeria="habitaciones" data-i18n="fotos_abrir">Abrir galería</button>
-      </p>
+  <section class="habitaciones-galeria contenedor">
+    <div class="habitaciones-galeria__principal"><img src="../images/fotos/b%20Habitaciones/Habitacion%20Categor%C3%ADa%20A/Destacada%20(1)/Finca_La_Carla_Animana_Salta_Argentina_HabitacionDest.jpg" alt="Habitación de Finca La Carla"></div>
+    <div class="habitaciones-galeria__secundarias">
+      <img src="../images/fotos/b%20Habitaciones/Habitacion%20Categor%C3%ADa%20A/Principales%20(6)/Finca_La_Carla_Animana_Salta_Argentina_Habitacion%20%20(1).jpg" alt="Interior de una habitación de Finca La Carla">
+      <img src="../images/fotos/b%20Habitaciones/z%20Ba%C3%B1o/Destacada%20(1)/Finca_La_Carla_Animana_Salta_Argentina_Ba%C3%B1o.png" alt="Baño de una habitación de Finca La Carla">
     </div>
   </section>
 
-  <section class="seccion seccion--arena">
-    <div class="contenedor">
-      <h2 class="titulo-seccion" data-i18n="hab_con_titulo">Todas cuentan con</h2>
-      <ul class="lista-carac">
-        <li data-i18n="hab_con_1">Baño privado</li>
-        <li data-i18n="hab_con_2">Inodoro</li>
-        <li data-i18n="hab_con_3">Bidet</li>
-        <li data-i18n="hab_con_4">Calefacción por radiadores</li>
-        <li data-i18n="hab_con_5">Wi-Fi</li>
-        <li data-i18n="hab_con_6">Placard</li>
-        <li data-i18n="hab_con_7">Secador de pelo</li>
-        <li data-i18n="hab_con_8">Ropa de cama</li>
-        <li data-i18n="hab_con_9">Toallas</li>
-      </ul>
-      <p data-i18n="hab_smarttv" style="margin-top:8px;">Hay Smart TV únicamente en un espacio común.</p>
-
-      <h2 class="titulo-seccion" style="margin-top:36px;" data-i18n="hab_sin_titulo">No cuentan con</h2>
-      <ul class="lista-carac lista-carac--no">
-        <li data-i18n="hab_sin_1">Televisión dentro de la habitación</li>
-        <li data-i18n="hab_sin_2">Aire acondicionado</li>
-        <li data-i18n="hab_sin_3">Caja de seguridad</li>
-        <li data-i18n="hab_sin_4">Minibar</li>
-        <li data-i18n="hab_sin_5">Pava eléctrica</li>
-        <li data-i18n="hab_sin_6">Cafetera</li>
+  <section class="habitaciones-caracteristicas contenedor">
+    <div>
+      <h2 data-i18n="hab_con_titulo">Todas cuentan con</h2>
+      <ul class="habitaciones-lista habitaciones-lista--ok">
+        <li data-i18n="hab_con_1">Baño privado, inodoro y bidet</li><li data-i18n="hab_con_4">Calefacción por radiadores</li><li data-i18n="hab_con_5">Conexión Wi-Fi</li><li data-i18n="hab_con_6">Placard</li><li data-i18n="hab_con_7">Secador de pelo</li><li data-i18n="hab_con_8">Ropa de cama</li><li data-i18n="hab_con_9">Toallas</li>
       </ul>
     </div>
-  </section>
-
-  <section class="seccion">
-    <div class="contenedor">
-      <h2 class="titulo-seccion" data-i18n="hab_capacidad_titulo">Capacidad y distribución</h2>
-      <div class="datos">
-        <div class="dato"><div class="dato__clave" data-i18n="hab_cap_triples">5 triples</div><div class="dato__valor">1 cama matrimonial + 1 cama simple</div></div>
-        <div class="dato"><div class="dato__clave" data-i18n="hab_cap_doble">1 doble</div><div class="dato__valor">—</div></div>
-        <div class="dato"><div class="dato__clave" data-i18n="hab_cap_doblem">1 doble matrimonial</div><div class="dato__valor">1 cama matrimonial</div></div>
-        <div class="dato"><div class="dato__clave" data-i18n="hab_cap_pb">Planta baja</div><div class="dato__valor">5 habitaciones</div></div>
-        <div class="dato"><div class="dato__clave" data-i18n="hab_cap_pa">Planta alta</div><div class="dato__valor">2 habitaciones, acceso por escalera</div></div>
-        <div class="dato"><div class="dato__clave" data-i18n="info_capacidad">Capacidad</div><div class="dato__valor" data-i18n="hab_cap_total">Hasta 21 personas con camas adicionales según disponibilidad</div></div>
-        <div class="dato"><div class="dato__clave" data-i18n="hab_cap_superficie">Superficie</div><div class="dato__valor">18 m² aprox.</div></div>
-      </div>
-      <div class="nota" style="background:#fdf6ea;border-left:4px solid var(--adobe);padding:12px 16px;margin-top:22px;border-radius:4px;">
-        <p data-i18n="hab_accesibilidad">Por los desniveles y escaleras, las instalaciones no están adaptadas para personas con movilidad reducida.</p>
-      </div>
+    <div>
+      <h2 data-i18n="hab_sin_titulo">No cuentan con</h2>
+      <ul class="habitaciones-lista habitaciones-lista--no">
+        <li data-i18n="hab_sin_1">Televisión dentro de la habitación</li><li data-i18n="hab_sin_2">Aire acondicionado</li><li data-i18n="hab_sin_3">Caja de seguridad</li><li data-i18n="hab_sin_4">Minibar</li><li data-i18n="hab_sin_5">Pava eléctrica</li><li data-i18n="hab_sin_6">Cafetera</li>
+      </ul>
+      <p class="habitaciones-nota" data-i18n="hab_smarttv">Hay Smart TV únicamente en un espacio común.</p>
     </div>
   </section>
 
-  <section class="seccion seccion--arena">
-    <div class="contenedor">
-      <h2 class="titulo-seccion" data-i18n="hab_adicional_titulo">Información adicional</h2>
-      <div class="tarjetas">
-        <div class="tarjeta"><p data-i18n="hab_adic_1">Cama adicional a pedido según disponibilidad y siempre que el hotel no esté totalmente lleno. Sin costo adicional.</p></div>
-        <div class="tarjeta"><p data-i18n="hab_adic_2">Cuna a pedido, sin costo adicional.</p></div>
-        <div class="tarjeta"><p data-i18n="hab_adic_3">La habitación número 3 es la única con bañera con jacuzzi.</p></div>
-        <div class="tarjeta"><p data-i18n="hab_adic_4">Algunas habitaciones tienen vista hacia el viñedo y otras hacia el ingreso de la finca.</p></div>
-        <div class="tarjeta"><p data-i18n="hab_adic_5">Existe una habitación con gran ventanal y vista al Valle Calchaquí, especialmente valorada por parejas y por la vista nocturna.</p></div>
+  <section class="habitaciones-capacidad contenedor">
+    <div class="habitaciones-capacidad__datos">
+      <h2 data-i18n="hab_capacidad_titulo">Capacidad y distribución</h2>
+      <div class="habitaciones-filas">
+        <div><span data-i18n="hab_cap_triples">Habitaciones triples (1 matrimonial + 1 simple)</span><strong>5</strong></div>
+        <div><span data-i18n="hab_cap_doble">Habitación doble</span><strong>1</strong></div>
+        <div><span data-i18n="hab_cap_doblem">Habitación doble matrimonial</span><strong>1</strong></div>
       </div>
+      <div class="habitaciones-pastillas"><span data-i18n="hab_cap_total">Capacidad máx.: 21 personas</span><span data-i18n="hab_cap_superficie">Superficie promedio: 18 m²</span></div>
+      <p class="habitaciones-nota" data-i18n="hab_accesibilidad">* Nota: El acceso a la planta alta es por escalera (no contamos con ascensor).</p>
     </div>
+    <aside class="habitaciones-detalles">
+      <h3 data-i18n="hab_detalles_titulo">Detalles que importan</h3><span class="habitaciones-detalles__linea"></span>
+      <ul>
+        <li><b>+</b><div><strong data-i18n="hab_detalle_cuna">Cuna a pedido</strong><span data-i18n="hab_detalle_cuna_texto">Disponible sin costo adicional.</span></div></li>
+        <li><b>+</b><div><strong data-i18n="hab_detalle_jacuzzi">Experiencia superior</strong><span data-i18n="hab_detalle_jacuzzi_texto">Habitación 3 equipada con jacuzzi exclusivo.</span></div></li>
+        <li><b>+</b><div><strong data-i18n="hab_detalle_vistas">Vistas privilegiadas</strong><span data-i18n="hab_detalle_vistas_texto">Orientación hacia el viñedo o el inmenso valle.</span></div></li>
+      </ul>
+    </aside>
+  </section>
+
+  <section class="habitaciones-galeria-final contenedor">
+    <div class="galeria-grid" data-render-galeria="habitaciones" data-max="6"></div>
+    <p class="texto-centro"><button class="btn btn--primario" type="button" data-galeria="habitaciones" data-i18n="fotos_abrir">Abrir galería</button></p>
   </section>
 </main>
 

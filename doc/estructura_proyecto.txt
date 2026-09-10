@@ -1,0 +1,54 @@
+/mi-proyecto-finca-la-carla/
+│
+├── index.html                  (Home)
+├── design-finca-la-carla.md    (Este archivo)
+│
+├── /css/
+│   ├── styles.css              (Estilos globales)
+│   ├── home.css
+│   ├── habitaciones.css
+│   ├── gastronomia.css
+│   ├── servicios.css
+│   ├── eventos.css
+│   ├── que-hacer.css
+│   ├── quienes-somos.css
+│   ├── fotos.css
+│   ├── contacto.css
+│   └── responsive.css
+│
+├── /js/
+│   ├── main.js                 (Funcionalidad general)
+│   ├── idioma.js               (Selector español/inglés)
+│   ├── galeria.js              (Galerías y lightbox)
+│   ├── formulario.js           (Validación del formulario)
+│   └── whatsapp.js             (Botón flotante de WhatsApp)
+│
+├── /html/
+│   ├── habitaciones.html
+│   ├── gastronomia.html
+│   ├── servicios.html
+│   ├── eventos.html
+│   ├── que-hacer.html
+│   ├── quienes-somos.html
+│   ├── fotos.html
+│   ├── contacto.html
+│   ├── terminos.html
+│   └── cookies.html
+│
+└── /img/                       (Todas las fotos del Drive, organizadas por carpeta)
+    ├── /banner/
+    ├── /exterior/
+    ├── /arquitectura/
+    ├── /habitaciones/
+    ├── /banos/
+    ├── /gastronomia/
+    ├── /desayuno/
+    ├── /pileta/
+    ├── /recreacion/
+    ├── /eventos/
+    ├── /artesanias/
+    ├── /livings/
+    ├── /galeria/
+    ├── /quienes-somos/
+    ├── /que-hacer/
+    └── /jardines/

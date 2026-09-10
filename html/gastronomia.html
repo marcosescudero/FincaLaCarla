@@ -42,89 +42,85 @@
 </header>
 <div class="menu-sombra" aria-hidden="true"></div>
 
-<main>
-  <section class="cabecera-pagina cabecera-pagina--imagen" style="background-image:url('../images/fotos/c%20Gastronomía/Destacada%20(1)/Finca_La_Carla_Animana_Salta_Argentina_Gastronomia.png');">
-    <div class="contenedor">
+<main class="gastro-page">
+  <section class="gastro-hero" style="background-image:url('../images/fotos/c%20Gastronomía/Destacada%20(1)/Finca_La_Carla_Animana_Salta_Argentina_Gastronomia.png');">
+    <div class="gastro-hero__velo"></div>
+    <div class="contenedor gastro-hero__contenido">
       <p class="migas"><a href="../index.html" data-i18n="nav_home">Home</a> / <span data-i18n="nav_gastronomia">Gastronomía</span></p>
+      <p class="rotulo" data-i18n="nav_gastronomia">Gastronomía</p>
       <h1 data-i18n="gastro_titulo">Gastronomía</h1>
       <p data-i18n="gastro_intro">Sabores caseros y productos de la propia finca</p>
     </div>
   </section>
 
-  <section class="seccion">
-    <div class="contenedor">
-      <p class="rotulo" data-i18n="nav_gastronomia">Gastronomía</p>
-      <h2 class="titulo-seccion" data-i18n="gastro_acerca_titulo">Acerca de nuestra cocina</h2>
-      <p data-i18n="gastro_acerca">El desayuno está incluido e integra café, leche, tés, tostadas, manteca, yogur y granola caseros, además de mermeladas elaboradas en la finca con frutas de estación. Según el día se suman budines, tortas, masas dulces y pan de bollo de vecinos de la comunidad. Los almuerzos y cenas se preparan a pedido y tienen costo adicional: pueden incluir cazuela de cabrito, tartas con productos de la huerta, empanadas árabes y pastas caseras. También hay opciones vegetarianas, veganas e infantiles a pedido, vinos y sidras propios y viandas para picnic. Las comidas se coordinan con anticipación y buscan aprovechar productos de la finca y de productores cercanos.</p>
+  <section class="seccion gastro-intro">
+    <div class="contenedor gastro-intro__grid">
+      <div>
+        <p class="rotulo" data-i18n="nav_gastronomia">Nuestra cocina</p>
+        <h2 class="titulo-seccion" data-i18n="gastro_acerca_titulo">Acerca de nuestra cocina</h2>
+      </div>
+      <p class="gastro-lead" data-i18n="gastro_acerca">El desayuno está incluido e integra café, leche, tés, tostadas, manteca, yogur y granola caseros, además de mermeladas elaboradas en la finca con frutas de estación. Según el día se suman budines, tortas, masas dulces y pan de bollo de vecinos de la comunidad. Los almuerzos y cenas se preparan a pedido y tienen costo adicional: pueden incluir cazuela de cabrito, tartas con productos de la huerta, empanadas árabes y pastas caseras. También hay opciones vegetarianas, veganas e infantiles a pedido, vinos y sidras propios y viandas para picnic. Las comidas se coordinan con anticipación y buscan aprovechar productos de la finca y de productores cercanos.</p>
     </div>
   </section>
 
-  <section class="seccion seccion--arena">
+  <section class="seccion seccion--arena gastro-oferta">
     <div class="contenedor">
+      <p class="rotulo texto-centro" data-i18n="nav_gastronomia">Servicios gastronómicos</p>
+      <h2 class="titulo-seccion texto-centro" data-i18n="gastro_oferta_titulo">Lo que ofrecemos en la mesa</h2>
+      <div class="gastro-oferta__lista">
+        <div><span>01</span><p data-i18n="gastro_desayuno_titulo">Desayuno incluido</p></div>
+        <div><span>02</span><p data-i18n="gastro_oferta_2">Cenas con reserva anticipada</p></div>
+        <div><span>03</span><p data-i18n="gastro_oferta_3">Pastas, empanadas y preparaciones caseras</p></div>
+        <div><span>04</span><p data-i18n="gastro_oferta_4">Opciones vegetarianas, veganas e infantiles</p></div>
+        <div><span>05</span><p data-i18n="gastro_oferta_5">Vinos y sidras elaborados en la finca</p></div>
+        <div><span>06</span><p data-i18n="gastro_oferta_6">Viandas para excursiones y picnics</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="gastro-feature">
+    <div class="gastro-feature__imagen"><img src="../images/fotos/c%20Gastronomía/Principales%20(6)/Finca_La_Carla_Animana_Salta_Argentina_Gastronomia%20(1).jpg" alt="Preparaciones caseras de Finca La Carla"></div>
+    <div class="gastro-feature__texto">
+      <p class="rotulo" data-i18n="gastro_fuego_rotulo">Al fuego</p>
+      <h2 class="titulo-seccion" data-i18n="gastro_almuerzos_titulo">Almuerzos y cenas</h2>
+      <p data-i18n="gastro_almuerzos_texto">No funcionan como restaurante abierto con carta permanente. Se preparan a pedido, tienen costo adicional y se recomienda solicitarlos con 3 o 4 horas de anticipación. Existe una cocinera local que puede preparar las comidas.</p>
+      <ul class="gastro-lista">
+        <li data-i18n="gastro_plato_1">Cazuela de cabrito</li><li data-i18n="gastro_plato_2">Tartas o tarteletas con productos de la huerta</li><li data-i18n="gastro_plato_4">Empanadas árabes</li><li data-i18n="gastro_plato_5">Pastas caseras</li><li data-i18n="gastro_plato_10">Strudel de manzana elaborado con manzanas de la finca</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="gastro-feature gastro-feature--invertido">
+    <div class="gastro-feature__imagen"><img src="../images/fotos/c%20Gastronomía/z%20Otras/Desayunos/Destacada%20(1)/Finca_La_Carla_Animana_Salta_Argentina_Desayuno.jpeg" alt="Desayuno casero de Finca La Carla"></div>
+    <div class="gastro-feature__texto">
+      <p class="rotulo" data-i18n="gastro_desayuno_rotulo">Cada mañana</p>
       <h2 class="titulo-seccion" data-i18n="gastro_desayuno_titulo">Desayuno</h2>
       <p data-i18n="gastro_desayuno_texto">Está incluido en todas las reservas. Puede incluir:</p>
-      <div class="tarjetas">
-        <div class="tarjeta"><p data-i18n="gastro_desayuno_1">Café</p></div>
-        <div class="tarjeta"><p data-i18n="gastro_desayuno_2">Leche</p></div>
-        <div class="tarjeta"><p data-i18n="gastro_desayuno_3">Distintos tés</p></div>
-        <div class="tarjeta"><p data-i18n="gastro_desayuno_4">Tostadas</p></div>
-        <div class="tarjeta"><p data-i18n="gastro_desayuno_5">Manteca</p></div>
-        <div class="tarjeta"><p data-i18n="gastro_desayuno_6">Yogur casero</p></div>
-        <div class="tarjeta"><p data-i18n="gastro_desayuno_7">Granola casera</p></div>
-        <div class="tarjeta"><p data-i18n="gastro_desayuno_8">Budines</p></div>
-        <div class="tarjeta"><p data-i18n="gastro_desayuno_9">Tortas</p></div>
-        <div class="tarjeta"><p data-i18n="gastro_desayuno_10">Masas dulces</p></div>
-        <div class="tarjeta"><p data-i18n="gastro_desayuno_11">Pan de bollo elaborado por vecinos</p></div>
-      </div>
-      <p style="margin-top:16px;" data-i18n="gastro_mermeladas">Mermeladas caseras según disponibilidad: damasco, durazno, cayote, membrillo, ciruela, tomate y manzana.</p>
-    </div>
-  </section>
-
-  <section class="seccion">
-    <div class="contenedor">
-      <h2 class="titulo-seccion" data-i18n="gastro_almuerzos_titulo">Almuerzos y cenas</h2>
-      <p data-i18n="gastro_almuerzos_texto">No funcionan como restaurante abierto con carta permanente. Se preparan a pedido, tienen costo adicional y se recomienda solicitarlos con 3 o 4 horas de anticipación. Existe una cocinera local que puede preparar las comidas. Algunos de los platos:</p>
-      <div class="tarjetas">
-        <div class="tarjeta"><p data-i18n="gastro_plato_1">Cazuela de cabrito</p></div>
-        <div class="tarjeta"><p data-i18n="gastro_plato_2">Tartas o tarteletas con productos de la huerta</p></div>
-        <div class="tarjeta"><p data-i18n="gastro_plato_3">Preparaciones con zucchini y zapallitos</p></div>
-        <div class="tarjeta"><p data-i18n="gastro_plato_4">Empanadas árabes</p></div>
-        <div class="tarjeta"><p data-i18n="gastro_plato_5">Pastas caseras</p></div>
-        <div class="tarjeta"><p data-i18n="gastro_plato_6">Agnolotti de ricota, nuez y jamón</p></div>
-        <div class="tarjeta"><p data-i18n="gastro_plato_7">Fideos caseros</p></div>
-        <div class="tarjeta"><p data-i18n="gastro_plato_8">Salsa boloñesa</p></div>
-        <div class="tarjeta"><p data-i18n="gastro_plato_9">Salsa fileto</p></div>
-        <div class="tarjeta"><p data-i18n="gastro_plato_10">Strudel de manzana elaborado con manzanas de la finca</p></div>
-        <div class="tarjeta"><p data-i18n="gastro_plato_11">Helados según temporada</p></div>
-      </div>
-    </div>
-  </section>
-
-  <section class="seccion seccion--arena">
-    <div class="contenedor">
-      <h2 class="titulo-seccion" data-i18n="gastro_dietas_titulo">Dietas especiales</h2>
-      <p data-i18n="gastro_dietas_texto">Pueden prepararse a pedido: menú vegetariano, menú vegano y menú infantil. Actualmente no existe una propuesta sin TACC confirmada.</p>
-
-      <h2 class="titulo-seccion" style="margin-top:40px;" data-i18n="gastro_bebidas_titulo">Bebidas</h2>
-      <ul class="lista-carac">
-        <li data-i18n="gastro_bebidas_1">Vinos elaborados en la finca</li>
-        <li data-i18n="gastro_bebidas_2">Sidras elaboradas en la finca</li>
-        <li data-i18n="gastro_bebidas_3">Cerveza</li>
-        <li data-i18n="gastro_bebidas_4">Gaseosas</li>
-        <li data-i18n="gastro_bebidas_5">Agua</li>
-        <li data-i18n="gastro_bebidas_6">Soda</li>
+      <ul class="gastro-lista">
+        <li data-i18n="gastro_desayuno_1">Café</li><li data-i18n="gastro_desayuno_3">Distintos tés</li><li data-i18n="gastro_desayuno_4">Tostadas</li><li data-i18n="gastro_desayuno_6">Yogur casero</li><li data-i18n="gastro_desayuno_7">Granola casera</li><li data-i18n="gastro_desayuno_8">Budines</li><li data-i18n="gastro_desayuno_10">Masas dulces</li>
       </ul>
-      <p data-i18n="gastro_bebidas_nota_1">El agua y la soda suelen ser invitación de la casa.</p>
-      <p data-i18n="gastro_bebidas_nota_2">Pueden ofrecerse a pedido durante la sobremesa aguardiente, grapa y coñac. Hay una cava con vinos propios; no existe bar independiente.</p>
-      <p data-i18n="gastro_viandas">No existe servicio a la habitación. Sí pueden prepararse viandas para picnic, excursiones o viajes, previa coordinación.</p>
+      <p data-i18n="gastro_mermeladas">Mermeladas caseras según disponibilidad: damasco, durazno, cayote, membrillo, ciruela, tomate y manzana.</p>
     </div>
   </section>
 
-  <section class="seccion">
+  <section class="seccion gastro-espacios">
+    <div class="contenedor gastro-espacios__grid">
+      <div class="gastro-espacios__texto">
+        <p class="rotulo" data-i18n="gastro_espacios_rotulo">Los espacios</p>
+        <h2 class="titulo-seccion" data-i18n="gastro_espacios_titulo">Cocina y sala comedor</h2>
+        <p data-i18n="gastro_espacios_texto">La cocina y el comedor son parte del corazón de la finca: lugares para preparar, compartir y disfrutar sin apuro.</p>
+        <p data-i18n="gastro_viandas">No existe servicio a la habitación. Sí pueden prepararse viandas para picnic, excursiones o viajes, previa coordinación.</p>
+      </div>
+      <img src="../images/fotos/c%20Gastronomía/z%20Otras/Salón%20Comedor/Destacada%20(1)/Finca_La_Carla_Animana_Salta_Argentina_Comedor.jpg" alt="Salón comedor de Finca La Carla">
+    </div>
+  </section>
+
+  <section class="seccion seccion--arena gastro-galeria">
     <div class="contenedor">
-      <h2 class="titulo-seccion" data-i18n="fotos_gastronomia">Galería de gastronomía</h2>
-      <div class="galeria-grid" data-render-galeria="gastronomia" data-max="8"></div>
-      <p style="margin-top:18px;"><button class="btn btn--primario" type="button" data-galeria="gastronomia" data-i18n="fotos_abrir">Abrir galería</button></p>
+      <p class="rotulo texto-centro" data-i18n="fotos_gastronomia">Gastronomía</p>
+      <h2 class="titulo-seccion texto-centro" data-i18n="gastro_galeria_titulo">Sabores de la finca</h2>
+      <div class="galeria-grid" data-render-galeria="gastronomia" data-max="6"></div>
+      <p class="texto-centro" style="margin-top:24px;"><button class="btn btn--primario" type="button" data-galeria="gastronomia" data-i18n="fotos_abrir">Abrir galería</button></p>
     </div>
   </section>
 </main>
