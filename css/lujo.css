@@ -1,9 +1,14 @@
 /* ==========================================================================
-   FINCA LA CARLA — PROTOTIPO "LUJO CLÁSICO" (Opción L)
-   Capa de prototipo: se carga DESPUÉS de style.css y redefine el sistema.
+   FINCA LA CARLA — SISTEMA "LUJO CLÁSICO" (Opción L)
+   Capa que redefine el sistema visual. Se carga DESPUÉS de style.css en
+   TODAS las páginas del sitio (index.html y html/*.html).
    Dirección: verde profundo + oro, serif de alto contraste, formas rectas,
    filetes de 1px, fotografía cinematográfica.
-   ⚠️ Es una capa de comparación: NO consolidar sin refactorizar en style.css.
+   Remapea los tokens de style.css en :root, de modo que los componentes
+   heredan el sistema nuevo sin tener que reescribirlos uno por uno.
+   ⚠️ Al sobrescribir hay que replicar los selectores de TODOS los estados
+   (base, .encabezado--solido, hover, media queries): una regla de la capa
+   NO gana por cargarse después si tiene menos especificidad.
    ========================================================================== */
 
 /* ---------- Tokens ---------- */
@@ -17,7 +22,7 @@
   --oro: #c6a664;
   --oro-claro: #e0cb9a;
   --oro-osc: #9a7f45;
-  --oro-texto: #8a6d33;   /* oro legible sobre fondo claro (AA 4,55:1) */
+  --oro-texto: #7a5b28;   /* oro legible sobre fondo claro y sobre arena (AA 5,0:1) */
 
   /* Claros */
   --marfil: #f8f5ee;
@@ -33,7 +38,7 @@
   --adobe-osc: #9a7f45;
   --adobe-claro: #e0cb9a;
   --dorado: #c6a664;
-  --dorado-texto: #8a6d33;
+  --dorado-texto: #7a5b28;
   --dorado-claro: #e0cb9a;
   --vegetacion: #16211b;
   --vegetacion-osc: #0f1712;
@@ -299,7 +304,7 @@ h1 { font-weight: 400; }
 .tarjeta, .dato, .ficha { border: 1px solid rgba(198, 166, 100, .3); border-radius: 0; box-shadow: none; background: #fff; }
 .dato__valor, .ficha__valor { color: var(--texto); }
 .acordeon__boton { border-bottom: 1px solid rgba(198, 166, 100, .3); }
-.acordeon__icono { color: var(--oro-osc); }
+.acordeon__icono { color: var(--oro-texto); }
 .mapa { border: 1px solid rgba(198, 166, 100, .3); border-radius: 0; box-shadow: none; }
 .migas { letter-spacing: .16em; font-size: 10px; text-transform: uppercase; color: var(--oro-claro); }
 .migas a { color: rgba(248, 245, 238, .7); }
