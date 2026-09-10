@@ -4,9 +4,9 @@
 
 Antes de generar, modificar o eliminar cualquier archivo, debés leer y comprender **en este orden**:
 
-1. **`design_itinere.md`** → Sistema de diseño oficial de la empresa Itinere. Define paleta de colores, tipografía, componentes, HERO, reglas de responsive, animaciones, accesibilidad y tono de voz. **Es la fuente única de verdad visual.**
+1. **`design_itinere.md`** → Sistema de diseño del proyecto (tokens visuales reales: paleta adobe/cream/earth, `Cormorant Garamond` + `Inter`, componentes, HERO, reglas de responsive, animaciones, accesibilidad y tono de voz). **Es la fuente única de verdad visual.** Sus tokens están alineados a lo implementado en `css/style.css`.
 
-2. **`design_finca_la_carla.md`** → Especificaciones completas del proyecto Finca La Carla. Define identidad, textos exactos, mapa de navegación, contenido por sección, reglas de contenido, control final obligatorio y todas las restricciones del cliente.
+2. **`Design_Finca_La_Carla.md`** → Especificaciones completas del proyecto Finca La Carla. Define identidad, textos exactos, mapa de navegación, contenido por sección, reglas de contenido, control final obligatorio y todas las restricciones del cliente.
 
 3. **`estructura_proyecto.txt`** → Estructura oficial de carpetas y archivos del proyecto. Define dónde va cada tipo de archivo (HTML, CSS, JS, imágenes, etc.).
 
@@ -34,10 +34,10 @@ Antes de generar, modificar o eliminar cualquier archivo, debés leer y comprend
 
 ### 4. Respeto a la estructura de carpetas
 - **HTML** → dentro de `/html/` (excepto `index.html` que va en la raíz).
-- **CSS** → dentro de `/css/`.
+- **CSS** → dentro de `/css/` (una única hoja: `style.css`).
 - **JS** → dentro de `/js/`.
-- **Imágenes** → dentro de `/img/`, organizadas por sección.
-- **Nunca** crear archivos en ubicaciones fuera de esta estructura sin autorización explícita.
+- **Imágenes** → dentro de `/images/fotos/`, respetando las carpetas del Drive.
+- **Nunca** crear archivos en ubicaciones fuera de esta estructura sin autorización explícita. Ver `estructura_proyecto.txt`.
 
 ### 5. Comportamiento de trabajo
 - Trabajar **componente por componente**, no todo el sitio de una sola vez.
@@ -58,7 +58,7 @@ Antes de generar, modificar o eliminar cualquier archivo, debés leer y comprend
 Para cada tarea que te pida, seguí este flujo:
 
 ### Paso 1 — Lectura y comprensión
-1. Leer los tres archivos obligatorios (`design_itinere.md`, `design_finca_la_carla.md`, `estructura_proyecto.txt`).
+1. Leer los tres archivos obligatorios (`design_itinere.md`, `Design_Finca_La_Carla.md`, `estructura_proyecto.txt`).
 2. Confirmar que entendiste el pedido.
 3. Listar los archivos que vas a crear o modificar.
 
@@ -89,14 +89,14 @@ Antes de dar por terminada la tarea, ejecutar mentalmente el checklist de la sec
 1. **Lectura:** Confirmar que leíste `design_itinere.md` (sección 8 sobre HERO) y `design_finca_la_carla.md` (sección 5.1 sobre banner principal y texto).
 2. **Plan:**
    - Crear `index.html` en la raíz (o modificar si ya existe).
-   - Crear `css/home.css` con los estilos del HERO.
-   - Crear `js/main.js` si hace falta (ej. carrusel del banner).
+   - Agregar los estilos del HERO en `css/style.css` (hoja única).
+   - Usar `js/slider.js` para el carrusel (ya existente).
 3. **Código:** Generar el HERO con:
    - 3 imágenes en carrusel (Banner 1 → Banner 2 → Banner 3).
-   - Texto "UNA PROPUESTA TERRENAL" en tipografía serif.
-   - Overlay según especificación de `design_itinere.md` sección 8.2.
-   - Altura responsive: 80vh desktop / 60vh tablet / 50vh móvil.
-   - Sin parallax en móvil.
+   - Texto "Una propuesta terrenal" en `Cormorant Garamond`.
+   - Overlay según `design_itinere.md` sección 8.2 (degradado en tonos tierra).
+   - Altura responsive: `min(100svh, 980px)` desktop / `78vh` tablet / `100svh` móvil.
+   - Sin parallax (solo un Ken Burns sutil).
 4. **Verificación:** Reportar que el HERO es responsive, que respeta la paleta, que no se cortan rostros y que cumple con el checklist 9.4.
 
 ---

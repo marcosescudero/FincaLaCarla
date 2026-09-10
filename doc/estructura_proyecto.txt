@@ -1,54 +1,84 @@
-/mi-proyecto-finca-la-carla/
+/FincaLaCarla/main/                     (raíz del sitio — HTML estático, sin build)
 │
 ├── index.html                  (Home)
-├── design-finca-la-carla.md    (Este archivo)
+├── FincaLaCarla.code-workspace (workspace de VS Code)
 │
 ├── /css/
-│   ├── styles.css              (Estilos globales)
-│   ├── home.css
-│   ├── habitaciones.css
-│   ├── gastronomia.css
-│   ├── servicios.css
-│   ├── eventos.css
-│   ├── que-hacer.css
-│   ├── quienes-somos.css
-│   ├── fotos.css
-│   ├── contacto.css
-│   └── responsive.css
+│   └── style.css               (ÚNICA hoja de estilos: tokens :root + componentes + secciones + media queries)
 │
 ├── /js/
-│   ├── main.js                 (Funcionalidad general)
-│   ├── idioma.js               (Selector español/inglés)
-│   ├── galeria.js              (Galerías y lightbox)
-│   ├── formulario.js           (Validación del formulario)
-│   └── whatsapp.js             (Botón flotante de WhatsApp)
+│   ├── main.js                 (motor de idiomas ES/EN, menú móvil, enlace activo, header sólido al scroll)
+│   ├── lang.js                 (diccionario window.LANG.es / .en — textos traducibles)
+│   ├── galerias.js             (window.Finca.galerias: datos de todas las galerías)
+│   ├── lightbox.js             (visor de imágenes: data-galeria / data-render-galeria)
+│   ├── slider.js               (carrusel del HERO del Home)
+│   ├── acordeon.js             (acordeones, ej. Preguntas frecuentes)
+│   ├── formulario.js           (validación y envío AJAX del formulario de contacto)
+│   └── whatsapp.js             (aplica los enlaces wa.me +54 9 11 6793-1464)
 │
-├── /html/
+├── /html/                      (todas las páginas internas)
 │   ├── habitaciones.html
 │   ├── gastronomia.html
 │   ├── servicios.html
 │   ├── eventos.html
 │   ├── que-hacer.html
+│   ├── que-hacer-obras-agua.html
+│   ├── que-hacer-petroglifos.html
+│   ├── que-hacer-cabalgata.html
 │   ├── quienes-somos.html
 │   ├── fotos.html
 │   ├── contacto.html
-│   ├── terminos.html
-│   └── cookies.html
+│   ├── informacion-util.html
+│   ├── preguntas-frecuentes.html
+│   ├── sustentabilidad.html
+│   ├── compromiso-comunidad.html
+│   ├── terminos-condiciones.html
+│   └── politica-cookies.html
 │
-└── /img/                       (Todas las fotos del Drive, organizadas por carpeta)
-    ├── /banner/
-    ├── /exterior/
-    ├── /arquitectura/
-    ├── /habitaciones/
-    ├── /banos/
-    ├── /gastronomia/
-    ├── /desayuno/
-    ├── /pileta/
-    ├── /recreacion/
-    ├── /eventos/
-    ├── /artesanias/
-    ├── /livings/
-    ├── /galeria/
-    ├── /quienes-somos/
-    ├── /que-hacer/
-    └── /jardines/
+├── /php/
+│   └── enviar_consulta.php     (endpoint del formulario; responde JSON {ok,error})
+│
+├── /images/
+│   └── /fotos/                 (fotos exclusivas del Google Drive, con la estructura de carpetas original)
+│       ├── a Home/
+│       ├── b Habitaciones/
+│       │   ├── Habitacion Categoría A/   (Destacada (1) / Principales (6) / Secundarias (resto))
+│       │   └── z Baño/
+│       ├── c Gastronomía/
+│       ├── d Servicios/        (0 Destacada, 5 Recreacion, 7 Pileta, 8 Parrilla, 9 Artesanías, 10 Living, 11 Galería, 12 Información Útil, 13 Preguntas Frecuentes…)
+│       ├── f Eventos/
+│       ├── g Que hacer/        (Cabalgatas en Corralito / Pinturas y geroglifos / Trekking por el río)
+│       ├── h Quienes somos/
+│       ├── i Arquitectura/
+│       ├── j Exterior o jardines/
+│       ├── k Objetos decorativos/
+│       ├── m Sustentabilidad/
+│       ├── n Logo/
+│       └── o Seccion Fotos/
+│
+├── /doc/                       (documentación del proyecto)
+│   ├── design_itinere.md       (sistema de diseño — fuente única de verdad visual)
+│   ├── Design_Finca_La_Carla.md (especificaciones y contenido del proyecto)
+│   ├── estructura_proyecto.txt (este archivo)
+│   ├── prompt_finca_la_carla.md (prompt maestro)
+│   ├── PLAN_SITIO_FINCA_LA_CARLA.html
+│   └── PROPUESTA_MEJORA_VISUAL_FINCA_LA_CARLA.html
+│
+└── /prototipos/                (referencias de diseño generadas con Stitch — NO forman parte del sitio publicado)
+    ├── DESIGN.md
+    ├── index.html
+    ├── home.html
+    ├── habitaciones.html
+    ├── fotos.html
+    └── contacto.html
+
+
+CONVENCIONES
+-----------
+- HTML estático sin framework ni build. Rutas de imágenes RELATIVAS: desde la raíz `images/fotos/...`,
+  desde `/html/` `../images/fotos/...`. Los espacios se codifican como `%20` en los `src`.
+- Todo texto traducible lleva `data-i18n="clave"` y su clave en `js/lang.js` (ES idéntico al HTML).
+- Páginas con galerías deben cargar, en este orden: `lang.js`, `main.js`, `galerias.js`, `lightbox.js`,
+  y declarar `<script>window.FINCA_BASE = "../";</script>` antes de `galerias.js` (la base es "" en la raíz).
+- Un único `css/style.css`. No crear hojas por página: los estilos nuevos van en el archivo único.
+- No crear archivos fuera de esta estructura sin autorización explícita.
