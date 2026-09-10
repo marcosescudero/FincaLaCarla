@@ -221,30 +221,10 @@ h1 { font-weight: 400; }
 }
 
 /* ---------- HERO: cinematográfico ----------
-   La foto se muestra con su color real: en lugar de un velo uniforme que
-   apaga toda la imagen, quedan sólo dos degradados en los bordes (arriba
-   para el encabezado, abajo para flechas y puntos) más un foco oscuro
-   localizado detrás del bloque de texto, que es el que asegura el
-   contraste de la tipografía. */
+   Las fotos se muestran con su color real: sin velo ni foco, no hay ningún
+   oscurecimiento sobre la imagen. */
 .hero__img { height: 88vh; min-height: 620px; max-height: 1000px; }
-.hero__velo {
-  background: linear-gradient(180deg,
-    rgba(15, 23, 18, .62) 0%,
-    rgba(15, 23, 18, .05) 24%,
-    rgba(15, 23, 18, .05) 64%,
-    rgba(15, 23, 18, .62) 100%);
-}
-.hero__contenido::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  background: radial-gradient(ellipse 58% 42% at 50% 50%,
-    rgba(15, 23, 18, .80) 0%,
-    rgba(15, 23, 18, .74) 66%,
-    rgba(15, 23, 18, .34) 88%,
-    rgba(15, 23, 18, 0) 100%);
-}
+.hero__velo { background: none; }
 .hero__lema {
   font-size: clamp(46px, 7vw, 96px);
   font-weight: 400;
