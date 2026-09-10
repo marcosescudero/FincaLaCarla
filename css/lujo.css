@@ -302,6 +302,31 @@ h1 { font-weight: 400; }
 
 /* ---------- Otros componentes ---------- */
 .tarjeta, .dato, .ficha { border: 1px solid rgba(198, 166, 100, .3); border-radius: 0; box-shadow: none; background: #fff; }
+
+/* Tarjeta con foto de portada: la usan las paginas madre que resumen sus subpaginas
+   (cada actividad hija usa la misma foto como hero, asi el enlace se reconoce). */
+.tarjeta--foto {
+  display: flex; flex-direction: column;
+  padding: 0; overflow: hidden;
+  text-decoration: none; color: inherit;
+  transition: border-color .35s ease;
+}
+.tarjeta--foto:hover { border-color: var(--oro); }
+.tarjeta--foto img {
+  display: block; width: 100%; height: 220px; object-fit: cover;
+  filter: saturate(1.04) contrast(1.06);
+  transition: transform .9s ease;
+}
+.tarjeta--foto:hover img { transform: scale(1.03); }
+.tarjeta--foto .tarjeta__cuerpo {
+  display: flex; flex-direction: column; gap: 10px;
+  flex: 1; padding: 26px 28px 30px;
+}
+.tarjeta--foto .tarjeta__cuerpo h3 { margin-bottom: 0; }
+.tarjeta--foto .tarjeta__cuerpo .btn { align-self: flex-start; margin-top: auto; }
+@media (prefers-reduced-motion: reduce) {
+  .tarjeta--foto img, .tarjeta--foto:hover img { transition: none; transform: none; }
+}
 .dato__valor, .ficha__valor { color: var(--texto); }
 .acordeon__boton { border-bottom: 1px solid rgba(198, 166, 100, .3); }
 .acordeon__icono { color: var(--oro-texto); }
