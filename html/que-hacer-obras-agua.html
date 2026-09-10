@@ -7,15 +7,18 @@
 <title>Obras hidráulicas — Qué hacer · Finca La Carla</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/lujo.css">
 </head>
 <body>
+
+<a class="salto-contenido" href="#contenido-principal">Saltar al contenido</a>
 <header class="encabezado">
   <div class="contenedor encabezado__fila">
     <a class="marca" href="../index.html" aria-label="Finca La Carla — Inicio"><span class="marca__nombre">Finca La Carla<small>Valle Calchaquí · Salta</small></span></a>
     <nav aria-label="Navegación principal">
-      <ul class="menu">
+      <ul class="menu" id="menu-principal">
         <li><a href="../index.html" data-i18n="nav_home">Home</a></li>
         <li><a href="habitaciones.html" data-i18n="nav_habitaciones">Habitaciones</a></li>
         <li><a href="gastronomia.html" data-i18n="nav_gastronomia">Gastronomía</a></li>
@@ -30,16 +33,18 @@
     </nav>
     <div class="encabezado__acciones">
       <div class="idioma" role="group" aria-label="Selector de idioma">
+        <svg class="idioma__globo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
         <button type="button" data-idioma="es" aria-pressed="true">ES</button>
+        <span class="idioma__sep" aria-hidden="true">|</span>
         <button type="button" data-idioma="en" aria-pressed="false">EN</button>
       </div>
-      <button class="menu-boton" type="button" aria-label="Abrir menú" aria-expanded="false">☰</button>
+      <button class="menu-boton" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu-principal">☰</button>
     </div>
   </div>
 </header>
 <div class="menu-sombra" aria-hidden="true"></div>
 
-<main>
+<main id="contenido-principal">
   <section class="cabecera-pagina cabecera-pagina--imagen" style="background-image:url('../images/fotos/g%20Que%20hacer/Trekking%20por%20el%20río/Destacada%20(1)/Finca_La_Carla_Animana_Salta_Argentina_Trekking_Nano_Escudero.png');">
     <div class="contenedor">
       <p class="migas"><a href="../index.html" data-i18n="nav_home">Home</a> / <a href="que-hacer.html" data-i18n="nav_quehacer">Qué hacer</a> / <span data-i18n="q_act1_titulo">Obras hidráulicas</span></p>

@@ -1,54 +1,73 @@
-/mi-proyecto-finca-la-carla/
+Estructura real del proyecto (actualizada 2026-09-10)
+
+/finca-la-carla/                        (d:\EscuderoSistemas\src\websites\animana\FincaLaCarla\main)
 │
-├── index.html                  (Home)
-├── design-finca-la-carla.md    (Este archivo)
+├── index.html                          (Home)
+├── FincaLaCarla.code-workspace
 │
 ├── /css/
-│   ├── styles.css              (Estilos globales)
-│   ├── home.css
-│   ├── habitaciones.css
-│   ├── gastronomia.css
-│   ├── servicios.css
-│   ├── eventos.css
-│   ├── que-hacer.css
-│   ├── quienes-somos.css
-│   ├── fotos.css
-│   ├── contacto.css
-│   └── responsive.css
+│   ├── style.css                       (Sistema base: layout, componentes, media queries)
+│   └── lujo.css                        (Capa "Lujo clásico": remapea tokens y redefine componentes)
 │
 ├── /js/
-│   ├── main.js                 (Funcionalidad general)
-│   ├── idioma.js               (Selector español/inglés)
-│   ├── galeria.js              (Galerías y lightbox)
-│   ├── formulario.js           (Validación del formulario)
-│   └── whatsapp.js             (Botón flotante de WhatsApp)
+│   ├── main.js                         (Menú, encabezado al hacer scroll, motor de idioma)
+│   ├── lang.js                         (Diccionario ES/EN — window.LANG)
+│   ├── slider.js                       (Carrusel del hero)
+│   ├── galerias.js                     (Datos de las galerías)
+│   ├── lightbox.js                     (Visor de imágenes)
+│   ├── acordeon.js                     (Acordeón de preguntas frecuentes)
+│   ├── formulario.js                   (Validación del formulario de contacto)
+│   └── whatsapp.js                     (Botón flotante de WhatsApp)
 │
-├── /html/
+├── /html/                              (17 páginas)
 │   ├── habitaciones.html
 │   ├── gastronomia.html
 │   ├── servicios.html
 │   ├── eventos.html
 │   ├── que-hacer.html
+│   ├── que-hacer-cabalgata.html
+│   ├── que-hacer-obras-agua.html
+│   ├── que-hacer-petroglifos.html
 │   ├── quienes-somos.html
 │   ├── fotos.html
 │   ├── contacto.html
-│   ├── terminos.html
-│   └── cookies.html
+│   ├── informacion-util.html
+│   ├── preguntas-frecuentes.html
+│   ├── sustentabilidad.html
+│   ├── compromiso-comunidad.html
+│   ├── terminos-condiciones.html
+│   └── politica-cookies.html
 │
-└── /img/                       (Todas las fotos del Drive, organizadas por carpeta)
-    ├── /banner/
-    ├── /exterior/
-    ├── /arquitectura/
-    ├── /habitaciones/
-    ├── /banos/
-    ├── /gastronomia/
-    ├── /desayuno/
-    ├── /pileta/
-    ├── /recreacion/
-    ├── /eventos/
-    ├── /artesanias/
-    ├── /livings/
-    ├── /galeria/
-    ├── /quienes-somos/
-    ├── /que-hacer/
-    └── /jardines/
+├── /php/
+│   └── enviar_consulta.php             (Receptor del formulario de contacto)
+│
+├── /doc/                               (Documentación)
+│   ├── design_lujo.md                  (Sistema de diseño VIGENTE)
+│   ├── design_itinere.md               (DESESTIMADO — se conserva como registro)
+│   ├── estructura_proyecto.txt         (Este archivo)
+│   └── prompt_finca_la_carla.md        (Brief del proyecto)
+│
+├── /prototipos/                        (Prototipos sueltos de etapas anteriores)
+│
+└── /images/fotos/                      (Fototeca, organizada por sección)
+    ├── a Home/
+    ├── b Habitaciones/
+    ├── c Gastronomía/
+    ├── d Servicios/
+    ├── f Eventos/
+    ├── g Que hacer/
+    ├── h Quienes somos/
+    ├── i Arquitectura/
+    ├── j Exterior o jardines/
+    ├── k Objetos decorativos/
+    ├── m Sustentabilidad/
+    ├── n Logo/
+    └── o Seccion Fotos/
+
+Notas
+-----
+- Las 18 páginas (index.html + las 17 de html/) cargan style.css y luego lujo.css.
+  El sistema visual vive casi por completo en la capa lujo.css: ver doc/design_lujo.md.
+- Tipografías: Cormorant Garamond (títulos) + Inter (texto), desde Google Fonts.
+- Todo texto traducible lleva data-i18n y su clave en js/lang.js.
+- La fototeca tiene 21 grupos de fotos duplicadas (el mismo archivo en varias carpetas).

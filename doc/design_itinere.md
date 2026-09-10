@@ -1,3 +1,15 @@
+> ## ⚠️ DOCUMENTO DESESTIMADO
+>
+> **Este sistema no se aplicó al sitio y no debe usarse como referencia.**
+>
+> La dirección visual fue descartada por decisión del cliente el 2026-09-10, en favor del sistema
+> **«Lujo clásico»** (verde profundo + oro), documentado en **`doc/design_lujo.md`**.
+>
+> Se conserva únicamente como registro histórico de una alternativa evaluada. El código del sitio
+> **no** implementa las indicaciones de este archivo.
+
+---
+
 # Sistema de Diseño para Proyectos Itinere
 
 **Inspiración:** Fusión de "La Posada de Cloe" (calidez y autenticidad), "Buenas Vibras Lodge" (claridad y confianza) y estilo "Emergent" (fluidez y modernidad técnica).

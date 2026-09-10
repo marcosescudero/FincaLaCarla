@@ -7,10 +7,13 @@
 <title>Finca La Carla — Una propuesta terrenal</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/lujo.css">
 </head>
 <body>
+
+<a class="salto-contenido" href="#contenido-principal">Saltar al contenido</a>
 
 <!-- ===================== ENCABEZADO ===================== -->
 <header class="encabezado">
@@ -20,7 +23,7 @@
     </a>
 
     <nav aria-label="Navegación principal">
-      <ul class="menu">
+      <ul class="menu" id="menu-principal">
         <li><a href="index.html" data-i18n="nav_home" class="activo">Home</a></li>
         <li><a href="html/habitaciones.html" data-i18n="nav_habitaciones">Habitaciones</a></li>
         <li><a href="html/gastronomia.html" data-i18n="nav_gastronomia">Gastronomía</a></li>
@@ -36,7 +39,9 @@
 
     <div class="encabezado__acciones">
       <div class="idioma" role="group" aria-label="Selector de idioma">
+        <svg class="idioma__globo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
         <button type="button" data-idioma="es" aria-pressed="true">ES</button>
+        <span class="idioma__sep" aria-hidden="true">|</span>
         <button type="button" data-idioma="en" aria-pressed="false">EN</button>
       </div>
       <button class="menu-boton" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu-principal">☰</button>
@@ -45,6 +50,8 @@
 </header>
 <div class="menu-sombra" aria-hidden="true"></div>
 
+<main id="contenido-principal">
+
 <!-- ===================== HERO / BANNER ===================== -->
 <section class="hero" aria-label="Bienvenida">
   <div class="hero__carrusel">
@@ -52,7 +59,7 @@
       <img class="hero__img" src="images/fotos/a%20Home/Banner%20(1)/Finca_La_Carla_Animana_Salta_Argentina_Banner_1.jpg" alt="Finca La Carla — Valle Calchaquí">
     </div>
     <div class="hero__slide">
-      <img class="hero__img" src="images/fotos/a%20Home/Banner%20(1)/Finca_La_Carla_Animana_Salta_Argentina_Banner_2.png" alt="Finca La Carla — paisaje del valle">
+      <img class="hero__img" src="images/fotos/a%20Home/Banner%20(1)/Finca_La_Carla_Animana_Salta_Argentina_Banner_2.jpg" alt="Finca La Carla — paisaje del valle">
     </div>
     <div class="hero__slide">
       <img class="hero__img" src="images/fotos/a%20Home/Banner%20(1)/Finca_La_Carla_Animana_Salta_Argentina_Banner_3.jpg" alt="Finca La Carla — atardecer en el valle">
@@ -104,7 +111,7 @@
       </a>
 
       <a class="tarjeta-servicio" href="html/eventos.html">
-        <img class="tarjeta-servicio__img" src="images/fotos/f%20Eventos/Destacada%20(1)/Finca_La_Carla_Animana_Salta_Argentina_Living.jpg" alt="Eventos Finca La Carla">
+        <img class="tarjeta-servicio__img" src="images/fotos/f%20Eventos/Principales%20(6)/Finca_La_Carla_Animana_Salta_Argentina_Parrilla.jpg" alt="Eventos Finca La Carla">
         <div class="tarjeta-servicio__info"><span class="rotulo" data-i18n="descubrir">Descubrir</span><h3 data-i18n="serv_eventos">Eventos</h3></div>
       </a>
 
@@ -114,12 +121,12 @@
       </a>
 
       <a class="tarjeta-servicio" href="html/servicios.html#recreacion">
-        <img class="tarjeta-servicio__img" src="images/fotos/d%20Servicios/5%20Recreacion/Destacada%20(1)/Finca_La_Carla_Animana_Salta_Argentina_Living.jpg" alt="Recreación Finca La Carla">
+        <img class="tarjeta-servicio__img" src="images/fotos/d%20Servicios/5%20Recreacion/Principales%20(6)/Finca_La_Carla_Animana_Salta_Argentina_Recreacion.jpeg" alt="Recreación Finca La Carla">
         <div class="tarjeta-servicio__info"><span class="rotulo" data-i18n="descubrir">Descubrir</span><h3 data-i18n="serv_recreacion">Recreación</h3></div>
       </a>
 
       <a class="tarjeta-servicio" href="html/servicios.html#pileta">
-        <img class="tarjeta-servicio__img" src="images/fotos/d%20Servicios/7%20Pileta/Destacada%20(1)/Finca_La_Carla_Animana_Salta_Argentina_Pileta.png" alt="Pileta Finca La Carla">
+        <img class="tarjeta-servicio__img" src="images/fotos/d%20Servicios/7%20Pileta/Principales%20(6)/Finca_La_Carla_Animana_Salta_Argentina_Pileta%20(1).png" alt="Pileta Finca La Carla">
         <div class="tarjeta-servicio__info"><span class="rotulo" data-i18n="descubrir">Descubrir</span><h3 data-i18n="serv_pileta">Pileta</h3></div>
       </a>
 
@@ -144,7 +151,7 @@
       </a>
 
       <a class="tarjeta-servicio" href="html/preguntas-frecuentes.html">
-        <img class="tarjeta-servicio__img" src="images/fotos/d%20Servicios/13%20Preguntas%20Frecuentes/Destacada%20(1)/Finca_La_Carla_Animana_Salta_Argentina_Arquitectura.jpg" alt="Preguntas frecuentes Finca La Carla">
+        <img class="tarjeta-servicio__img" src="images/fotos/d%20Servicios/13%20Preguntas%20Frecuentes/Principales%20(6)/Finca_La_Carla_Animana_Salta_Argentina_Habitacion%20%20(5).jpg" alt="Preguntas frecuentes Finca La Carla">
         <div class="tarjeta-servicio__info"><span class="rotulo" data-i18n="descubrir">Descubrir</span><h3 data-i18n="serv_faq">Preguntas frecuentes</h3></div>
       </a>
 
@@ -200,35 +207,53 @@
 </section>
 
 <!-- ===================== TESTIMONIOS ===================== -->
-<section class="seccion seccion--oscura">
+<!-- ===================== TESTIMONIOS (carrusel, estilo sección 6 Cloe) ===================== -->
+<section class="seccion testimonios-seccion">
   <div class="contenedor">
-    <p class="rotulo texto-centro" data-i18n="eyebrow_testimonios">Experiencias de huéspedes</p>
-    <h2 class="titulo-seccion texto-centro" data-i18n="testimonios_titulo">Testimonios</h2>
-    <div class="testimonios">
-      <div class="testimonio">
-        <svg class="testimonio__quote" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z"/><path d="M5 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z"/></svg>
-        <p data-i18n="test_marcelo">Un lugar soñado en la montaña para conectarse en serio. Todo está muy cuidado y bien logrado. Se destacan la atención cordial y genuina de sus dueños, la comida, los dulces caseros y los vinos que elaboran.</p>
-        <span class="testimonio__autor">Marcelo</span>
+    <h2 class="oculto" data-i18n="testimonios_titulo">Testimonios</h2>
+
+    <div class="cita-carrusel" id="cita-carrusel">
+      <span class="cita-carrusel__comillas" aria-hidden="true">“</span>
+
+      <div class="cita-carrusel__pista">
+        <blockquote class="cita activa">
+          <p data-i18n="test_marcelo">Un lugar soñado en la montaña para conectarse en serio. Todo está muy cuidado y bien logrado. Se destacan la atención cordial y genuina de sus dueños, la comida, los dulces caseros y los vinos que elaboran.</p>
+          <span class="cita__linea" aria-hidden="true"></span>
+          <cite class="cita__autor">Marcelo</cite>
+        </blockquote>
+        <blockquote class="cita">
+          <p data-i18n="test_eugenia">Nos alojamos en pareja y desde el primer día la experiencia fue hermosa. Diego y Marcela nos atendieron con mucha calidez. Disfrutamos los desayunos, las cenas, los productos cosechados allí y especialmente sus vinos.</p>
+          <span class="cita__linea" aria-hidden="true"></span>
+          <cite class="cita__autor">Eugenia</cite>
+        </blockquote>
+        <blockquote class="cita">
+          <p data-i18n="test_nelly">Cada espacio refleja mucho trabajo, amor y buen gusto. La calidez con la que nos atendieron fue maravillosa, la limpieza impecable y nos encantó que tantos productos salieran directamente de la tierra y la huerta.</p>
+          <span class="cita__linea" aria-hidden="true"></span>
+          <cite class="cita__autor">Nelly de Ortega</cite>
+        </blockquote>
+        <blockquote class="cita">
+          <p data-i18n="test_maya">Anfitriones maravillosos, habitaciones acogedoras e impecables, un ambiente encantador y comida increíblemente deliciosa. La finca es un oasis de relajación, con mucha atención al detalle. Ya estoy deseando volver.</p>
+          <span class="cita__linea" aria-hidden="true"></span>
+          <cite class="cita__autor">Maya Maja — Alemania</cite>
+        </blockquote>
+        <blockquote class="cita">
+          <p data-i18n="test_marie">Un lugar excepcional, tranquilo, íntimo y relajante, con un desayuno exquisito elaborado con ingredientes frescos y dueños acogedores y cálidos. Fue el mejor lugar de nuestro recorrido de dos meses y medio por Sudamérica.</p>
+          <span class="cita__linea" aria-hidden="true"></span>
+          <cite class="cita__autor">Marie — Francia</cite>
+        </blockquote>
       </div>
-      <div class="testimonio">
-        <svg class="testimonio__quote" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z"/><path d="M5 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z"/></svg>
-        <p data-i18n="test_eugenia">Nos alojamos en pareja y desde el primer día la experiencia fue hermosa. Diego y Marcela nos atendieron con mucha calidez. Disfrutamos los desayunos, las cenas, los productos cosechados allí y especialmente sus vinos.</p>
-        <span class="testimonio__autor">Eugenia</span>
-      </div>
-      <div class="testimonio">
-        <svg class="testimonio__quote" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z"/><path d="M5 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z"/></svg>
-        <p data-i18n="test_nelly">Cada espacio refleja mucho trabajo, amor y buen gusto. La calidez con la que nos atendieron fue maravillosa, la limpieza impecable y nos encantó que tantos productos salieran directamente de la tierra y la huerta.</p>
-        <span class="testimonio__autor">Nelly de Ortega</span>
-      </div>
-      <div class="testimonio">
-        <svg class="testimonio__quote" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z"/><path d="M5 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z"/></svg>
-        <p data-i18n="test_maya">Anfitriones maravillosos, habitaciones acogedoras e impecables, un ambiente encantador y comida increíblemente deliciosa. La finca es un oasis de relajación, con mucha atención al detalle. Ya estoy deseando volver.</p>
-        <span class="testimonio__autor">Maya Maja — Alemania</span>
-      </div>
-      <div class="testimonio">
-        <svg class="testimonio__quote" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z"/><path d="M5 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z"/></svg>
-        <p data-i18n="test_marie">Un lugar excepcional, tranquilo, íntimo y relajante, con un desayuno exquisito elaborado con ingredientes frescos y dueños acogedores y cálidos. Fue el mejor lugar de nuestro recorrido de dos meses y medio por Sudamérica.</p>
-        <span class="testimonio__autor">Marie — Francia</span>
+
+      <div class="cita-carrusel__controles">
+        <button class="cita-carrusel__flecha cita-carrusel__flecha--prev" type="button" aria-label="Testimonio anterior">&#10094;</button>
+        <div class="cita-carrusel__puntos" role="group" aria-label="Elegir testimonio">
+          <button class="cita-carrusel__punto activo" type="button" aria-label="Testimonio 1"></button>
+          <button class="cita-carrusel__punto" type="button" aria-label="Testimonio 2"></button>
+          <button class="cita-carrusel__punto" type="button" aria-label="Testimonio 3"></button>
+          <button class="cita-carrusel__punto" type="button" aria-label="Testimonio 4"></button>
+          <button class="cita-carrusel__punto" type="button" aria-label="Testimonio 5"></button>
+        </div>
+        <button class="cita-carrusel__flecha cita-carrusel__flecha--next" type="button" aria-label="Testimonio siguiente">&#10095;</button>
+        <button class="cita-carrusel__pausa" type="button" aria-label="Pausar los testimonios">&#10074;&#10074;</button>
       </div>
     </div>
   </div>
@@ -249,6 +274,8 @@
     </div>
   </div>
 </section>
+
+</main>
 
 <!-- ===================== FOOTER ===================== -->
 <footer class="pie">
@@ -310,5 +337,70 @@
 <script src="js/whatsapp.js"></script>
 <script src="js/slider.js"></script>
 <script src="js/lightbox.js"></script>
+<script>
+/* Carrusel de testimonios (Opción L) — una cita a la vez */
+(function () {
+  "use strict";
+  var raiz = document.getElementById("cita-carrusel");
+  if (!raiz) return;
+  var citas = [].slice.call(raiz.querySelectorAll(".cita"));
+  var puntos = [].slice.call(raiz.querySelectorAll(".cita-carrusel__punto"));
+  var prev = raiz.querySelector(".cita-carrusel__flecha--prev");
+  var next = raiz.querySelector(".cita-carrusel__flecha--next");
+  var botonPausa = raiz.querySelector(".cita-carrusel__pausa");
+  var i = 0, timer = null, PAUSA = 8000;
+  var pausadoManual = false;
+
+  function ver(n) {
+    i = (n + citas.length) % citas.length;
+    citas.forEach(function (c, k) { c.classList.toggle("activa", k === i); });
+    puntos.forEach(function (p, k) {
+      p.classList.toggle("activo", k === i);
+      p.setAttribute("aria-current", k === i ? "true" : "false");
+    });
+  }
+  function parar() { if (timer) { clearInterval(timer); timer = null; } }
+  function arrancar() {
+    parar();
+    /* Si el usuario lo detuvo a propósito, no se reanuda solo */
+    if (pausadoManual) return;
+    timer = setInterval(function () { ver(i + 1); }, PAUSA);
+  }
+  function ir(n) { ver(n); arrancar(); }
+
+  prev.addEventListener("click", function () { ir(i - 1); });
+  next.addEventListener("click", function () { ir(i + 1); });
+  puntos.forEach(function (p, k) { p.addEventListener("click", function () { ir(k); }); });
+
+  raiz.addEventListener("mouseenter", parar);
+  raiz.addEventListener("mouseleave", arrancar);
+  raiz.addEventListener("focusin", parar);
+  raiz.addEventListener("focusout", arrancar);
+  raiz.addEventListener("keydown", function (e) {
+    if (e.key === "ArrowLeft") { ir(i - 1); }
+    if (e.key === "ArrowRight") { ir(i + 1); }
+  });
+
+  /* Control de pausa (WCAG 2.2.2): una vez detenido, el carrusel no vuelve a
+     arrancar solo — ni al salir con el mouse ni al perder el foco. */
+  function pintarPausa() {
+    if (!botonPausa) return;
+    botonPausa.innerHTML = pausadoManual ? "\u25B6" : "\u275A\u275A";
+    botonPausa.setAttribute("aria-label", pausadoManual ? "Reanudar los testimonios" : "Pausar los testimonios");
+  }
+  if (botonPausa) {
+    botonPausa.addEventListener("click", function () {
+      pausadoManual = !pausadoManual;
+      if (pausadoManual) { parar(); } else { arrancar(); }
+      pintarPausa();
+    });
+  }
+
+  var sinMovimiento = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if (sinMovimiento) { pausadoManual = true; parar(); }
+  pintarPausa();
+  if (!sinMovimiento) { arrancar(); }
+})();
+</script>
 </body>
 </html>
